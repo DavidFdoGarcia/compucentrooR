@@ -72,12 +72,36 @@ namespace Compucentro4
             //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
             Font font = new Font("Century Gotic", 15, FontStyle.Bold);
             e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
-            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(350, 200, 1000, 20));
-             /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
-             Bitmap varbmp = new Bitmap(este.Image);
-             Image img = este.Image;
-             e.Graphics.DrawImage(img, new Rectangle(20, 30, 185, 50));
-             e.Graphics.DrawString("*" + txtCodigo.Text + "*", font, Brushes.Black, new Rectangle(75, 85, 150, 20)); */
+            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 200, 1000, 20));
+
+            e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 230, 1000, 30));
+            e.Graphics.DrawString(dateI.Text, font, Brushes.Black, new Rectangle(200, 230, 1000, 30));
+
+            e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 230, 1000, 40));
+            e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 230, 1000, 40));
+
+            e.Graphics.DrawString("Cliente:", font, Brushes.Black, new Rectangle(20, 280, 1000, 40));
+            e.Graphics.DrawString(cmbCliente.Text, font, Brushes.Black, new Rectangle(120, 280, 1000, 40));
+
+            e.Graphics.DrawString("No. Serie:", font, Brushes.Black, new Rectangle(20, 340, 1000, 40));
+            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(120, 340, 1000, 40));
+
+            e.Graphics.DrawString("Modelo:", font, Brushes.Black, new Rectangle(350, 340, 1000, 40));
+            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(450, 340, 1000, 40));
+
+            e.Graphics.DrawString("Equipo:", font, Brushes.Black, new Rectangle(500, 280, 1000, 40));
+            e.Graphics.DrawString(txtEquipo.Text, font, Brushes.Black, new Rectangle(600, 280, 1000, 40));
+
+            e.Graphics.DrawString("Accesorios:", font, Brushes.Black, new Rectangle(20, 400, 1000, 40));
+            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 400, 1000, 40));
+
+            e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 440, 1000, 40));
+            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 440, 1000, 40));
+            /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
+            Bitmap varbmp = new Bitmap(este.Image);
+            Image img = este.Image;
+            e.Graphics.DrawImage(img, new Rectangle(20, 30, 185, 50));
+            e.Graphics.DrawString("*" + txtCodigo.Text + "*", font, Brushes.Black, new Rectangle(75, 85, 150, 20)); */
         }
     }
 }
