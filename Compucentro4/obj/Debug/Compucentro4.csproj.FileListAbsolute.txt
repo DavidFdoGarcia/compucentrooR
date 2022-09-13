@@ -17,3 +17,7 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\Bounc
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\itextsharp.dll
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\itextsharp.xml
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.csproj.CopyComplete
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\Compucentro4.exe.manifest
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\Compucentro4.application
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.exe.manifest
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.application

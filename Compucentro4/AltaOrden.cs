@@ -47,24 +47,41 @@ namespace Compucentro4
             MessageBox.Show("La orden fue agregado con exito");
         }
 
+        public string ConsultaOrdenId()
+        {
+            Conexion.Conectar();
+            string query = "select max (idOrden) as ID from Orden";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["ID"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea Insertar un nuevo usuario? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 InsertaOrden();
+                txtOrden.Text = ConsultaOrdenId();
             }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            PrintDialog pd = new PrintDialog();
+           /* PrintDialog pd = new PrintDialog();
             PrintDocument doc = new PrintDocument();
             doc.PrintPage += Imprimir;
             pd.Document = doc;
             if (pd.ShowDialog() == DialogResult.OK)
             {
                 doc.Print();
-            }
+            } */
         }
 
         private void Imprimir(object sender, PrintPageEventArgs e)
@@ -96,7 +113,7 @@ namespace Compucentro4
             e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 400, 1000, 40));
 
             e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 440, 1000, 40));
-            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 440, 1000, 40));
+            e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 440, 1000, 40));
             /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
             Bitmap varbmp = new Bitmap(este.Image);
             Image img = este.Image;

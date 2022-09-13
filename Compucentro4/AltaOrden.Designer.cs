@@ -316,7 +316,7 @@
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(111, 61);
             this.btnImprimir.TabIndex = 33;
-            this.btnImprimir.Text = "Impriimir";
+            this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
@@ -337,10 +337,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Compucentro4.Properties.Resources.ax;
+            this.pictureBox1.Image = global::Compucentro4.Properties.Resources.ax1;
             this.pictureBox1.Location = new System.Drawing.Point(1, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(732, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(733, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
