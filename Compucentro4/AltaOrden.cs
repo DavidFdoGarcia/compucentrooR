@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,8 @@ namespace Compucentro4
 
         private void AltaOrden_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'empleado.Empleado' Puede moverla o quitarla según sea necesario.
+            this.empleadoTableAdapter.Fill(this.empleado.Empleado);
             // TODO: esta línea de código carga datos en la tabla 'usuaario2.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter1.Fill(this.usuaario2.Usuario);
             // TODO: esta línea de código carga datos en la tabla 'equipo._Equipo' Puede moverla o quitarla según sea necesario.
@@ -35,14 +38,15 @@ namespace Compucentro4
         public void InsertaOrden()
         {
             Conexion.Conectar();
-            string Alta = dateI.Value.ToShortDateString();
-            string insertar = "insert into Orden(idEquipo,idUsuario,FechaI,Complemento,FallaC) values(@equipo,@usuario,@fechaI,@complemento,@fallaC)";
+            string insertar = "insert into Orden(idEquipo,idUsuario,Complemento,FallaC,Status,idEmpleado) values(@equipo,@usuario,@complemento,@fallaC,@status,@empleado)";
             SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
             cmd1.Parameters.AddWithValue("@equipo", cmbIDEquipo.Text);
             cmd1.Parameters.AddWithValue("@usuario", cmbIDCliente.Text);
-            cmd1.Parameters.AddWithValue("@fechaI", Alta);
+            
             cmd1.Parameters.AddWithValue("@complemento", txtComplemento.Text);
             cmd1.Parameters.AddWithValue("@fallaC", txtFalla.Text);
+            cmd1.Parameters.AddWithValue("@status", cmbStatus.Text);
+            cmd1.Parameters.AddWithValue("@empleado", cmbAtendioID.Text);
             cmd1.ExecuteNonQuery();
             MessageBox.Show("La orden fue agregado con exito");
         }
@@ -74,14 +78,26 @@ namespace Compucentro4
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-           /* PrintDialog pd = new PrintDialog();
-            PrintDocument doc = new PrintDocument();
-            doc.PrintPage += Imprimir;
-            pd.Document = doc;
-            if (pd.ShowDialog() == DialogResult.OK)
-            {
-                doc.Print();
-            } */
+            visor v = new visor();
+            v.Show();
+            /* PrintDialog pd = new PrintDialog();
+             PrintDocument doc = new PrintDocument();
+             doc.PrintPage += Imprimir;
+             pd.Document = doc;
+             if (pd.ShowDialog() == DialogResult.OK)
+             {
+                 doc.Print();
+             } */
+            ReportDocument cryRpt = new ReportDocument();
+
+            //cryRpt.Load(@"C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\ORDEN.rpt");
+            cryRpt.Load(@"C:\Users\user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Compucentro4\ORDEN.rpt");
+
+            cryRpt.SetDatabaseLogon("dttdato", "123456");
+            cryRpt.SetParameterValue("@id", txtOrden.Text);
+            v.crystalReportViewer1.ReportSource = cryRpt;
+
+            v.crystalReportViewer1.Refresh();
         }
 
         private void Imprimir(object sender, PrintPageEventArgs e)
@@ -92,7 +108,6 @@ namespace Compucentro4
             e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 200, 1000, 20));
 
             e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 230, 1000, 30));
-            e.Graphics.DrawString(dateI.Text, font, Brushes.Black, new Rectangle(200, 230, 1000, 30));
 
             e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 230, 1000, 40));
             e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 230, 1000, 40));

@@ -44,6 +44,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(308, 333);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtTelefono
             // 

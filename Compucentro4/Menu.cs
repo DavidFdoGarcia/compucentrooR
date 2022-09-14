@@ -48,5 +48,17 @@ namespace Compucentro4
             AltaOrden AO = new AltaOrden();
             AO.Show();
         }
+
+        private void altaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Empleado AE = new Empleado();
+            AE.Show();
+        }
+
+        private void altaDeTécnicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tecnico AT = new Tecnico();
+            AT.Show();
+        }
     }
 }

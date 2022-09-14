@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AltaOrden));
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateI = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,13 +49,15 @@
             this.txtFalla = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbAtendio = new System.Windows.Forms.ComboBox();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.empleado = new Compucentro4.empleado();
             this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuaario2 = new Compucentro4.Usuaario2();
             this.usuarioTableAdapter1 = new Compucentro4.Usuaario2TableAdapters.UsuarioTableAdapter();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbAtendioID = new System.Windows.Forms.ComboBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
@@ -67,10 +67,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtEquipo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.empleadoTableAdapter = new Compucentro4.empleadoTableAdapters.EmpleadoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuaario2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,24 +105,6 @@
             this.label7.Size = new System.Drawing.Size(86, 21);
             this.label7.TabIndex = 14;
             this.label7.Text = "No.Orden";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 21);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Ingreso";
-            // 
-            // dateI
-            // 
-            this.dateI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateI.Location = new System.Drawing.Point(176, 132);
-            this.dateI.Name = "dateI";
-            this.dateI.Size = new System.Drawing.Size(109, 27);
-            this.dateI.TabIndex = 17;
             // 
             // label3
             // 
@@ -255,16 +240,16 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "Status";
             // 
-            // comboBox1
+            // cmbStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
             "Acttivo",
             "Inactivo"});
-            this.comboBox1.Location = new System.Drawing.Point(605, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 29;
+            this.cmbStatus.Location = new System.Drawing.Point(605, 248);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(121, 29);
+            this.cmbStatus.TabIndex = 29;
             // 
             // label9
             // 
@@ -278,13 +263,23 @@
             // 
             // cmbAtendio
             // 
-            this.cmbAtendio.DataSource = this.usuarioBindingSource1;
+            this.cmbAtendio.DataSource = this.empleadoBindingSource;
             this.cmbAtendio.DisplayMember = "Nombre";
             this.cmbAtendio.FormattingEnabled = true;
             this.cmbAtendio.Location = new System.Drawing.Point(218, 565);
             this.cmbAtendio.Name = "cmbAtendio";
             this.cmbAtendio.Size = new System.Drawing.Size(248, 29);
             this.cmbAtendio.TabIndex = 31;
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "Empleado";
+            this.empleadoBindingSource.DataSource = this.empleado;
+            // 
+            // empleado
+            // 
+            this.empleado.DataSetName = "empleado";
+            this.empleado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuarioBindingSource1
             // 
@@ -300,15 +295,15 @@
             // 
             this.usuarioTableAdapter1.ClearBeforeFill = true;
             // 
-            // comboBox2
+            // cmbAtendioID
             // 
-            this.comboBox2.DataSource = this.usuarioBindingSource1;
-            this.comboBox2.DisplayMember = "idUsuario";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(504, 560);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(52, 29);
-            this.comboBox2.TabIndex = 32;
+            this.cmbAtendioID.DataSource = this.empleadoBindingSource;
+            this.cmbAtendioID.DisplayMember = "idEmpleado";
+            this.cmbAtendioID.FormattingEnabled = true;
+            this.cmbAtendioID.Location = new System.Drawing.Point(504, 560);
+            this.cmbAtendioID.Name = "cmbAtendioID";
+            this.cmbAtendioID.Size = new System.Drawing.Size(52, 29);
+            this.cmbAtendioID.TabIndex = 32;
             // 
             // btnImprimir
             // 
@@ -383,6 +378,10 @@
             this.label10.TabIndex = 37;
             this.label10.Text = "Equipo";
             // 
+            // empleadoTableAdapter
+            // 
+            this.empleadoTableAdapter.ClearBeforeFill = true;
+            // 
             // AltaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -394,10 +393,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbAtendioID);
             this.Controls.Add(this.cmbAtendio);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtFalla);
             this.Controls.Add(this.label6);
@@ -409,8 +408,6 @@
             this.Controls.Add(this.cmbIDCliente);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateI);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOrden);
             this.Controls.Add(this.label7);
             this.Name = "AltaOrden";
@@ -419,8 +416,6 @@
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtOrden, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.dateI, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.cmbCliente, 0);
             this.Controls.SetChildIndex(this.cmbIDCliente, 0);
@@ -432,10 +427,10 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.txtFalla, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.cmbStatus, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.cmbAtendio, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
+            this.Controls.SetChildIndex(this.cmbAtendioID, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnImprimir, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
@@ -447,6 +442,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuaario2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -458,8 +455,6 @@
         #endregion
         private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateI;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbCliente;
         private Cliente cliente;
@@ -477,13 +472,13 @@
         private System.Windows.Forms.TextBox txtFalla;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbAtendio;
         private Usuaario2 usuaario2;
         private System.Windows.Forms.BindingSource usuarioBindingSource1;
         private Usuaario2TableAdapters.UsuarioTableAdapter usuarioTableAdapter1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbAtendioID;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
@@ -493,5 +488,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEquipo;
         private System.Windows.Forms.Label label10;
+        private empleado empleado;
+        private System.Windows.Forms.BindingSource empleadoBindingSource;
+        private empleadoTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
     }
 }
