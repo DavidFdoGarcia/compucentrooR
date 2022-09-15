@@ -68,6 +68,8 @@
             this.txtEquipo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.empleadoTableAdapter = new Compucentro4.empleadoTableAdapters.EmpleadoTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.datei = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
@@ -90,7 +92,7 @@
             // 
             // txtOrden
             // 
-            this.txtOrden.Location = new System.Drawing.Point(513, 137);
+            this.txtOrden.Location = new System.Drawing.Point(589, 118);
             this.txtOrden.Margin = new System.Windows.Forms.Padding(5);
             this.txtOrden.Name = "txtOrden";
             this.txtOrden.Size = new System.Drawing.Size(64, 27);
@@ -99,7 +101,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(371, 137);
+            this.label7.Location = new System.Drawing.Point(440, 121);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 21);
@@ -382,11 +384,31 @@
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 118);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 21);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Fecha";
+            // 
+            // datei
+            // 
+            this.datei.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datei.Location = new System.Drawing.Point(198, 116);
+            this.datei.Name = "datei";
+            this.datei.Size = new System.Drawing.Size(158, 27);
+            this.datei.TabIndex = 40;
+            // 
             // AltaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 704);
+            this.Controls.Add(this.datei);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEquipo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtModelo);
@@ -438,6 +460,8 @@
             this.Controls.SetChildIndex(this.txtModelo, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.txtEquipo, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.datei, 0);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
@@ -491,5 +515,7 @@
         private empleado empleado;
         private System.Windows.Forms.BindingSource empleadoBindingSource;
         private empleadoTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker datei;
     }
 }

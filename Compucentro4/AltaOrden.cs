@@ -78,26 +78,26 @@ namespace Compucentro4
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            visor v = new visor();
-            v.Show();
-            /* PrintDialog pd = new PrintDialog();
+           // visor v = new visor();
+            //v.Show();
+             PrintDialog pd = new PrintDialog();
              PrintDocument doc = new PrintDocument();
              doc.PrintPage += Imprimir;
              pd.Document = doc;
              if (pd.ShowDialog() == DialogResult.OK)
              {
                  doc.Print();
-             } */
-            ReportDocument cryRpt = new ReportDocument();
+             } 
+          /*  ReportDocument cryRpt = new ReportDocument();
 
             //cryRpt.Load(@"C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\ORDEN.rpt");
-            cryRpt.Load(@"C:\Users\user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Compucentro4\ORDEN.rpt");
+            cryRpt.Load(@"C:\Users\Compucentro\  Compucentro4\ORDEN.rpt");
 
             cryRpt.SetDatabaseLogon("dttdato", "123456");
             cryRpt.SetParameterValue("@id", txtOrden.Text);
             v.crystalReportViewer1.ReportSource = cryRpt;
 
-            v.crystalReportViewer1.Refresh();
+            v.crystalReportViewer1.Refresh();*/
         }
 
         private void Imprimir(object sender, PrintPageEventArgs e)
@@ -105,30 +105,31 @@ namespace Compucentro4
             //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
             Font font = new Font("Century Gotic", 15, FontStyle.Bold);
             e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
-            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 200, 1000, 20));
+            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 100, 1000, 20));
 
-            e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 230, 1000, 30));
+            e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 150, 1000, 30));
+            e.Graphics.DrawString(datei.Text, font, Brushes.Black, new Rectangle(205, 150, 1000, 30));
 
-            e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 230, 1000, 40));
-            e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 230, 1000, 40));
+            e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 150, 1000, 40));
+            e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 150, 1000, 40));
 
-            e.Graphics.DrawString("Cliente:", font, Brushes.Black, new Rectangle(20, 280, 1000, 40));
-            e.Graphics.DrawString(cmbCliente.Text, font, Brushes.Black, new Rectangle(120, 280, 1000, 40));
+            e.Graphics.DrawString("Cliente:", font, Brushes.Black, new Rectangle(20, 200, 1000, 40));
+            e.Graphics.DrawString(cmbCliente.Text, font, Brushes.Black, new Rectangle(120, 200, 1000, 40));
 
-            e.Graphics.DrawString("No. Serie:", font, Brushes.Black, new Rectangle(20, 340, 1000, 40));
-            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(120, 340, 1000, 40));
+            e.Graphics.DrawString("No. Serie:", font, Brushes.Black, new Rectangle(20, 250, 1000, 40));
+            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(120, 250, 1000, 40));
 
-            e.Graphics.DrawString("Modelo:", font, Brushes.Black, new Rectangle(350, 340, 1000, 40));
-            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(450, 340, 1000, 40));
+            e.Graphics.DrawString("Modelo:", font, Brushes.Black, new Rectangle(350, 250, 1000, 40));
+            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(450, 250, 1000, 40));
 
-            e.Graphics.DrawString("Equipo:", font, Brushes.Black, new Rectangle(500, 280, 1000, 40));
-            e.Graphics.DrawString(txtEquipo.Text, font, Brushes.Black, new Rectangle(600, 280, 1000, 40));
+            e.Graphics.DrawString("Equipo:", font, Brushes.Black, new Rectangle(600, 200, 1000, 40));
+            e.Graphics.DrawString(txtEquipo.Text, font, Brushes.Black, new Rectangle(700, 200, 1000, 40));
 
-            e.Graphics.DrawString("Accesorios:", font, Brushes.Black, new Rectangle(20, 400, 1000, 40));
-            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 400, 1000, 40));
+            e.Graphics.DrawString("Accesorios:", font, Brushes.Black, new Rectangle(20, 300, 1000, 40));
+            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 300, 1000, 40));
 
-            e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 440, 1000, 40));
-            e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 440, 1000, 40));
+            e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 350, 1000, 40));
+            e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 350, 1000, 40));
             /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
             Bitmap varbmp = new Bitmap(este.Image);
             Image img = este.Image;
