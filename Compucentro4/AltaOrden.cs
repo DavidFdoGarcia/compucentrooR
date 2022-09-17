@@ -104,7 +104,7 @@ namespace Compucentro4
         {
             //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
             Font font = new Font("Century Gotic", 15, FontStyle.Bold);
-            e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
+            //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
             e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 100, 1000, 20));
 
             e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 150, 1000, 30));
@@ -130,6 +130,22 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 350, 1000, 40));
             e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 350, 1000, 40));
+
+            e.Graphics.DrawString("Condiciones generales", font, Brushes.Black, new Rectangle(20, 420, 1000, 40));
+            e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font, Brushes.Black, new Rectangle(20, 470, 900, 60));
+            e.Graphics.DrawString("II. Toda revisión de equipos fuera de su garantía genera un cargo, siendo el monto minimo de $100.00 + IVA el cual cambiará de acuerdo al modelo del equipo.", font, Brushes.Black, new Rectangle(20, 520, 900, 60));
+            e.Graphics.DrawString("III. Toda reparación que requiera cambio de parte, se solicitara el 50% de anticipo.", font, Brushes.Black, new Rectangle(20, 570, 900, 60));
+            e.Graphics.DrawString("IV. Toda revisión o reparación en la que no proceda la garantía tendra un costo.", font, Brushes.Black, new Rectangle(20, 620, 900, 60));
+            e.Graphics.DrawString("V. La garantía del equipo no cubre problemas de software(programas y aplicaciones) únicamente problemas de hardware(daños fisicos).", font, Brushes.Black, new Rectangle(20, 670, 900, 60));
+            e.Graphics.DrawString("VI. La garantía del equipo tampoco cubre el servicio de mantenimiento preventivo.", font, Brushes.Black, new Rectangle(20, 720, 900, 60));
+            e.Graphics.DrawString("VII. La garantía del servicio es de 30 días naturales.", font, Brushes.Black, new Rectangle(20, 770, 900, 60));
+            e.Graphics.DrawString("VIII. En el caso de la información contenida en el disco duro es RESPONSABILIDAD ABSOLUTA DEL CLIENTE.", font, Brushes.Black, new Rectangle(20, 820, 900, 60));
+            e.Graphics.DrawString("IX. Todo equipo que no se haya recogido después de 8 días de habérse notiicado al cliente, tendrá un cargo de almacenamiento de $15.00 por día", font, Brushes.Black, new Rectangle(20, 870, 900, 60));
+            e.Graphics.DrawString("X. Transcurridos 30 días naturales después de la notificación, el equipo se pasará al almacén de destrucción sin ninguna responsabilidad para Computadoras Centro de Servicio.", font, Brushes.Black, new Rectangle(20, 920, 900, 60));
+            e.Graphics.DrawString("I. El horario para seguimiento de reportes es de 10:00 a 19:00 hrs. de lunes a viernes, sábados de 10:00 a 14:00 hrs. a los teléfonos 444-817-5710, 444-128-6760, WhatsApp 444-427-3576.", font, Brushes.Black, new Rectangle(20, 970, 900, 60));
+
+            e.Graphics.DrawString("ACEPTO", font, Brushes.Black, new Rectangle(50, 1000, 900, 60));
+            e.Graphics.DrawString("NOMBRE Y FIRMA", font, Brushes.Black, new Rectangle(50, 1200, 900, 60));
             /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
             Bitmap varbmp = new Bitmap(este.Image);
             Image img = este.Image;
