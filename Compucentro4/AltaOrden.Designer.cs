@@ -70,6 +70,7 @@
             this.empleadoTableAdapter = new Compucentro4.empleadoTableAdapters.EmpleadoTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.datei = new System.Windows.Forms.DateTimePicker();
+            this.btnimprimir2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
@@ -313,7 +314,7 @@
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(111, 61);
             this.btnImprimir.TabIndex = 33;
-            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.Text = "Imprimir1";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
@@ -402,11 +403,22 @@
             this.datei.Size = new System.Drawing.Size(158, 27);
             this.datei.TabIndex = 40;
             // 
+            // btnimprimir2
+            // 
+            this.btnimprimir2.Location = new System.Drawing.Point(154, 629);
+            this.btnimprimir2.Name = "btnimprimir2";
+            this.btnimprimir2.Size = new System.Drawing.Size(111, 61);
+            this.btnimprimir2.TabIndex = 41;
+            this.btnimprimir2.Text = "Imprimir2";
+            this.btnimprimir2.UseVisualStyleBackColor = true;
+            this.btnimprimir2.Click += new System.EventHandler(this.btnimprimir2_Click);
+            // 
             // AltaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 704);
+            this.Controls.Add(this.btnimprimir2);
             this.Controls.Add(this.datei);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEquipo);
@@ -462,6 +474,7 @@
             this.Controls.SetChildIndex(this.txtEquipo, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.datei, 0);
+            this.Controls.SetChildIndex(this.btnimprimir2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
@@ -517,5 +530,6 @@
         private empleadoTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker datei;
+        private System.Windows.Forms.Button btnimprimir2;
     }
 }

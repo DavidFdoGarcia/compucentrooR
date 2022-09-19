@@ -125,6 +125,11 @@
       <DependentUpon>Cliente.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="dataTecnico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataTecnico.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +164,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Rango.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Refacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refacciones.Designer.cs">
+      <DependentUpon>Refacciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Tecnico.cs">
       <SubType>Form</SubType>
@@ -212,6 +229,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Refacciones.resx">
+      <DependentUpon>Refacciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tecnico.resx">
       <DependentUpon>Tecnico.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +253,17 @@
       <DependentUpon>Cliente.xsd</DependentUpon>
     </None>
     <None Include="Compucentro4_TemporaryKey.pfx" />
+    <None Include="dataTecnico.xsc">
+      <DependentUpon>dataTecnico.xsd</DependentUpon>
+    </None>
+    <None Include="dataTecnico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataTecnico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataTecnico.xss">
+      <DependentUpon>dataTecnico.xsd</DependentUpon>
+    </None>
     <None Include="empleado.xsc">
       <DependentUpon>empleado.xsd</DependentUpon>
     </None>

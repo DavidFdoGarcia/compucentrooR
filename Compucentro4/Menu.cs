@@ -60,5 +60,17 @@ namespace Compucentro4
             Tecnico AT = new Tecnico();
             AT.Show();
         }
+
+        private void altaDeReportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.Show();
+        }
+
+        private void altaDeRefaccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Refacciones refa = new Refacciones();
+            refa.Show();
+        }
     }
 }

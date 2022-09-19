@@ -132,23 +132,23 @@ namespace Compucentro4
             e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 340, 1000, 60));
             e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 340, 1000, 60));
 
-            e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 490, 1000, 60));
-            e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 530, 900, 60));
-            e.Graphics.DrawString("II. Toda revisión de equipos fuera de su garantía genera un cargo, siendo el monto minimo de $100.00 + IVA \n el cual cambiará de acuerdo al modelo del equipo.", font2, Brushes.Black, new Rectangle(20, 570, 900, 60));
-            e.Graphics.DrawString("III. Toda reparación que requiera cambio de parte, se solicitara el 50% de anticipo.", font2, Brushes.Black, new Rectangle(20, 600, 900, 60));
-            e.Graphics.DrawString("IV. Toda revisión o reparación en la que no proceda la garantía tendra un costo.", font2, Brushes.Black, new Rectangle(20, 640, 900, 60));
-            e.Graphics.DrawString("V. La garantía del equipo no cubre problemas de software(programas y aplicaciones) únicamente problemas de hardware (daños fisicos).", font2, Brushes.Black, new Rectangle(20, 680, 900, 60));
-            e.Graphics.DrawString("VI. La garantía del equipo tampoco cubre el servicio de mantenimiento preventivo.", font2, Brushes.Black, new Rectangle(20, 720, 900, 60));
+            e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 600, 1000, 60));
+            e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 620, 900, 60));
+            e.Graphics.DrawString("II. Toda revisión de equipos fuera de su garantía genera un cargo, siendo el monto minimo de $100.00 + IVA \n el cual cambiará de acuerdo al modelo del equipo.", font2, Brushes.Black, new Rectangle(20, 650, 900, 60));
+            e.Graphics.DrawString("III. Toda reparación que requiera cambio de parte, se solicitara el 50% de anticipo.", font2, Brushes.Black, new Rectangle(20, 680, 900, 60));
+            e.Graphics.DrawString("IV. Toda revisión o reparación en la que no proceda la garantía tendra un costo.", font2, Brushes.Black, new Rectangle(20, 700, 900, 60));
+            e.Graphics.DrawString("V. La garantía del equipo no cubre problemas de software(programas y aplicaciones) únicamente problemas de hardware (daños fisicos).", font2, Brushes.Black, new Rectangle(20, 720, 900, 60));
+            e.Graphics.DrawString("VI. La garantía del equipo tampoco cubre el servicio de mantenimiento preventivo.", font2, Brushes.Black, new Rectangle(20, 740, 900, 60));
             e.Graphics.DrawString("VII. La garantía del servicio es de 30 días naturales.", font2, Brushes.Black, new Rectangle(20, 760, 900, 60));
-            e.Graphics.DrawString("VIII. En el caso de la información contenida en el disco duro es RESPONSABILIDAD ABSOLUTA DEL CLIENTE.", font2, Brushes.Black, new Rectangle(20,800, 900, 60));
-            e.Graphics.DrawString("IX. Todo equipo que no se haya recogido después de 8 días de habérse notiicado al cliente, tendrá un cargo de almacenamiento de $15.00 por día", font2, Brushes.Black, new Rectangle(20, 840, 900, 60));
-            e.Graphics.DrawString("X. Transcurridos 30 días naturales después de la notificación, el equipo se pasará al almacén de destrucción sin ninguna  responsabilidad para \n Computadoras Centro de Servicio.", font2, Brushes.Black, new Rectangle(20, 870, 900, 60));
-            e.Graphics.DrawString("XI. El horario para seguimiento de reportes es de 10:00 a 19:00 hrs. de lunes a viernes, sábados de 10:00 a 14:00 hrs. \n a los teléfonos 444-817-5710, 444-128-6760, WhatsApp 444-427-3576.", font2, Brushes.Black, new Rectangle(20, 920, 900, 60));
+            e.Graphics.DrawString("VIII. En el caso de la información contenida en el disco duro es RESPONSABILIDAD ABSOLUTA DEL CLIENTE.", font2, Brushes.Black, new Rectangle(20,780, 900, 60));
+            e.Graphics.DrawString("IX. Todo equipo que no se haya recogido después de 8 días de habérse notiicado al cliente, tendrá un cargo de almacenamiento de $15.00 por día", font2, Brushes.Black, new Rectangle(20, 800, 900, 60));
+            e.Graphics.DrawString("X. Transcurridos 30 días naturales después de la notificación, el equipo se pasará al almacén de destrucción sin ninguna  responsabilidad para \n Computadoras Centro de Servicio.", font2, Brushes.Black, new Rectangle(20, 820, 900, 60));
+            e.Graphics.DrawString("XI. El horario para seguimiento de reportes es de 10:00 a 19:00 hrs. de lunes a viernes, sábados de 10:00 a 14:00 hrs. \n a los teléfonos 444-817-5710, 444-128-6760, WhatsApp 444-427-3576.", font2, Brushes.Black, new Rectangle(20, 850, 900, 60));
 
-            e.Graphics.DrawString("ACEPTO", font2, Brushes.Black, new Rectangle(80, 960, 800, 60));
+            e.Graphics.DrawString("ACEPTO", font2, Brushes.Black, new Rectangle(80, 880, 800, 60));
             e.Graphics.DrawString("NOMBRE Y FIRMA", font2, Brushes.Black, new Rectangle(50, 980, 900, 60));
 
-            e.Graphics.DrawString("RECIBE", font2, Brushes.Black, new Rectangle(630, 960, 800, 60));
+            e.Graphics.DrawString("RECIBE", font2, Brushes.Black, new Rectangle(630, 880, 880, 60));
             e.Graphics.DrawString(cmbAtendio.Text, font2, Brushes.Black, new Rectangle(600, 980, 900, 60));
             /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
             Bitmap varbmp = new Bitmap(este.Image);
@@ -156,6 +156,76 @@ namespace Compucentro4
             e.Graphics.DrawImage(img, new Rectangle(20, 30, 185, 50));
             e.Graphics.DrawString("*" + txtCodigo.Text + "*", font, Brushes.Black, new Rectangle(75, 85, 150, 20)); */
             
+        }
+
+        private void btnimprimir2_Click(object sender, EventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+            PrintDocument doc = new PrintDocument();
+            doc.PrintPage += Imprimir2;
+            pd.Document = doc;
+            if (pd.ShowDialog() == DialogResult.OK)
+            {
+                doc.Print();
+            }
+        }
+
+        private void Imprimir2(object sender, PrintPageEventArgs e)
+        {
+            //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
+            Font font = new Font("Arial", 12, FontStyle.Bold);
+            Font font2 = new Font("Arial", 8, FontStyle.Bold);
+            //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
+            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 700, 1000, 60));
+
+            e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 730, 1000, 60));
+            e.Graphics.DrawString(datei.Text, font, Brushes.Black, new Rectangle(205, 730, 1000, 60));
+
+            e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 730, 1000, 60));
+            e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 730, 1000, 60));
+
+            e.Graphics.DrawString("Cliente:", font, Brushes.Black, new Rectangle(20, 760, 1000, 60));
+            e.Graphics.DrawString(cmbCliente.Text, font, Brushes.Black, new Rectangle(160, 760, 1000, 60));
+
+            e.Graphics.DrawString("Equipo:", font, Brushes.Black, new Rectangle(600, 760, 1000, 60));
+            e.Graphics.DrawString(txtEquipo.Text, font, Brushes.Black, new Rectangle(700, 760, 1000, 60));
+
+            e.Graphics.DrawString("No. Serie:", font, Brushes.Black, new Rectangle(20, 790, 1000, 60));
+            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(120, 790, 1000, 60));
+
+            e.Graphics.DrawString("Modelo:", font, Brushes.Black, new Rectangle(350, 790, 1000, 60));
+            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(450, 790, 1000, 60));
+
+            e.Graphics.DrawString("Accesorios:", font, Brushes.Black, new Rectangle(20, 820, 1000, 60));
+            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 820, 1000, 60));
+
+            e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 850, 1000, 60));
+            e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 850, 1000, 60));
+
+            e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 120, 1000, 60));
+            e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 140, 900, 60));
+            e.Graphics.DrawString("II. Toda revisión de equipos fuera de su garantía genera un cargo, siendo el monto minimo de $100.00 + IVA \n el cual cambiará de acuerdo al modelo del equipo.", font2, Brushes.Black, new Rectangle(20, 160, 900, 60));
+            e.Graphics.DrawString("III. Toda reparación que requiera cambio de parte, se solicitara el 50% de anticipo.", font2, Brushes.Black, new Rectangle(20, 190, 900, 60));
+            e.Graphics.DrawString("IV. Toda revisión o reparación en la que no proceda la garantía tendra un costo.", font2, Brushes.Black, new Rectangle(20, 210, 900, 60));
+            e.Graphics.DrawString("V. La garantía del equipo no cubre problemas de software(programas y aplicaciones) únicamente problemas de hardware (daños fisicos).", font2, Brushes.Black, new Rectangle(20, 230, 900, 60));
+            e.Graphics.DrawString("VI. La garantía del equipo tampoco cubre el servicio de mantenimiento preventivo.", font2, Brushes.Black, new Rectangle(20, 250, 900, 60));
+            e.Graphics.DrawString("VII. La garantía del servicio es de 30 días naturales.", font2, Brushes.Black, new Rectangle(20, 270, 900, 60));
+            e.Graphics.DrawString("VIII. En el caso de la información contenida en el disco duro es RESPONSABILIDAD ABSOLUTA DEL CLIENTE.", font2, Brushes.Black, new Rectangle(20, 290, 900, 60));
+            e.Graphics.DrawString("IX. Todo equipo que no se haya recogido después de 8 días de habérse notificado al cliente, tendrá un cargo de almacenamiento de $15.00 por día", font2, Brushes.Black, new Rectangle(20, 310, 900, 60));
+            e.Graphics.DrawString("X. Transcurridos 30 días naturales después de la notificación, el equipo se pasará al almacén de destrucción sin ninguna  responsabilidad para \n Computadoras Centro de Servicio.", font2, Brushes.Black, new Rectangle(20, 330, 900, 60));
+            e.Graphics.DrawString("XI. El horario para seguimiento de reportes es de 10:00 a 19:00 hrs. de lunes a viernes, sábados de 10:00 a 14:00 hrs. \n a los teléfonos 444-817-5710, 444-128-6760, WhatsApp 444-427-3576.", font2, Brushes.Black, new Rectangle(20, 360, 900, 60));
+
+            e.Graphics.DrawString("ACEPTO", font2, Brushes.Black, new Rectangle(80, 390, 800, 60));
+            e.Graphics.DrawString("NOMBRE Y FIRMA", font2, Brushes.Black, new Rectangle(50, 410, 900, 60));
+
+            e.Graphics.DrawString("RECIBE", font2, Brushes.Black, new Rectangle(630, 390, 880, 60));
+            e.Graphics.DrawString(cmbAtendio.Text, font2, Brushes.Black, new Rectangle(600, 410, 900, 60));
+            /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
+            Bitmap varbmp = new Bitmap(este.Image);
+            Image img = este.Image;
+            e.Graphics.DrawImage(img, new Rectangle(20, 30, 185, 50));
+            e.Graphics.DrawString("*" + txtCodigo.Text + "*", font, Brushes.Black, new Rectangle(75, 85, 150, 20)); */
+
         }
     }
 }

@@ -43,3 +43,5 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\Cryst
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\FlashControlV71.dll
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.visor.resources
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Refacciones.resources
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Reportes.resources

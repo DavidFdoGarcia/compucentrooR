@@ -37,10 +37,12 @@
             this.altaDeRangosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeTécnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaDeReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaDeRefaccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +68,9 @@
             this.ordenesToolStripMenuItem,
             this.altaDeRangosToolStripMenuItem,
             this.altaDeEmpleadosToolStripMenuItem,
-            this.altaDeTécnicosToolStripMenuItem});
+            this.altaDeTécnicosToolStripMenuItem,
+            this.altaDeReportesToolStripMenuItem,
+            this.altaDeRefaccionToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.menuToolStripMenuItem.Text = "Altas";
@@ -113,6 +117,12 @@
             this.altaDeTécnicosToolStripMenuItem.Text = "Alta de Técnicos";
             this.altaDeTécnicosToolStripMenuItem.Click += new System.EventHandler(this.altaDeTécnicosToolStripMenuItem_Click);
             // 
+            // modificacionesToolStripMenuItem
+            // 
+            this.modificacionesToolStripMenuItem.Name = "modificacionesToolStripMenuItem";
+            this.modificacionesToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.modificacionesToolStripMenuItem.Text = "Modificaciones";
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -124,9 +134,16 @@
             // salirToolStripMenuItem1
             // 
             this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
+            // 
+            // altaDeReportesToolStripMenuItem
+            // 
+            this.altaDeReportesToolStripMenuItem.Name = "altaDeReportesToolStripMenuItem";
+            this.altaDeReportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaDeReportesToolStripMenuItem.Text = "Alta de Reportes";
+            this.altaDeReportesToolStripMenuItem.Click += new System.EventHandler(this.altaDeReportesToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -138,11 +155,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // modificacionesToolStripMenuItem
+            // altaDeRefaccionToolStripMenuItem
             // 
-            this.modificacionesToolStripMenuItem.Name = "modificacionesToolStripMenuItem";
-            this.modificacionesToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
-            this.modificacionesToolStripMenuItem.Text = "Modificaciones";
+            this.altaDeRefaccionToolStripMenuItem.Name = "altaDeRefaccionToolStripMenuItem";
+            this.altaDeRefaccionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaDeRefaccionToolStripMenuItem.Text = "Alta de Refaccion";
+            this.altaDeRefaccionToolStripMenuItem.Click += new System.EventHandler(this.altaDeRefaccionToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -179,6 +197,8 @@
         private System.Windows.Forms.ToolStripMenuItem altaDeTécnicosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem modificacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem altaDeReportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem altaDeRefaccionToolStripMenuItem;
     }
 }
 
