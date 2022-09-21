@@ -34,12 +34,9 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.rangoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rango = new Compucentro4.Rango();
             this.rangoTableAdapter = new Compucentro4.RangoTableAdapters.RangoTableAdapter();
-            this.cmbIDCargo = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -102,25 +99,6 @@
             this.label5.Text = "Dirrección";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(472, 181);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 21);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Cargo";
-            // 
-            // cmbCargo
-            // 
-            this.cmbCargo.DataSource = this.rangoBindingSource;
-            this.cmbCargo.DisplayMember = "cargo";
-            this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(559, 178);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(138, 29);
-            this.cmbCargo.TabIndex = 10;
-            // 
             // rangoBindingSource
             // 
             this.rangoBindingSource.DataMember = "Rango";
@@ -134,16 +112,6 @@
             // rangoTableAdapter
             // 
             this.rangoTableAdapter.ClearBeforeFill = true;
-            // 
-            // cmbIDCargo
-            // 
-            this.cmbIDCargo.DataSource = this.rangoBindingSource;
-            this.cmbIDCargo.DisplayMember = "idRango";
-            this.cmbIDCargo.FormattingEnabled = true;
-            this.cmbIDCargo.Location = new System.Drawing.Point(741, 89);
-            this.cmbIDCargo.Name = "cmbIDCargo";
-            this.cmbIDCargo.Size = new System.Drawing.Size(51, 29);
-            this.cmbIDCargo.TabIndex = 11;
             // 
             // comboBox1
             // 
@@ -197,9 +165,6 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cmbIDCargo);
-            this.Controls.Add(this.cmbCargo);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
@@ -213,9 +178,6 @@
             this.Controls.SetChildIndex(this.txtNombre, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtDireccion, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.cmbCargo, 0);
-            this.Controls.SetChildIndex(this.cmbIDCargo, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtTelefono, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
@@ -237,12 +199,9 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbCargo;
         private Rango rango;
         private System.Windows.Forms.BindingSource rangoBindingSource;
         private RangoTableAdapters.RangoTableAdapter rangoTableAdapter;
-        private System.Windows.Forms.ComboBox cmbIDCargo;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label7;

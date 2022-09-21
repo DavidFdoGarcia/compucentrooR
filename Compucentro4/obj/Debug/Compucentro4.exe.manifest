@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Compucentro4.exe" size="804848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Compucentro4.exe" size="859632">
       <assemblyIdentity name="Compucentro4" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+lI95l7snCCsHGv9R9VnXj8YBi8Q77r2EqzrU9UCbmM=</dsig:DigestValue>
+        <dsig:DigestValue>GPPM6udlhCYrR2Qy1Y1kMJtkbGFyg0i0G3/xROIatN8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -279,6 +279,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>zloQfa1DpBAe6z/oT/bRc6bVXzTwv/cltTY2bxDplBA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.xmlworker.dll" size="165376">
+      <assemblyIdentity name="itextsharp.xmlworker" version="5.5.13.3" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2jdN8bF62pZUYAmBrH+e/xNqMU+R2ZuHs75+UVmVFtg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

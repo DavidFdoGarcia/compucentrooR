@@ -74,6 +74,9 @@
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.3\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -123,6 +126,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="clienteee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>clienteee.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="dataTecnico.Designer.cs">
@@ -182,6 +190,11 @@
     </Compile>
     <Compile Include="Tecnico.Designer.cs">
       <DependentUpon>Tecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usu.xsd</DependentUpon>
     </Compile>
     <Compile Include="Usuaario2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -252,6 +265,17 @@
     <None Include="Cliente.xss">
       <DependentUpon>Cliente.xsd</DependentUpon>
     </None>
+    <None Include="clienteee.xsc">
+      <DependentUpon>clienteee.xsd</DependentUpon>
+    </None>
+    <None Include="clienteee.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>clienteee.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="clienteee.xss">
+      <DependentUpon>clienteee.xsd</DependentUpon>
+    </None>
     <None Include="Compucentro4_TemporaryKey.pfx" />
     <None Include="dataTecnico.xsc">
       <DependentUpon>dataTecnico.xsd</DependentUpon>
@@ -307,6 +331,17 @@
     <None Include="Rango.xss">
       <DependentUpon>Rango.xsd</DependentUpon>
     </None>
+    <None Include="usu.xsc">
+      <DependentUpon>usu.xsd</DependentUpon>
+    </None>
+    <None Include="usu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usu.xss">
+      <DependentUpon>usu.xsd</DependentUpon>
+    </None>
     <None Include="Usuaario2.xsc">
       <DependentUpon>Usuaario2.xsd</DependentUpon>
     </None>
@@ -340,6 +375,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="COMPUUCENTRO-_2_.ico" />
+    <None Include="Resources\index.html" />
     <None Include="Resources\COMPUUCENTRO %282%29.png" />
   </ItemGroup>
   <ItemGroup>

@@ -37,6 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtImporte = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -54,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(237, 31);
+            this.label1.Location = new System.Drawing.Point(134, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 38);
@@ -63,7 +65,7 @@
             // 
             // txtRefaccion
             // 
-            this.txtRefaccion.Location = new System.Drawing.Point(267, 117);
+            this.txtRefaccion.Location = new System.Drawing.Point(239, 157);
             this.txtRefaccion.Name = "txtRefaccion";
             this.txtRefaccion.Size = new System.Drawing.Size(220, 27);
             this.txtRefaccion.TabIndex = 7;
@@ -71,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 117);
+            this.label2.Location = new System.Drawing.Point(28, 157);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 21);
@@ -97,7 +99,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(294, 210);
+            this.txtCantidad.Location = new System.Drawing.Point(301, 222);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(102, 27);
             this.txtCantidad.TabIndex = 11;
@@ -105,7 +107,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(102, 210);
+            this.label4.Location = new System.Drawing.Point(71, 222);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 21);
@@ -129,11 +131,30 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Importe";
             // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(269, 94);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(102, 27);
+            this.txtOrden.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(126, 100);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 21);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Orden";
+            // 
             // Refacciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 485);
+            this.Controls.Add(this.txtOrden);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCantidad);
@@ -151,12 +172,14 @@
             this.Controls.SetChildIndex(this.txtRefaccion, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtPrecio, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
-            this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtCantidad, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtImporte, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.txtOrden, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +196,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtImporte;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtOrden;
+        private System.Windows.Forms.Label label6;
     }
 }

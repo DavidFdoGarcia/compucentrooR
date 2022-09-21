@@ -45,3 +45,4 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\Shock
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.visor.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Refacciones.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Reportes.resources
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\itextsharp.xmlworker.dll

@@ -33,11 +33,9 @@
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cliente = new Compucentro4.Cliente();
             this.usuarioTableAdapter = new Compucentro4.ClienteTableAdapters.UsuarioTableAdapter();
-            this.cmbIDCliente = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbSerie = new System.Windows.Forms.ComboBox();
             this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,6 +69,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.datei = new System.Windows.Forms.DateTimePicker();
             this.btnimprimir2 = new System.Windows.Forms.Button();
+            this.usu = new Compucentro4.usu();
+            this.usuarioBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter2 = new Compucentro4.usuTableAdapters.UsuarioTableAdapter();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.clienteee = new Compucentro4.clienteee();
+            this.usuarioBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter3 = new Compucentro4.clienteeeTableAdapters.UsuarioTableAdapter();
+            this.cmbIDCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
@@ -80,6 +86,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuaario2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -119,16 +129,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Cliente";
             // 
-            // cmbCliente
-            // 
-            this.cmbCliente.DataSource = this.usuarioBindingSource;
-            this.cmbCliente.DisplayMember = "Nombre";
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(176, 207);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(290, 29);
-            this.cmbCliente.TabIndex = 19;
-            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
@@ -142,16 +142,6 @@
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // cmbIDCliente
-            // 
-            this.cmbIDCliente.DataSource = this.usuarioBindingSource;
-            this.cmbIDCliente.DisplayMember = "idUsuario";
-            this.cmbIDCliente.FormattingEnabled = true;
-            this.cmbIDCliente.Location = new System.Drawing.Point(504, 207);
-            this.cmbIDCliente.Name = "cmbIDCliente";
-            this.cmbIDCliente.Size = new System.Drawing.Size(63, 29);
-            this.cmbIDCliente.TabIndex = 20;
             // 
             // label4
             // 
@@ -413,11 +403,61 @@
             this.btnimprimir2.UseVisualStyleBackColor = true;
             this.btnimprimir2.Click += new System.EventHandler(this.btnimprimir2_Click);
             // 
+            // usu
+            // 
+            this.usu.DataSetName = "usu";
+            this.usu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioBindingSource2
+            // 
+            this.usuarioBindingSource2.DataMember = "Usuario";
+            this.usuarioBindingSource2.DataSource = this.usu;
+            // 
+            // usuarioTableAdapter2
+            // 
+            this.usuarioTableAdapter2.ClearBeforeFill = true;
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.DataSource = this.usuarioBindingSource3;
+            this.cmbCliente.DisplayMember = "Nombre";
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(132, 204);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(285, 29);
+            this.cmbCliente.TabIndex = 42;
+            // 
+            // clienteee
+            // 
+            this.clienteee.DataSetName = "clienteee";
+            this.clienteee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioBindingSource3
+            // 
+            this.usuarioBindingSource3.DataMember = "Usuario";
+            this.usuarioBindingSource3.DataSource = this.clienteee;
+            // 
+            // usuarioTableAdapter3
+            // 
+            this.usuarioTableAdapter3.ClearBeforeFill = true;
+            // 
+            // cmbIDCliente
+            // 
+            this.cmbIDCliente.DataSource = this.usuarioBindingSource3;
+            this.cmbIDCliente.DisplayMember = "idUsuario";
+            this.cmbIDCliente.FormattingEnabled = true;
+            this.cmbIDCliente.Location = new System.Drawing.Point(459, 207);
+            this.cmbIDCliente.Name = "cmbIDCliente";
+            this.cmbIDCliente.Size = new System.Drawing.Size(84, 29);
+            this.cmbIDCliente.TabIndex = 43;
+            // 
             // AltaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 704);
+            this.Controls.Add(this.cmbIDCliente);
+            this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.btnimprimir2);
             this.Controls.Add(this.datei);
             this.Controls.Add(this.label2);
@@ -439,8 +479,6 @@
             this.Controls.Add(this.cmbIDEquipo);
             this.Controls.Add(this.cmbSerie);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbIDCliente);
-            this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtOrden);
             this.Controls.Add(this.label7);
@@ -451,8 +489,6 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtOrden, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.cmbCliente, 0);
-            this.Controls.SetChildIndex(this.cmbIDCliente, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.cmbSerie, 0);
             this.Controls.SetChildIndex(this.cmbIDEquipo, 0);
@@ -475,6 +511,8 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.datei, 0);
             this.Controls.SetChildIndex(this.btnimprimir2, 0);
+            this.Controls.SetChildIndex(this.cmbCliente, 0);
+            this.Controls.SetChildIndex(this.cmbIDCliente, 0);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
@@ -484,6 +522,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuaario2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,11 +535,9 @@
         private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbCliente;
         private Cliente cliente;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private ClienteTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
-        private System.Windows.Forms.ComboBox cmbIDCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbSerie;
         private Equipo equipo;
@@ -531,5 +571,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker datei;
         private System.Windows.Forms.Button btnimprimir2;
+        private usu usu;
+        private System.Windows.Forms.BindingSource usuarioBindingSource2;
+        private usuTableAdapters.UsuarioTableAdapter usuarioTableAdapter2;
+        private System.Windows.Forms.ComboBox cmbCliente;
+        private clienteee clienteee;
+        private System.Windows.Forms.BindingSource usuarioBindingSource3;
+        private clienteeeTableAdapters.UsuarioTableAdapter usuarioTableAdapter3;
+        private System.Windows.Forms.ComboBox cmbIDCliente;
     }
 }

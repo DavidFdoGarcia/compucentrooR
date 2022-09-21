@@ -30,9 +30,7 @@ namespace Compucentro4
 
         private void AltaUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'rango._Rango' Puede moverla o quitarla según sea necesario.
-            this.rangoTableAdapter.Fill(this.rango._Rango);
-
+           
         }
 
         //Métodos
@@ -40,9 +38,8 @@ namespace Compucentro4
         public void InsertaUsuario()
         {
             Conexion.Conectar();
-            string insertar = "insert into Usuario(idRango,Nombre,Direccion,Telefono,Celular) values(@rango,@nombre,@direccion,@telefono,@celular)";
+            string insertar = "insert into Usuario(Nombre,Direccion,Telefono,Celular) values(@nombre,@direccion,@telefono,@celular)";
             SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
-            cmd1.Parameters.AddWithValue("@rango", cmbIDCargo.Text);
             cmd1.Parameters.AddWithValue("@nombre", txtNombre.Text);
             cmd1.Parameters.AddWithValue("@direccion", txtDireccion.Text);
             cmd1.Parameters.AddWithValue("@telefono", txtTelefono.Text);

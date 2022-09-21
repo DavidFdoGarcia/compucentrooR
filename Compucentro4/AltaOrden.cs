@@ -22,14 +22,15 @@ namespace Compucentro4
 
         private void AltaOrden_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'clienteee.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter3.Fill(this.clienteee.Usuario);
+
             // TODO: esta línea de código carga datos en la tabla 'empleado.Empleado' Puede moverla o quitarla según sea necesario.
             this.empleadoTableAdapter.Fill(this.empleado.Empleado);
-            // TODO: esta línea de código carga datos en la tabla 'usuaario2.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter1.Fill(this.usuaario2.Usuario);
+            
             // TODO: esta línea de código carga datos en la tabla 'equipo._Equipo' Puede moverla o quitarla según sea necesario.
             this.equipoTableAdapter.Fill(this.equipo._Equipo);
-            // TODO: esta línea de código carga datos en la tabla 'cliente.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.cliente.Usuario);
+
 
         }
 

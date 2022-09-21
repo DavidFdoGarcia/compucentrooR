@@ -23,11 +23,14 @@ namespace Compucentro4
 
         }
 
+
+
         public void InsertaRefaccion()
         {
             Conexion.Conectar();
-            string insertar = "insert into Refaccion(Nombre,Precio,Cantidad,Importe) values(@Nombre,@Precio,@Cantidad,@Importe)";
+            string insertar = "insert into Refaccion(idOrden,Nombre,Precio,Cantidad,Importe) values(@idOrden,@Nombre,@Precio,@Cantidad,@Importe)";
             SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@idOrden", txtOrden.Text);
             cmd1.Parameters.AddWithValue("@Nombre", txtRefaccion.Text);
             cmd1.Parameters.AddWithValue("@Precio", txtPrecio.Text);
             cmd1.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
