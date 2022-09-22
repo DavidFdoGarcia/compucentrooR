@@ -106,8 +106,10 @@ namespace Compucentro4
             //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
             Font font = new Font("Arial", 12, FontStyle.Bold);
             Font font2 = new Font("Arial", 8, FontStyle.Bold);
-            //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
-            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 120, 1000, 60));
+            // 
+            int y = 20;
+            e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, 5, 850, 80));
+            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, y+=60, 1000, 60));
 
             e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 140, 1000, 60));
             e.Graphics.DrawString(datei.Text, font, Brushes.Black, new Rectangle(205, 140, 1000, 60));
@@ -132,6 +134,8 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 340, 1000, 60));
             e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 340, 1000, 60));
+
+            e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 420, 850, 50));
 
             e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 600, 1000, 60));
             e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 620, 900, 60));
@@ -176,32 +180,25 @@ namespace Compucentro4
             //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
             Font font = new Font("Arial", 12, FontStyle.Bold);
             Font font2 = new Font("Arial", 8, FontStyle.Bold);
-            //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            e.Graphics.DrawImage(pictureBox1.Image, 2, 5);
-            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, 700, 1000, 60));
+            //  
+            int y = 20;
+            e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, y+=680, 850, 80));
+            e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, y+=70, 1000, 60));
 
-            e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 730, 1000, 60));
-            e.Graphics.DrawString(datei.Text, font, Brushes.Black, new Rectangle(205, 730, 1000, 60));
+            e.Graphics.DrawString("No.Orden: " + txtOrden.Text, font, Brushes.Black, new Rectangle(550, y + 30, 1000, 60));
+            e.Graphics.DrawString("Fecha de Ingreso: " + datei.Text, font, Brushes.Black, new Rectangle(20, y+=30, 1000, 60));
 
-            e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 730, 1000, 60));
-            e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 730, 1000, 60));
+            e.Graphics.DrawString("Equipo: " + txtEquipo.Text, font, Brushes.Black, new Rectangle(550, y+30, 1000, 60));
+            e.Graphics.DrawString("Cliente: " + cmbCliente.Text, font, Brushes.Black, new Rectangle(20, y+=30, 1000, 60));
 
-            e.Graphics.DrawString("Cliente:", font, Brushes.Black, new Rectangle(20, 760, 1000, 60));
-            e.Graphics.DrawString(cmbCliente.Text, font, Brushes.Black, new Rectangle(160, 760, 1000, 60));
+            e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(550, y+30, 1000, 60));
+            e.Graphics.DrawString("No. Serie: " + cmbSerie.Text, font, Brushes.Black, new Rectangle(20, y+=30, 1000, 60));
 
-            e.Graphics.DrawString("Equipo:", font, Brushes.Black, new Rectangle(600, 760, 1000, 60));
-            e.Graphics.DrawString(txtEquipo.Text, font, Brushes.Black, new Rectangle(700, 760, 1000, 60));
+            e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y+=30, 1000, 60));
 
-            e.Graphics.DrawString("No. Serie:", font, Brushes.Black, new Rectangle(20, 790, 1000, 60));
-            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(120, 790, 1000, 60));
+            e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y+=50, 1000, 60));
 
-            e.Graphics.DrawString("Modelo:", font, Brushes.Black, new Rectangle(350, 790, 1000, 60));
-            e.Graphics.DrawString(cmbSerie.Text, font, Brushes.Black, new Rectangle(450, 790, 1000, 60));
-
-            e.Graphics.DrawString("Accesorios:", font, Brushes.Black, new Rectangle(20, 820, 1000, 60));
-            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 820, 1000, 60));
-
-            e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 850, 1000, 60));
-            e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 850, 1000, 60));
+            e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 980, 850, 50));
 
             e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 120, 1000, 60));
             e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 140, 900, 60));

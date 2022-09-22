@@ -375,6 +375,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="COMPUUCENTRO-_2_.ico" />
+    <None Include="Resources\PIEPAGINA_COMPUCENTRO2.jpg" />
+    <None Include="Resources\PIEPAGINA_COMPUCENTRO1.jpg" />
+    <None Include="Resources\PIEPAGINA_COMPUCENTRO.jpg" />
+    <None Include="Resources\CABECERA_COMPUCENTRO1.jpg" />
+    <None Include="Resources\CABECERA_COMPUCENTRO.jpg" />
     <None Include="Resources\index.html" />
     <None Include="Resources\COMPUUCENTRO %282%29.png" />
   </ItemGroup>

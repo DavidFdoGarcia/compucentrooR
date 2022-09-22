@@ -83,6 +83,26 @@ namespace Compucentro4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CABECERA_COMPUCENTRO {
+            get {
+                object obj = ResourceManager.GetObject("CABECERA_COMPUCENTRO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CABECERA_COMPUCENTRO1 {
+            get {
+                object obj = ResourceManager.GetObject("CABECERA_COMPUCENTRO1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap COMPUUCENTRO__2_ {
             get {
                 object obj = ResourceManager.GetObject("COMPUUCENTRO (2)", resourceCulture);
@@ -106,6 +126,7 @@ namespace Compucentro4.Properties {
         ///&lt;head&gt;
         ///    &lt;title&gt;Title of the document&lt;/title&gt;
         ///    &lt;style&gt;
+        ///
         ///        table.border {
         ///            border-collapse: collapse;
         ///        }
@@ -123,12 +144,41 @@ namespace Compucentro4.Properties {
         ///&lt;/head&gt;
         ///&lt;body&gt;
         ///    &lt;table style=&quot;width:100%&quot;&gt;
-        ///        &lt;tr&gt;
-        ///            &lt;td  [resto de la cadena truncado]&quot;;.
+        ///      [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string index {
             get {
                 return ResourceManager.GetString("index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PIEPAGINA_COMPUCENTRO {
+            get {
+                object obj = ResourceManager.GetObject("PIEPAGINA_COMPUCENTRO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PIEPAGINA_COMPUCENTRO1 {
+            get {
+                object obj = ResourceManager.GetObject("PIEPAGINA_COMPUCENTRO1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PIEPAGINA_COMPUCENTRO2 {
+            get {
+                object obj = ResourceManager.GetObject("PIEPAGINA_COMPUCENTRO2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
