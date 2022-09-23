@@ -54,6 +54,33 @@ namespace Compucentro4
 
         }
 
+        public void InsertaRefaccion()
+        {
+            double imp = double.Parse(txtPrecio.Text) * double.Parse(txtCantidad.Text);
+            Conexion.Conectar();
+            string insertar = "insert into Refaccion(idOrden,Nombre,Precio,Cantidad,Importe) values(@idOrden,@Nombre,@Precio,@Cantidad,@Importe)";
+            SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@idOrden", txtOrden.Text);
+            cmd1.Parameters.AddWithValue("@Nombre", txtPieza.Text);
+            cmd1.Parameters.AddWithValue("@Precio", txtPrecio.Text);
+            cmd1.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+            cmd1.Parameters.AddWithValue("@Importe", imp);
+            cmd1.ExecuteNonQuery();
+           // MessageBox.Show("La Refacción fue agregada con exito");
+        }
+
+        public void InsertaReporte()
+        {
+            Conexion.Conectar();
+            string insertar = "insert into Reporte(idOrden,idOperador,DescripcionFalla) values(@idOrden,@idOperador,@DescripcionFalla)";
+            SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@idOrden", txtOrden.Text);
+            cmd1.Parameters.AddWithValue("@idOperador", cmbReparoID.Text);
+            cmd1.Parameters.AddWithValue("@DescripcionFalla", txtReporte.Text);
+            cmd1.ExecuteNonQuery();
+            MessageBox.Show("El reporte fue agregado con exito");
+        }
+
         public void cargardatagridEditar() //todas las facturas
         {
 
@@ -95,6 +122,7 @@ namespace Compucentro4
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
+            InsertaRefaccion();
             /*int indice_fila = dgvver.Rows.Add();
             DataGridViewRow row = dgvver.Rows[indice_fila];
 
@@ -276,6 +304,16 @@ namespace Compucentro4
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            InsertaReporte();
+        }
+
+        private void pictureCabecera_Click(object sender, EventArgs e)
         {
 
         }
