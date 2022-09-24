@@ -34,15 +34,15 @@
             this.altaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeEquiiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDeRangosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeTécnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaDeReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDeReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.altaDeRefaccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaOrdenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
+            this.consultasToolStripMenuItem,
             this.modificacionesToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -66,11 +67,9 @@
             this.altaDeClientesToolStripMenuItem,
             this.altaDeEquiiposToolStripMenuItem,
             this.ordenesToolStripMenuItem,
-            this.altaDeRangosToolStripMenuItem,
             this.altaDeEmpleadosToolStripMenuItem,
             this.altaDeTécnicosToolStripMenuItem,
-            this.altaDeReportesToolStripMenuItem,
-            this.altaDeRefaccionToolStripMenuItem});
+            this.altaDeReportesToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.menuToolStripMenuItem.Text = "Altas";
@@ -96,13 +95,6 @@
             this.ordenesToolStripMenuItem.Text = "Ordenes";
             this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
             // 
-            // altaDeRangosToolStripMenuItem
-            // 
-            this.altaDeRangosToolStripMenuItem.Name = "altaDeRangosToolStripMenuItem";
-            this.altaDeRangosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.altaDeRangosToolStripMenuItem.Text = "Alta de Rangos";
-            this.altaDeRangosToolStripMenuItem.Click += new System.EventHandler(this.altaDeRangosToolStripMenuItem_Click);
-            // 
             // altaDeEmpleadosToolStripMenuItem
             // 
             this.altaDeEmpleadosToolStripMenuItem.Name = "altaDeEmpleadosToolStripMenuItem";
@@ -116,6 +108,13 @@
             this.altaDeTécnicosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaDeTécnicosToolStripMenuItem.Text = "Alta de Técnicos";
             this.altaDeTécnicosToolStripMenuItem.Click += new System.EventHandler(this.altaDeTécnicosToolStripMenuItem_Click);
+            // 
+            // altaDeReportesToolStripMenuItem
+            // 
+            this.altaDeReportesToolStripMenuItem.Name = "altaDeReportesToolStripMenuItem";
+            this.altaDeReportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaDeReportesToolStripMenuItem.Text = "Alta de Reportes";
+            this.altaDeReportesToolStripMenuItem.Click += new System.EventHandler(this.altaDeReportesToolStripMenuItem_Click);
             // 
             // modificacionesToolStripMenuItem
             // 
@@ -138,13 +137,6 @@
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
             // 
-            // altaDeReportesToolStripMenuItem
-            // 
-            this.altaDeReportesToolStripMenuItem.Name = "altaDeReportesToolStripMenuItem";
-            this.altaDeReportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.altaDeReportesToolStripMenuItem.Text = "Alta de Reportes";
-            this.altaDeReportesToolStripMenuItem.Click += new System.EventHandler(this.altaDeReportesToolStripMenuItem_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Compucentro4.Properties.Resources.COMPUUCENTRO__2_;
@@ -155,12 +147,20 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // altaDeRefaccionToolStripMenuItem
+            // consultasToolStripMenuItem
             // 
-            this.altaDeRefaccionToolStripMenuItem.Name = "altaDeRefaccionToolStripMenuItem";
-            this.altaDeRefaccionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.altaDeRefaccionToolStripMenuItem.Text = "Alta de Refaccion";
-            this.altaDeRefaccionToolStripMenuItem.Click += new System.EventHandler(this.altaDeRefaccionToolStripMenuItem_Click);
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaOrdenesToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // consultaOrdenesToolStripMenuItem
+            // 
+            this.consultaOrdenesToolStripMenuItem.Name = "consultaOrdenesToolStripMenuItem";
+            this.consultaOrdenesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.consultaOrdenesToolStripMenuItem.Text = "Consulta Ordenes y Refacciones";
+            this.consultaOrdenesToolStripMenuItem.Click += new System.EventHandler(this.consultaOrdenesToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -190,7 +190,6 @@
         private System.Windows.Forms.ToolStripMenuItem altaDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaDeEquiiposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDeRangosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem altaDeEmpleadosToolStripMenuItem;
@@ -198,7 +197,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem modificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaDeReportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDeRefaccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaOrdenesToolStripMenuItem;
     }
 }
 

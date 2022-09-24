@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbReparo = new System.Windows.Forms.ComboBox();
@@ -79,6 +79,7 @@
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureCabecera = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).BeginInit();
@@ -91,15 +92,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(509, 652);
+            this.btnSalir.Location = new System.Drawing.Point(531, 684);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(359, 650);
+            this.btnGuardar.Location = new System.Drawing.Point(381, 682);
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
@@ -160,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 597);
+            this.label2.Location = new System.Drawing.Point(30, 563);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 21);
@@ -169,7 +171,7 @@
             // 
             // txtReporte
             // 
-            this.txtReporte.Location = new System.Drawing.Point(158, 591);
+            this.txtReporte.Location = new System.Drawing.Point(156, 557);
             this.txtReporte.Name = "txtReporte";
             this.txtReporte.Size = new System.Drawing.Size(468, 27);
             this.txtReporte.TabIndex = 13;
@@ -195,34 +197,34 @@
             // 
             this.dgvver.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvver.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvver.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvver.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvver.GridColor = System.Drawing.Color.Silver;
             this.dgvver.Location = new System.Drawing.Point(12, 156);
             this.dgvver.Name = "dgvver";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvver.RowTemplate.Height = 24;
             this.dgvver.Size = new System.Drawing.Size(455, 117);
             this.dgvver.TabIndex = 16;
@@ -239,7 +241,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(208, 650);
+            this.btnImprimir.Location = new System.Drawing.Point(230, 682);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(109, 63);
             this.btnImprimir.TabIndex = 18;
@@ -324,7 +326,7 @@
             // txtModelo
             // 
             this.txtModelo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource1, "Modelo", true));
-            this.txtModelo.Location = new System.Drawing.Point(158, 515);
+            this.txtModelo.Location = new System.Drawing.Point(156, 499);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(175, 27);
             this.txtModelo.TabIndex = 29;
@@ -347,7 +349,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 521);
+            this.label9.Location = new System.Drawing.Point(30, 505);
             this.label9.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 21);
@@ -357,7 +359,7 @@
             // txtSerie
             // 
             this.txtSerie.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource1, "Serie", true));
-            this.txtSerie.Location = new System.Drawing.Point(453, 515);
+            this.txtSerie.Location = new System.Drawing.Point(451, 499);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(175, 27);
             this.txtSerie.TabIndex = 31;
@@ -365,7 +367,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(383, 518);
+            this.label10.Location = new System.Drawing.Point(381, 502);
             this.label10.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 21);
@@ -408,6 +410,7 @@
             // txtPieza
             // 
             this.txtPieza.Location = new System.Drawing.Point(560, 156);
+            this.txtPieza.MaxLength = 20;
             this.txtPieza.Name = "txtPieza";
             this.txtPieza.Size = new System.Drawing.Size(131, 27);
             this.txtPieza.TabIndex = 35;
@@ -425,6 +428,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(586, 259);
+            this.txtPrecio.MaxLength = 10;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(105, 27);
             this.txtPrecio.TabIndex = 37;
@@ -442,6 +446,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(608, 208);
+            this.txtCantidad.MaxLength = 5;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(83, 27);
             this.txtCantidad.TabIndex = 39;
@@ -489,11 +494,21 @@
             this.pictureCabecera.TabStop = false;
             this.pictureCabecera.Click += new System.EventHandler(this.pictureCabecera_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Compucentro4.Properties.Resources.PIEPAGINA_COMPUCENTRO2;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 604);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(706, 63);
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 749);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureCabecera);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label13);
@@ -561,6 +576,7 @@
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.txtMonto, 0);
             this.Controls.SetChildIndex(this.pictureCabecera, 0);
+            this.Controls.SetChildIndex(this.pictureBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).EndInit();
@@ -573,6 +589,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,5 +644,6 @@
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureCabecera;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

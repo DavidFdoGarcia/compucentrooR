@@ -25,12 +25,7 @@ namespace Compucentro4
             }
         }
 
-        private void altaDeRangosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AltaRango AR = new AltaRango();
-            AR.Show();
-        }
-
+ 
         private void altaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AltaUsuario AS = new AltaUsuario();
@@ -67,10 +62,10 @@ namespace Compucentro4
             r.Show();
         }
 
-        private void altaDeRefaccionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void consultaOrdenesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Refacciones refa = new Refacciones();
-            refa.Show();
+            ConsultaOrden CO = new ConsultaOrden();
+            CO.Show();
         }
     }
 }

@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>G:\Programas\COMPUCENTRO\</PublishUrl>
+    <PublishUrl>G:\Programas\installer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -104,12 +104,6 @@
     <Compile Include="AltaOrden.Designer.cs">
       <DependentUpon>AltaOrden.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaRango.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AltaRango.Designer.cs">
-      <DependentUpon>AltaRango.cs</DependentUpon>
-    </Compile>
     <Compile Include="AltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +116,12 @@
     <Compile Include="Base.Designer.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseConsulta.Designer.cs">
+      <DependentUpon>BaseConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +133,12 @@
       <DependentUpon>clienteee.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="ConsultaOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaOrden.Designer.cs">
+      <DependentUpon>ConsultaOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataTecnico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -173,12 +179,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Rango.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Refacciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Refacciones.Designer.cs">
-      <DependentUpon>Refacciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,14 +213,17 @@
     <EmbeddedResource Include="AltaOrden.resx">
       <DependentUpon>AltaOrden.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltaRango.resx">
-      <DependentUpon>AltaRango.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseConsulta.resx">
+      <DependentUpon>BaseConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaOrden.resx">
+      <DependentUpon>ConsultaOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
@@ -242,9 +245,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Refacciones.resx">
-      <DependentUpon>Refacciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
