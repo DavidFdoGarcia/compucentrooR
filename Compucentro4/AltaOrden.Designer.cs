@@ -163,7 +163,7 @@
             this.cmbSerie.Location = new System.Drawing.Point(176, 274);
             this.cmbSerie.Name = "cmbSerie";
             this.cmbSerie.Size = new System.Drawing.Size(290, 29);
-            this.cmbSerie.TabIndex = 22;
+            this.cmbSerie.TabIndex = 2;
             // 
             // equipoBindingSource
             // 
@@ -205,7 +205,7 @@
             this.txtComplemento.Margin = new System.Windows.Forms.Padding(5);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(445, 27);
-            this.txtComplemento.TabIndex = 25;
+            this.txtComplemento.TabIndex = 5;
             // 
             // txtFalla
             // 
@@ -213,7 +213,7 @@
             this.txtFalla.Margin = new System.Windows.Forms.Padding(5);
             this.txtFalla.Name = "txtFalla";
             this.txtFalla.Size = new System.Drawing.Size(498, 27);
-            this.txtFalla.TabIndex = 27;
+            this.txtFalla.TabIndex = 6;
             // 
             // label6
             // 
@@ -244,7 +244,7 @@
             this.cmbStatus.Location = new System.Drawing.Point(605, 248);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(121, 29);
-            this.cmbStatus.TabIndex = 29;
+            this.cmbStatus.TabIndex = 8;
             // 
             // label9
             // 
@@ -264,7 +264,7 @@
             this.cmbAtendio.Location = new System.Drawing.Point(218, 510);
             this.cmbAtendio.Name = "cmbAtendio";
             this.cmbAtendio.Size = new System.Drawing.Size(248, 29);
-            this.cmbAtendio.TabIndex = 31;
+            this.cmbAtendio.TabIndex = 7;
             // 
             // empleadoBindingSource
             // 
@@ -342,7 +342,7 @@
             this.txtModelo.Margin = new System.Windows.Forms.Padding(5);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(118, 27);
-            this.txtModelo.TabIndex = 36;
+            this.txtModelo.TabIndex = 3;
             // 
             // label1
             // 
@@ -361,7 +361,7 @@
             this.txtEquipo.Margin = new System.Windows.Forms.Padding(5);
             this.txtEquipo.Name = "txtEquipo";
             this.txtEquipo.Size = new System.Drawing.Size(173, 27);
-            this.txtEquipo.TabIndex = 38;
+            this.txtEquipo.TabIndex = 4;
             // 
             // label10
             // 
@@ -427,7 +427,7 @@
             this.cmbCliente.Location = new System.Drawing.Point(132, 204);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(285, 29);
-            this.cmbCliente.TabIndex = 42;
+            this.cmbCliente.TabIndex = 1;
             // 
             // usuarioBindingSource3
             // 

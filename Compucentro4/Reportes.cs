@@ -123,6 +123,11 @@ namespace Compucentro4
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             InsertaRefaccion();
+            InsertaRefaccion();
+            InsertaRefaccion();
+            InsertaRefaccion();
+            InsertaRefaccion();
+            InsertaRefaccion();
             /*int indice_fila = dgvver.Rows.Add();
             DataGridViewRow row = dgvver.Rows[indice_fila];
 

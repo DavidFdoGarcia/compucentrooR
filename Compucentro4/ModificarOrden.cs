@@ -56,5 +56,20 @@ namespace Compucentro4
         {
             MorificarOrden();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtOrden_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

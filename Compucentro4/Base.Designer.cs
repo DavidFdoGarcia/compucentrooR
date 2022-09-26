@@ -58,6 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(940, 422);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnSalir);
@@ -66,6 +67,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Base";
             this.Text = "Base";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.ResumeLayout(false);
 
         }

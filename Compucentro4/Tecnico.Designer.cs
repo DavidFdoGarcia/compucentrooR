@@ -52,7 +52,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(364, 27);
-            this.txtTelefono.TabIndex = 19;
+            this.txtTelefono.TabIndex = 2;
             // 
             // label7
             // 
@@ -70,7 +70,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(5);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(430, 27);
-            this.txtDireccion.TabIndex = 17;
+            this.txtDireccion.TabIndex = 3;
             // 
             // label5
             // 
@@ -88,7 +88,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(441, 27);
-            this.txtNombre.TabIndex = 15;
+            this.txtNombre.TabIndex = 1;
             // 
             // label2
             // 

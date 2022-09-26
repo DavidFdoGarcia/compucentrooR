@@ -124,20 +124,23 @@
   <data name="PIEPAGINA_COMPUCENTRO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PIEPAGINA_COMPUCENTRO1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ax1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ax1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CABECERA_COMPUCENTRO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CABECERA_COMPUCENTRO1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="index" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\index.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="CABECERA_COMPUCENTRO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CABECERA_COMPUCENTRO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ax1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ax1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="encabezado2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\encabezado2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="index" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\index.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="PIEPAGINA_COMPUCENTRO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PIEPAGINA_COMPUCENTRO2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ax.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +148,7 @@
   <data name="PIEPAGINA_COMPUCENTRO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PIEPAGINA_COMPUCENTRO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PIEPAGINA_COMPUCENTRO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PIEPAGINA_COMPUCENTRO2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-ppt-technology-sense-line-background-picture-image_968881" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-ppt-technology-sense-line-background-picture-image_968881.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

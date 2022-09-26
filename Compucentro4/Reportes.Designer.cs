@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbReparo = new System.Windows.Forms.ComboBox();
@@ -174,14 +174,14 @@
             this.txtReporte.Location = new System.Drawing.Point(156, 557);
             this.txtReporte.Name = "txtReporte";
             this.txtReporte.Size = new System.Drawing.Size(468, 27);
-            this.txtReporte.TabIndex = 13;
+            this.txtReporte.TabIndex = 9;
             // 
             // txtOrden
             // 
             this.txtOrden.Location = new System.Drawing.Point(585, 90);
             this.txtOrden.Name = "txtOrden";
             this.txtOrden.Size = new System.Drawing.Size(83, 27);
-            this.txtOrden.TabIndex = 15;
+            this.txtOrden.TabIndex = 1;
             // 
             // label3
             // 
@@ -197,34 +197,34 @@
             // 
             this.dgvver.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvver.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvver.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvver.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvver.GridColor = System.Drawing.Color.Silver;
             this.dgvver.Location = new System.Drawing.Point(12, 156);
             this.dgvver.Name = "dgvver";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvver.RowTemplate.Height = 24;
             this.dgvver.Size = new System.Drawing.Size(455, 117);
             this.dgvver.TabIndex = 16;
@@ -267,7 +267,7 @@
             this.cmbCliente.Location = new System.Drawing.Point(121, 311);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(258, 29);
-            this.cmbCliente.TabIndex = 21;
+            this.cmbCliente.TabIndex = 5;
             // 
             // usuarioBindingSource2
             // 
@@ -329,7 +329,7 @@
             this.txtModelo.Location = new System.Drawing.Point(156, 499);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(175, 27);
-            this.txtModelo.TabIndex = 29;
+            this.txtModelo.TabIndex = 7;
             // 
             // equipoBindingSource1
             // 
@@ -362,7 +362,7 @@
             this.txtSerie.Location = new System.Drawing.Point(451, 499);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(175, 27);
-            this.txtSerie.TabIndex = 31;
+            this.txtSerie.TabIndex = 8;
             // 
             // label10
             // 
@@ -382,7 +382,7 @@
             this.cmbEquipo.Location = new System.Drawing.Point(158, 444);
             this.cmbEquipo.Name = "cmbEquipo";
             this.cmbEquipo.Size = new System.Drawing.Size(226, 29);
-            this.cmbEquipo.TabIndex = 32;
+            this.cmbEquipo.TabIndex = 6;
             // 
             // equipoTableAdapter
             // 
@@ -413,7 +413,7 @@
             this.txtPieza.MaxLength = 20;
             this.txtPieza.Name = "txtPieza";
             this.txtPieza.Size = new System.Drawing.Size(131, 27);
-            this.txtPieza.TabIndex = 35;
+            this.txtPieza.TabIndex = 2;
             // 
             // label6
             // 
@@ -431,7 +431,7 @@
             this.txtPrecio.MaxLength = 10;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(105, 27);
-            this.txtPrecio.TabIndex = 37;
+            this.txtPrecio.TabIndex = 4;
             // 
             // label11
             // 
@@ -449,7 +449,7 @@
             this.txtCantidad.MaxLength = 5;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(83, 27);
-            this.txtCantidad.TabIndex = 39;
+            this.txtCantidad.TabIndex = 3;
             // 
             // label12
             // 
@@ -470,7 +470,7 @@
             this.txtMonto.Location = new System.Drawing.Point(613, 401);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(105, 27);
-            this.txtMonto.TabIndex = 41;
+            this.txtMonto.TabIndex = 10;
             // 
             // label13
             // 

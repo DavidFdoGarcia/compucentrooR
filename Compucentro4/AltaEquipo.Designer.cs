@@ -73,14 +73,14 @@
             this.txtTipo.Location = new System.Drawing.Point(144, 131);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(220, 27);
-            this.txtTipo.TabIndex = 5;
+            this.txtTipo.TabIndex = 1;
             // 
             // txtSerie
             // 
             this.txtSerie.Location = new System.Drawing.Point(361, 215);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(220, 27);
-            this.txtSerie.TabIndex = 7;
+            this.txtSerie.TabIndex = 3;
             // 
             // label3
             // 
@@ -97,7 +97,7 @@
             this.txtModelo.Location = new System.Drawing.Point(538, 131);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(220, 27);
-            this.txtModelo.TabIndex = 9;
+            this.txtModelo.TabIndex = 2;
             // 
             // label4
             // 

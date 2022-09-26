@@ -181,5 +181,15 @@ namespace Compucentro4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_ppt_technology_sense_line_background_picture_image_968881 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-ppt-technology-sense-line-background-picture-image_968881", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -79,14 +79,14 @@
             this.txtNombre.Location = new System.Drawing.Point(213, 92);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(484, 27);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(198, 256);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(500, 27);
-            this.txtDireccion.TabIndex = 8;
+            this.txtDireccion.TabIndex = 4;
             this.txtDireccion.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
@@ -128,7 +128,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(198, 157);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(220, 27);
-            this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.TabIndex = 2;
             // 
             // label7
             // 
@@ -144,7 +144,7 @@
             this.txtCelular.Location = new System.Drawing.Point(198, 210);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(220, 27);
-            this.txtCelular.TabIndex = 16;
+            this.txtCelular.TabIndex = 3;
             // 
             // label8
             // 
