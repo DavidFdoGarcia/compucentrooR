@@ -31,7 +31,7 @@ namespace Compucentro4
             // TODO: esta línea de código carga datos en la tabla 'equipo._Equipo' Puede moverla o quitarla según sea necesario.
             this.equipoTableAdapter.Fill(this.equipo._Equipo);
 
-
+            txtOrden.Text = ConsultaOrdenId();
         }
 
         //Métodos
@@ -55,7 +55,7 @@ namespace Compucentro4
         public string ConsultaOrdenId()
         {
             Conexion.Conectar();
-            string query = "select max (idOrden) as ID from Orden";
+            string query = "select max (idOrden)+1 as ID from Orden";
             SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
             SqlDataReader reg = cmd.ExecuteReader();
             if (reg.Read())

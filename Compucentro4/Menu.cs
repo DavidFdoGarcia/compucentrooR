@@ -67,5 +67,11 @@ namespace Compucentro4
             ConsultaOrden CO = new ConsultaOrden();
             CO.Show();
         }
+
+        private void modificarOrdenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarOrden MO = new ModificarOrden();
+            MO.Show();
+        }
     }
 }
