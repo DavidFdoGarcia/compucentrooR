@@ -54,6 +54,22 @@ namespace Compucentro4
 
         }
 
+        public string ConsultaFecha()
+        {
+            Conexion.Conectar();
+            string query = "SELECT FechaS FROM Orden WHERE idOrden = '"+txtOrden.Text+"'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["FechaS"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
         public void InsertaRefaccion()
         {
             double imp = double.Parse(txtPrecio.Text) * double.Parse(txtCantidad.Text);
@@ -275,8 +291,9 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("Equipo: " + cmbEquipo.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
-            
-            e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(270, y += 30, ancho, 60));
+
+            e.Graphics.DrawString("Entregado: " + txtFecha.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
+            e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
             e.Graphics.DrawString("Reporte: " + txtReporte.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
             e.Graphics.DrawString("No. Refacciones", font, Brushes.Black, new Rectangle(270, y += 50, ancho, 60));
@@ -302,7 +319,7 @@ namespace Compucentro4
 
                 
             }
-            e.Graphics.DrawString("Monto a pagar: " + txtMonto.Text, font, Brushes.Black, new Rectangle(50, y += 50, 100, 60));
+            e.Graphics.DrawString("Monto a pagar: " + txtMonto.Text, font, Brushes.Black, new Rectangle(50, y += 50, 1000, 60));
             e.Graphics.DrawString("Firma de conformidad", font, Brushes.Black, new Rectangle(50, y += 40, ancho, 60));
             e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(5, y += 80, 850, 50));
 
@@ -315,7 +332,8 @@ namespace Compucentro4
             e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("Equipo: " + cmbEquipo.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
-            e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(270, y += 30, ancho, 60));
+            e.Graphics.DrawString("Entregado: " + txtFecha.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
+            e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
             e.Graphics.DrawString("Reporte: " + txtReporte.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
             e.Graphics.DrawString("No. Refacciones", font, Brushes.Black, new Rectangle(270, y += 50, ancho, 60));
@@ -341,7 +359,7 @@ namespace Compucentro4
 
 
             }
-            e.Graphics.DrawString("Monto a pagar: " + txtMonto.Text, font, Brushes.Black, new Rectangle(50, y += 50, 100, 60));
+            e.Graphics.DrawString("Monto a pagar: " + txtMonto.Text, font, Brushes.Black, new Rectangle(50, y += 50, 1000, 60));
             e.Graphics.DrawString("Firma de conformidad", font, Brushes.Black, new Rectangle(50, y += 40, ancho, 60));
             e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(5, y += 80, 850, 50));
         }
@@ -353,6 +371,7 @@ namespace Compucentro4
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            txtFecha.Text = ConsultaFecha();
             InsertaReporte();
         }
 

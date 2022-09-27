@@ -67,7 +67,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Base";
             this.Text = "Base";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.TransparencyKey = System.Drawing.Color.DarkGray;
             this.ResumeLayout(false);
 
         }

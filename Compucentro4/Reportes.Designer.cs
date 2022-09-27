@@ -80,6 +80,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureCabecera = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).BeginInit();
@@ -108,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(259, 75);
+            this.label1.Location = new System.Drawing.Point(265, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 38);
@@ -503,11 +505,31 @@
             this.pictureBox2.TabIndex = 44;
             this.pictureBox2.TabStop = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(35, 88);
+            this.label14.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 21);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Fecha";
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFecha.Location = new System.Drawing.Point(121, 88);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(134, 27);
+            this.txtFecha.TabIndex = 47;
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 749);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureCabecera);
             this.Controls.Add(this.txtMonto);
@@ -577,6 +599,8 @@
             this.Controls.SetChildIndex(this.txtMonto, 0);
             this.Controls.SetChildIndex(this.pictureCabecera, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.txtFecha, 0);
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).EndInit();
@@ -645,5 +669,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureCabecera;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker txtFecha;
     }
 }
