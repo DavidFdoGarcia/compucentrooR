@@ -32,22 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AltaOrden));
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cliente = new Compucentro4.Cliente();
             this.usuarioTableAdapter = new Compucentro4.ClienteTableAdapters.UsuarioTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmbSerie = new System.Windows.Forms.ComboBox();
             this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equipo = new Compucentro4.Equipo();
             this.equipoTableAdapter = new Compucentro4.EquipoTableAdapters.EquipoTableAdapter();
             this.cmbIDEquipo = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.txtFalla = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbAtendio = new System.Windows.Forms.ComboBox();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,19 +48,13 @@
             this.usuaario2 = new Compucentro4.Usuaario2();
             this.usuarioTableAdapter1 = new Compucentro4.Usuaario2TableAdapters.UsuarioTableAdapter();
             this.cmbAtendioID = new System.Windows.Forms.ComboBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pictureCabecera = new System.Windows.Forms.PictureBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEquipo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.empleadoTableAdapter = new Compucentro4.empleadoTableAdapters.EmpleadoTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.datei = new System.Windows.Forms.DateTimePicker();
-            this.btnimprimir2 = new System.Windows.Forms.Button();
             this.usu = new Compucentro4.usu();
             this.usuarioBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter2 = new Compucentro4.usuTableAdapters.UsuarioTableAdapter();
@@ -78,6 +64,20 @@
             this.usuarioTableAdapter3 = new Compucentro4.clienteeeTableAdapters.UsuarioTableAdapter();
             this.cmbIDCliente = new System.Windows.Forms.ComboBox();
             this.picturePie = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtFalla = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtEquipo = new System.Windows.Forms.TextBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnimprimir2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
@@ -121,16 +121,6 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "No.Orden";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 207);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 21);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Cliente";
-            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
@@ -144,16 +134,6 @@
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 277);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 21);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Serie";
             // 
             // cmbSerie
             // 
@@ -188,63 +168,6 @@
             this.cmbIDEquipo.Name = "cmbIDEquipo";
             this.cmbIDEquipo.Size = new System.Drawing.Size(56, 29);
             this.cmbIDEquipo.TabIndex = 23;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 401);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 21);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Complementos";
-            // 
-            // txtComplemento
-            // 
-            this.txtComplemento.Location = new System.Drawing.Point(176, 398);
-            this.txtComplemento.Margin = new System.Windows.Forms.Padding(5);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(445, 27);
-            this.txtComplemento.TabIndex = 5;
-            // 
-            // txtFalla
-            // 
-            this.txtFalla.Location = new System.Drawing.Point(134, 455);
-            this.txtFalla.Margin = new System.Windows.Forms.Padding(5);
-            this.txtFalla.Name = "txtFalla";
-            this.txtFalla.Size = new System.Drawing.Size(498, 27);
-            this.txtFalla.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 458);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 21);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Falla";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(637, 207);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 21);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Status";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "Acttivo",
-            "Inactivo"});
-            this.cmbStatus.Location = new System.Drawing.Point(605, 248);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 29);
-            this.cmbStatus.TabIndex = 8;
             // 
             // label9
             // 
@@ -300,16 +223,6 @@
             this.cmbAtendioID.Size = new System.Drawing.Size(52, 29);
             this.cmbAtendioID.TabIndex = 32;
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(288, 629);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(111, 61);
-            this.btnImprimir.TabIndex = 33;
-            this.btnImprimir.Text = "Imprimir1";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -335,44 +248,6 @@
             this.pictureCabecera.TabIndex = 34;
             this.pictureCabecera.TabStop = false;
             // 
-            // txtModelo
-            // 
-            this.txtModelo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource, "Modelo", true));
-            this.txtModelo.Location = new System.Drawing.Point(154, 340);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(5);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(118, 27);
-            this.txtModelo.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 340);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 21);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Modelo";
-            // 
-            // txtEquipo
-            // 
-            this.txtEquipo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource, "Tipo", true));
-            this.txtEquipo.Location = new System.Drawing.Point(459, 340);
-            this.txtEquipo.Margin = new System.Windows.Forms.Padding(5);
-            this.txtEquipo.Name = "txtEquipo";
-            this.txtEquipo.Size = new System.Drawing.Size(173, 27);
-            this.txtEquipo.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(339, 340);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 21);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Equipo";
-            // 
             // empleadoTableAdapter
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
@@ -394,16 +269,6 @@
             this.datei.Name = "datei";
             this.datei.Size = new System.Drawing.Size(158, 27);
             this.datei.TabIndex = 40;
-            // 
-            // btnimprimir2
-            // 
-            this.btnimprimir2.Location = new System.Drawing.Point(154, 629);
-            this.btnimprimir2.Name = "btnimprimir2";
-            this.btnimprimir2.Size = new System.Drawing.Size(111, 61);
-            this.btnimprimir2.TabIndex = 41;
-            this.btnimprimir2.Text = "Imprimir2";
-            this.btnimprimir2.UseVisualStyleBackColor = true;
-            this.btnimprimir2.Click += new System.EventHandler(this.btnimprimir2_Click);
             // 
             // usu
             // 
@@ -463,6 +328,153 @@
             this.picturePie.TabIndex = 44;
             this.picturePie.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 207);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 21);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Cliente";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 277);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 21);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Serie";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 401);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 21);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Complementos";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Location = new System.Drawing.Point(176, 398);
+            this.txtComplemento.Margin = new System.Windows.Forms.Padding(5);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(445, 27);
+            this.txtComplemento.TabIndex = 5;
+            this.txtComplemento.TextChanged += new System.EventHandler(this.txtComplemento_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 458);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 21);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Falla";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtFalla
+            // 
+            this.txtFalla.Location = new System.Drawing.Point(134, 455);
+            this.txtFalla.Margin = new System.Windows.Forms.Padding(5);
+            this.txtFalla.Name = "txtFalla";
+            this.txtFalla.Size = new System.Drawing.Size(498, 27);
+            this.txtFalla.TabIndex = 6;
+            this.txtFalla.TextChanged += new System.EventHandler(this.txtFalla_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(637, 207);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 21);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Status";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Acttivo",
+            "Inactivo"});
+            this.cmbStatus.Location = new System.Drawing.Point(605, 248);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(121, 29);
+            this.cmbStatus.TabIndex = 8;
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 340);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 21);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Modelo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource, "Modelo", true));
+            this.txtModelo.Location = new System.Drawing.Point(154, 340);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(5);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(118, 27);
+            this.txtModelo.TabIndex = 3;
+            this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(339, 340);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 21);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Equipo";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txtEquipo
+            // 
+            this.txtEquipo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource, "Tipo", true));
+            this.txtEquipo.Location = new System.Drawing.Point(459, 340);
+            this.txtEquipo.Margin = new System.Windows.Forms.Padding(5);
+            this.txtEquipo.Name = "txtEquipo";
+            this.txtEquipo.Size = new System.Drawing.Size(173, 27);
+            this.txtEquipo.TabIndex = 4;
+            this.txtEquipo.TextChanged += new System.EventHandler(this.txtEquipo_TextChanged);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(288, 629);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(111, 61);
+            this.btnImprimir.TabIndex = 33;
+            this.btnImprimir.Text = "Imprimir1";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnimprimir2
+            // 
+            this.btnimprimir2.Location = new System.Drawing.Point(154, 629);
+            this.btnimprimir2.Name = "btnimprimir2";
+            this.btnimprimir2.Size = new System.Drawing.Size(111, 61);
+            this.btnimprimir2.TabIndex = 41;
+            this.btnimprimir2.Text = "Imprimir2";
+            this.btnimprimir2.UseVisualStyleBackColor = true;
+            this.btnimprimir2.Click += new System.EventHandler(this.btnimprimir2_Click);
+            // 
             // AltaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -498,7 +510,6 @@
             this.Name = "AltaOrden";
             this.Text = "AltaOrden";
             this.Load += new System.EventHandler(this.AltaOrden_Load);
-            this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtOrden, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -514,7 +525,6 @@
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.cmbAtendio, 0);
             this.Controls.SetChildIndex(this.cmbAtendioID, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnImprimir, 0);
             this.Controls.SetChildIndex(this.pictureCabecera, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -527,6 +537,8 @@
             this.Controls.SetChildIndex(this.cmbCliente, 0);
             this.Controls.SetChildIndex(this.cmbIDCliente, 0);
             this.Controls.SetChildIndex(this.picturePie, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
@@ -549,43 +561,29 @@
         #endregion
         private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
         private Cliente cliente;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private ClienteTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbSerie;
         private Equipo equipo;
         private System.Windows.Forms.BindingSource equipoBindingSource;
         private EquipoTableAdapters.EquipoTableAdapter equipoTableAdapter;
         private System.Windows.Forms.ComboBox cmbIDEquipo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox txtFalla;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbAtendio;
         private Usuaario2 usuaario2;
         private System.Windows.Forms.BindingSource usuarioBindingSource1;
         private Usuaario2TableAdapters.UsuarioTableAdapter usuarioTableAdapter1;
         private System.Windows.Forms.ComboBox cmbAtendioID;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PictureBox pictureCabecera;
-        private System.Windows.Forms.TextBox txtModelo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEquipo;
-        private System.Windows.Forms.Label label10;
         private empleado empleado;
         private System.Windows.Forms.BindingSource empleadoBindingSource;
         private empleadoTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker datei;
-        private System.Windows.Forms.Button btnimprimir2;
         private usu usu;
         private System.Windows.Forms.BindingSource usuarioBindingSource2;
         private usuTableAdapters.UsuarioTableAdapter usuarioTableAdapter2;
@@ -595,5 +593,19 @@
         private clienteeeTableAdapters.UsuarioTableAdapter usuarioTableAdapter3;
         private System.Windows.Forms.ComboBox cmbIDCliente;
         private System.Windows.Forms.PictureBox picturePie;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtFalla;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtEquipo;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnimprimir2;
     }
 }
