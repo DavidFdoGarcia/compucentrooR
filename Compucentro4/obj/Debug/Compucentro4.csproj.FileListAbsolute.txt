@@ -35,6 +35,8 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compu
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ConsultaOrden.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Empleado.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Menu.resources
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ModificarOrden.resources
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ordenes.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Properties.Resources.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Reportes.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Tecnico.resources
@@ -46,5 +48,3 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compu
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.csproj.CopyComplete
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.exe
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.pdb
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ModificarOrden.resources
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ordenes.resources

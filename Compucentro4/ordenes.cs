@@ -24,6 +24,14 @@ namespace Compucentro4
             // TODO: esta línea de código carga datos en la tabla 'empleado.Empleado' Puede moverla o quitarla según sea necesario.
             this.empleadoTableAdapter.Fill(this.empleado.Empleado);
             txtOrden.Text = ConsultaOrdenId();
+
+            txtComplemento.AutoSize = false;
+            txtComplemento.Size = new Size(200, 150);
+            txtComplemento.Multiline = true;
+
+            txtFalla.AutoSize = false;
+            txtFalla.Size = new Size(200, 150);
+            txtFalla.Multiline = true;
         }
 
         public string ConsultaOrdenId()
@@ -45,11 +53,9 @@ namespace Compucentro4
         public void InsertaUsuario()
         {
             Conexion.Conectar();
-            string insertar = "insert into Usuario(Nombre,Direccion,Telefono,Celular) values(@nombre,@direccion,@telefono,@celular)";
+            string insertar = "insert into Usuario(Nombre,Celular) values(@nombre,@celular)";
             SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
             cmd1.Parameters.AddWithValue("@nombre", txtCliente.Text);
-            cmd1.Parameters.AddWithValue("@direccion", txtDireccion.Text);
-            cmd1.Parameters.AddWithValue("@telefono", txtTelefono.Text);
             cmd1.Parameters.AddWithValue("@celular", txtCelular.Text);
             cmd1.ExecuteNonQuery();
             MessageBox.Show("El usuario fue agregado con exito");
