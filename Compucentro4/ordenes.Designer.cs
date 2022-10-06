@@ -66,6 +66,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).BeginInit();
@@ -78,7 +79,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(842, 425);
+            this.btnSalir.Location = new System.Drawing.Point(848, 523);
             // 
             // btnGuardar
             // 
@@ -414,11 +415,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la Orden";
             // 
+            // txtLimpiar
+            // 
+            this.txtLimpiar.Location = new System.Drawing.Point(854, 423);
+            this.txtLimpiar.Name = "txtLimpiar";
+            this.txtLimpiar.Size = new System.Drawing.Size(111, 61);
+            this.txtLimpiar.TabIndex = 81;
+            this.txtLimpiar.Text = "Limpiar";
+            this.txtLimpiar.UseVisualStyleBackColor = true;
+            this.txtLimpiar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 749);
+            this.Controls.Add(this.txtLimpiar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -455,6 +467,7 @@
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.groupBox3, 0);
+            this.Controls.SetChildIndex(this.txtLimpiar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).EndInit();
@@ -510,5 +523,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button txtLimpiar;
     }
 }

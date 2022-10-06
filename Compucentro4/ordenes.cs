@@ -32,6 +32,8 @@ namespace Compucentro4
             txtFalla.AutoSize = false;
             txtFalla.Size = new Size(200, 150);
             txtFalla.Multiline = true;
+
+            cmbStatus.SelectedIndex = 0;
         }
 
         public string ConsultaOrdenId()
@@ -122,11 +124,15 @@ namespace Compucentro4
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            InsertaUsuario();
-            txtClienteID.Text = ConsultaUsuarioId();
-            InsertaEquipo();
-            txtSerieID.Text = ConsultaEquipoId();
-            InsertaOrden();
+            if (MessageBox.Show("Desea dar de alta la orden? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                InsertaUsuario();
+                txtClienteID.Text = ConsultaUsuarioId();
+                InsertaEquipo();
+                txtSerieID.Text = ConsultaEquipoId();
+                InsertaOrden();
+            }
+            
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -151,29 +157,20 @@ namespace Compucentro4
             e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, 5, 850, 80));
             e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, y += 60, 1000, 60));
 
-            e.Graphics.DrawString("Fecha de Ingreso:", font, Brushes.Black, new Rectangle(20, 140, 1000, 60));
-            e.Graphics.DrawString(datei.Text, font, Brushes.Black, new Rectangle(205, 140, 1000, 60));
+            e.Graphics.DrawString("No.Orden: " + txtOrden.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+            e.Graphics.DrawString("Fecha de Ingreso: " + datei.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
 
-            e.Graphics.DrawString("No.Orden:", font, Brushes.Black, new Rectangle(600, 140, 1000, 60));
-            e.Graphics.DrawString(txtOrden.Text, font, Brushes.Black, new Rectangle(710, 140, 1000, 60));
+            e.Graphics.DrawString("Equipo: " + txtEquipo.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+            e.Graphics.DrawString("Cliente: " + txtCliente.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
 
-            e.Graphics.DrawString("Cliente:", font, Brushes.Black, new Rectangle(20, 180, 1000, 60));
-            e.Graphics.DrawString(txtCliente.Text, font, Brushes.Black, new Rectangle(160, 180, 1000, 60));
+            e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+            e.Graphics.DrawString("Celular: " + txtCelular.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
 
-            e.Graphics.DrawString("Equipo:", font, Brushes.Black, new Rectangle(600, 180, 1000, 60));
-            e.Graphics.DrawString(txtEquipo.Text, font, Brushes.Black, new Rectangle(700, 180, 1000, 60));
+            e.Graphics.DrawString("Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
 
-            e.Graphics.DrawString("No. Serie:", font, Brushes.Black, new Rectangle(20, 220, 1000, 60));
-            e.Graphics.DrawString(txtSerie.Text, font, Brushes.Black, new Rectangle(120, 220, 1000, 60));
+            e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
-            e.Graphics.DrawString("Modelo:", font, Brushes.Black, new Rectangle(350, 220, 1000, 60));
-            e.Graphics.DrawString(txtModelo.Text, font, Brushes.Black, new Rectangle(450, 220, 1000, 60));
-
-            e.Graphics.DrawString("Accesorios:", font, Brushes.Black, new Rectangle(20, 260, 1000, 60));
-            e.Graphics.DrawString(txtComplemento.Text, font, Brushes.Black, new Rectangle(150, 260, 1000, 60));
-
-            e.Graphics.DrawString("Falla:", font, Brushes.Black, new Rectangle(20, 340, 1000, 60));
-            e.Graphics.DrawString(txtFalla.Text, font, Brushes.Black, new Rectangle(150, 340, 1000, 60));
+            e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
             e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 420, 850, 50));
 
@@ -222,21 +219,23 @@ namespace Compucentro4
             Font font2 = new Font("Arial", 8, FontStyle.Bold);
             //  
             int y = 20;
-            e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, y += 680, 850, 80));
+            e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, y += 600, 850, 80));
             e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, y += 70, 1000, 60));
 
-            e.Graphics.DrawString("No.Orden: " + txtOrden.Text, font, Brushes.Black, new Rectangle(550, y + 30, 1000, 60));
+            e.Graphics.DrawString("No.Orden: " + txtOrden.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
             e.Graphics.DrawString("Fecha de Ingreso: " + datei.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
 
-            e.Graphics.DrawString("Equipo: " + txtEquipo.Text, font, Brushes.Black, new Rectangle(550, y + 30, 1000, 60));
+            e.Graphics.DrawString("Equipo: " + txtEquipo.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
             e.Graphics.DrawString("Cliente: " + txtCliente.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
 
-            e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(550, y + 30, 1000, 60));
-            e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
+            e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+            e.Graphics.DrawString("Celular: " + txtCelular.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
 
-            e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
+            e.Graphics.DrawString("Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
 
-            e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 50, 1000, 60));
+            e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+
+            e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
             e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 980, 850, 50));
 
@@ -263,6 +262,22 @@ namespace Compucentro4
             Image img = este.Image;
             e.Graphics.DrawImage(img, new Rectangle(20, 30, 185, 50));
             e.Graphics.DrawString("*" + txtCodigo.Text + "*", font, Brushes.Black, new Rectangle(75, 85, 150, 20)); */
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea agregar una nueva orden? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                txtCliente.Text = "";
+                txtCelular.Text = "";
+                txtEquipo.Text = "";
+                txtModelo.Text = "";
+                txtSerie.Text = "";
+                txtFalla.Text = "";
+                txtComplemento.Text = "";
+                txtOrden.Text = ConsultaOrdenId();
+            }
 
         }
     }
