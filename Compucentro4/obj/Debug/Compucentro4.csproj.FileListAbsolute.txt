@@ -27,11 +27,7 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\Cryst
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\stdole.dll
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\itextsharp.xml
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.csprojAssemblyReference.cache
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.AltaEquipo.resources
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.AltaOrden.resources
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.AltaUsuario.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Base.resources
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.BaseConsulta.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ConsultaOrden.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Empleado.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Menu.resources
@@ -48,3 +44,4 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compu
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.csproj.CopyComplete
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.exe
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.pdb
+C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\DGV Printer.dll

@@ -31,8 +31,9 @@ namespace Compucentro4
 
         private void Reportes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'usu.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter1.Fill(this.usu.Usuario);
+            // TODO: esta línea de código carga datos en la tabla 'usuarioModificado.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter2.Fill(this.usuarioModificado.Usuario);
+
             // TODO: esta línea de código carga datos en la tabla 'equipo._Equipo' Puede moverla o quitarla según sea necesario.
             this.equipoTableAdapter.Fill(this.equipo._Equipo);
             // TODO: esta línea de código carga datos en la tabla 'dataTecnico.Operador' Puede moverla o quitarla según sea necesario.
@@ -285,37 +286,41 @@ namespace Compucentro4
             Font font2 = new Font("Arial", 8, FontStyle.Bold);
             //  
             e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, 5, 850, 80)); 
-            e.Graphics.DrawString("Reporte", font, Brushes.Black, new Rectangle(360, y+=50, ancho, 60));
-            e.Graphics.DrawString("Reparó: " + cmbReparo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
+            e.Graphics.DrawString("Reporte de Orde No.: " + txtOrden.Text, font, Brushes.Black, new Rectangle(360, y+=50, ancho, 60));
+            e.Graphics.DrawString("Entregado: " + txtFecha.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("Cliente: " + cmbCliente.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
             e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("Equipo: " + cmbEquipo.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
-            e.Graphics.DrawString("Entregado: " + txtFecha.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
+            e.Graphics.DrawString("Reparó: " + cmbReparo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
             e.Graphics.DrawString("Reporte: " + txtReporte.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
             e.Graphics.DrawString("No. Refacciones", font, Brushes.Black, new Rectangle(270, y += 50, ancho, 60));
 
             e.Graphics.DrawString("Cant.", font, Brushes.Black, new Rectangle(50, y + 20, ancho, 60));
-            e.Graphics.DrawString("Descripción", font, Brushes.Black, new Rectangle(150, y + 20, ancho, 60));
-            e.Graphics.DrawString("Precio", font, Brushes.Black, new Rectangle(400, y + 20, ancho, 60));
-            e.Graphics.DrawString("Importe", font, Brushes.Black, new Rectangle(500, y + 20, ancho, 60));
+            e.Graphics.DrawString("Descripción", font, Brushes.Black, new Rectangle(120, y + 20, ancho, 60));
+            e.Graphics.DrawString("Precio", font, Brushes.Black, new Rectangle(230, y + 20, ancho, 60));
+            e.Graphics.DrawString("Importe", font, Brushes.Black, new Rectangle(290, y + 20, ancho, 60));
+
+
+
+
          
     foreach (DataRow row in dt.Rows)
             {
-                e.Graphics.DrawString(row["Cantidad"].ToString() + " " + " " + " " + " " + " " + " " + " " +" " + " " + " " +
+                e.Graphics.DrawString(row["Cantidad"].ToString() + " " + " " + " " + " " + " " +" " + " " + " " + " " + " " + " " + " " +" " + " " + " " +
 
 
 
-               row["Descripcion"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " "+ " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " "+ " " + " " + " " + " " + " " + " " + " " + " " + " " + " "  +" " + " " + " " + " " + " " +
+               row["Descripcion"].ToString() +  " " + " " + " " + " " + " "+ " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " "+ " " + " " + " " + " " + " " + " " + " " + " " + " " + " "  +" " + " " + " " + " " + " " +
 
-                row["Precio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " +
+                row["Precio"].ToString() + " " + " " + " " + " " + " " +
 
                 row["Importe"].ToString()
 
-                   , font, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
+                   , font2, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
 
                 
             }
@@ -325,37 +330,37 @@ namespace Compucentro4
 
 
             e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, y=580, 850, 80));
-            e.Graphics.DrawString("Reporte", font, Brushes.Black, new Rectangle(360, y += 70, ancho, 60));
-            e.Graphics.DrawString("Reparó: " + cmbReparo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
+            e.Graphics.DrawString("Reporte de Orden No.: " + txtOrden.Text, font, Brushes.Black, new Rectangle(360, y += 70, ancho, 60));
+            e.Graphics.DrawString("Entregado: " + txtFecha.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("Cliente: " + cmbCliente.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
             e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("Equipo: " + cmbEquipo.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
-            e.Graphics.DrawString("Entregado: " + txtFecha.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
+            e.Graphics.DrawString("Reparó: " + cmbReparo.Text, font, Brushes.Black, new Rectangle(450, y + 30, ancho, 60));
             e.Graphics.DrawString("No. Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
             e.Graphics.DrawString("Reporte: " + txtReporte.Text, font, Brushes.Black, new Rectangle(50, y += 30, ancho, 60));
 
             e.Graphics.DrawString("No. Refacciones", font, Brushes.Black, new Rectangle(270, y += 50, ancho, 60));
 
             e.Graphics.DrawString("Cant.", font, Brushes.Black, new Rectangle(50, y + 20, ancho, 60));
-            e.Graphics.DrawString("Descripción", font, Brushes.Black, new Rectangle(150, y + 20, ancho, 60));
-            e.Graphics.DrawString("Precio", font, Brushes.Black, new Rectangle(400, y + 20, ancho, 60));
-            e.Graphics.DrawString("Importe", font, Brushes.Black, new Rectangle(500, y + 20, ancho, 60));
+            e.Graphics.DrawString("Descripción", font, Brushes.Black, new Rectangle(120, y + 20, ancho, 60));
+            e.Graphics.DrawString("Precio", font, Brushes.Black, new Rectangle(230, y + 20, ancho, 60));
+            e.Graphics.DrawString("Importe", font, Brushes.Black, new Rectangle(290, y + 20, ancho, 60));
 
             foreach (DataRow row in dt.Rows)
             {
-                e.Graphics.DrawString(row["Cantidad"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+                e.Graphics.DrawString(row["Cantidad"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
 
 
-               row["Descripcion"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+               row["Descripcion"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
-                row["Precio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " +
+                row["Precio"].ToString() + " " + " " + " " + " " + " " +
 
                 row["Importe"].ToString()
 
-                   , font, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
+                   , font2, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
 
 
             }

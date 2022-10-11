@@ -26,23 +26,11 @@ namespace Compucentro4
         }
 
  
-        private void altaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AltaUsuario AS = new AltaUsuario();
-            AS.Show();
-        }
+       
 
-        private void altaDeEquiiposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AltaEquipo AE = new AltaEquipo();
-            AE.Show();
-        }
+       
 
-        private void ordenesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AltaOrden AO = new AltaOrden();
-            AO.Show();
-        }
+        
 
         private void altaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {

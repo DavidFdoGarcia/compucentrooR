@@ -70,6 +70,9 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DGV Printer">
+      <HintPath>.\DGV Printer.dll</HintPath>
+    </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
@@ -92,35 +95,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaEquipo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AltaEquipo.Designer.cs">
-      <DependentUpon>AltaEquipo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AltaOrden.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AltaOrden.Designer.cs">
-      <DependentUpon>AltaOrden.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AltaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AltaUsuario.Designer.cs">
-      <DependentUpon>AltaUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Base.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Base.Designer.cs">
       <DependentUpon>Base.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseConsulta.Designer.cs">
-      <DependentUpon>BaseConsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -213,26 +192,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Usuaario2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="usuarioModificado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usuarioModificado.xsd</DependentUpon>
+    </Compile>
     <Compile Include="visor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="visor.Designer.cs">
       <DependentUpon>visor.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AltaEquipo.resx">
-      <DependentUpon>AltaEquipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AltaOrden.resx">
-      <DependentUpon>AltaOrden.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AltaUsuario.resx">
-      <DependentUpon>AltaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseConsulta.resx">
-      <DependentUpon>BaseConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaOrden.resx">
       <DependentUpon>ConsultaOrden.cs</DependentUpon>
@@ -370,6 +342,17 @@
     </None>
     <None Include="Usuaario2.xss">
       <DependentUpon>Usuaario2.xsd</DependentUpon>
+    </None>
+    <None Include="usuarioModificado.xsc">
+      <DependentUpon>usuarioModificado.xsd</DependentUpon>
+    </None>
+    <None Include="usuarioModificado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usuarioModificado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usuarioModificado.xss">
+      <DependentUpon>usuarioModificado.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

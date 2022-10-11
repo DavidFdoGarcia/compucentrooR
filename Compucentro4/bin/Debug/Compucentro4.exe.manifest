@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Compucentro4.exe" size="1958384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Compucentro4.exe" size="1946608">
       <assemblyIdentity name="Compucentro4" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3mY4PEzjIzmlyrqXWs0zN8O4clvWWqdpJhYjjFnpxwI=</dsig:DigestValue>
+        <dsig:DigestValue>Pb1Cxyuyf1wXSNwPX3stejnwGon2suC1nx+CviFevs0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -255,6 +255,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>DycOP7RVJF60hmLXs31iHfn2THJ2bfFDckpRcqJRE9I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DGV Printer.dll" size="53760">
+      <assemblyIdentity name="DGV Printer" version="4.4.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>lAySeHemdWnl43zGUzKLBpQ2EvHLpCQA60eF3I54JOo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

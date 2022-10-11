@@ -31,12 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDeEquiiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeTécnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaOrdenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +43,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ordenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,37 +64,13 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaDeClientesToolStripMenuItem,
-            this.altaDeEquiiposToolStripMenuItem,
-            this.ordenesToolStripMenuItem,
+            this.ordenToolStripMenuItem,
             this.altaDeEmpleadosToolStripMenuItem,
             this.altaDeTécnicosToolStripMenuItem,
-            this.altaDeReportesToolStripMenuItem,
-            this.ordenToolStripMenuItem});
+            this.altaDeReportesToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.menuToolStripMenuItem.Text = "Altas";
-            // 
-            // altaDeClientesToolStripMenuItem
-            // 
-            this.altaDeClientesToolStripMenuItem.Name = "altaDeClientesToolStripMenuItem";
-            this.altaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.altaDeClientesToolStripMenuItem.Text = "Alta de Usuarios";
-            this.altaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.altaDeClientesToolStripMenuItem_Click);
-            // 
-            // altaDeEquiiposToolStripMenuItem
-            // 
-            this.altaDeEquiiposToolStripMenuItem.Name = "altaDeEquiiposToolStripMenuItem";
-            this.altaDeEquiiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.altaDeEquiiposToolStripMenuItem.Text = "Alta de Equiipos";
-            this.altaDeEquiiposToolStripMenuItem.Click += new System.EventHandler(this.altaDeEquiiposToolStripMenuItem_Click);
-            // 
-            // ordenesToolStripMenuItem
-            // 
-            this.ordenesToolStripMenuItem.Name = "ordenesToolStripMenuItem";
-            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ordenesToolStripMenuItem.Text = "Ordenes";
-            this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
             // 
             // altaDeEmpleadosToolStripMenuItem
             // 
@@ -119,6 +92,13 @@
             this.altaDeReportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaDeReportesToolStripMenuItem.Text = "Alta de Reportes";
             this.altaDeReportesToolStripMenuItem.Click += new System.EventHandler(this.altaDeReportesToolStripMenuItem_Click);
+            // 
+            // ordenToolStripMenuItem
+            // 
+            this.ordenToolStripMenuItem.Name = "ordenToolStripMenuItem";
+            this.ordenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordenToolStripMenuItem.Text = "orden";
+            this.ordenToolStripMenuItem.Click += new System.EventHandler(this.ordenToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -181,13 +161,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // ordenToolStripMenuItem
-            // 
-            this.ordenToolStripMenuItem.Name = "ordenToolStripMenuItem";
-            this.ordenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ordenToolStripMenuItem.Text = "orden";
-            this.ordenToolStripMenuItem.Click += new System.EventHandler(this.ordenToolStripMenuItem_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -213,9 +186,6 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDeClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDeEquiiposToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ordenesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem altaDeEmpleadosToolStripMenuItem;

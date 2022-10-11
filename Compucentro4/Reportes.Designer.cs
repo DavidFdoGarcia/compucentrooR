@@ -48,6 +48,8 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.usuarioBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioModificado = new Compucentro4.usuarioModificado();
             this.usuarioBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usu = new Compucentro4.usu();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,7 +63,6 @@
             this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equipo = new Compucentro4.Equipo();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSerie = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbEquipo = new System.Windows.Forms.ComboBox();
             this.equipoTableAdapter = new Compucentro4.EquipoTableAdapters.EquipoTableAdapter();
@@ -82,9 +83,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
+            this.usuarioTableAdapter2 = new Compucentro4.usuarioModificadoTableAdapters.UsuarioTableAdapter();
+            this.txtSerie = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModificado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).BeginInit();
@@ -99,11 +104,11 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(531, 684);
+            this.btnSalir.Location = new System.Drawing.Point(551, 610);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(381, 682);
+            this.btnGuardar.Location = new System.Drawing.Point(401, 608);
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
@@ -243,7 +248,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(230, 682);
+            this.btnImprimir.Location = new System.Drawing.Point(250, 608);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(109, 63);
             this.btnImprimir.TabIndex = 18;
@@ -263,13 +268,23 @@
             // 
             // cmbCliente
             // 
-            this.cmbCliente.DataSource = this.usuarioBindingSource2;
+            this.cmbCliente.DataSource = this.usuarioBindingSource3;
             this.cmbCliente.DisplayMember = "nombre";
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(121, 311);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(258, 29);
             this.cmbCliente.TabIndex = 5;
+            // 
+            // usuarioBindingSource3
+            // 
+            this.usuarioBindingSource3.DataMember = "Usuario";
+            this.usuarioBindingSource3.DataSource = this.usuarioModificado;
+            // 
+            // usuarioModificado
+            // 
+            this.usuarioModificado.DataSetName = "usuarioModificado";
+            this.usuarioModificado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuarioBindingSource2
             // 
@@ -307,7 +322,7 @@
             // 
             // cmbID
             // 
-            this.cmbID.DataSource = this.usuarioBindingSource2;
+            this.cmbID.DataSource = this.usuarioBindingSource3;
             this.cmbID.DisplayMember = "idUsuario";
             this.cmbID.FormattingEnabled = true;
             this.cmbID.Location = new System.Drawing.Point(414, 311);
@@ -357,14 +372,6 @@
             this.label9.Size = new System.Drawing.Size(69, 21);
             this.label9.TabIndex = 28;
             this.label9.Text = "Modelo";
-            // 
-            // txtSerie
-            // 
-            this.txtSerie.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipoBindingSource1, "Serie", true));
-            this.txtSerie.Location = new System.Drawing.Point(451, 499);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(175, 27);
-            this.txtSerie.TabIndex = 8;
             // 
             // label10
             // 
@@ -499,7 +506,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Compucentro4.Properties.Resources.PIEPAGINA_COMPUCENTRO2;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 604);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 679);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(706, 63);
             this.pictureBox2.TabIndex = 44;
@@ -523,11 +530,26 @@
             this.txtFecha.Size = new System.Drawing.Size(134, 27);
             this.txtFecha.TabIndex = 47;
             // 
+            // usuarioTableAdapter2
+            // 
+            this.usuarioTableAdapter2.ClearBeforeFill = true;
+            // 
+            // txtSerie
+            // 
+            this.txtSerie.DataSource = this.equipoBindingSource1;
+            this.txtSerie.DisplayMember = "Serie";
+            this.txtSerie.FormattingEnabled = true;
+            this.txtSerie.Location = new System.Drawing.Point(439, 502);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.Size = new System.Drawing.Size(226, 29);
+            this.txtSerie.TabIndex = 48;
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 749);
+            this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox2);
@@ -542,7 +564,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbEquipoID);
             this.Controls.Add(this.cmbEquipo);
-            this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label9);
@@ -586,7 +607,6 @@
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.txtModelo, 0);
             this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.txtSerie, 0);
             this.Controls.SetChildIndex(this.cmbEquipo, 0);
             this.Controls.SetChildIndex(this.cmbEquipoID, 0);
             this.Controls.SetChildIndex(this.label6, 0);
@@ -601,9 +621,12 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.txtFecha, 0);
+            this.Controls.SetChildIndex(this.txtSerie, 0);
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModificado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cliente)).EndInit();
@@ -645,7 +668,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbEquipo;
         private System.Windows.Forms.BindingSource equipoBindingSource;
@@ -671,5 +693,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker txtFecha;
+        private usuarioModificado usuarioModificado;
+        private System.Windows.Forms.BindingSource usuarioBindingSource3;
+        private usuarioModificadoTableAdapters.UsuarioTableAdapter usuarioTableAdapter2;
+        private System.Windows.Forms.ComboBox txtSerie;
     }
 }
