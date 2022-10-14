@@ -85,6 +85,7 @@
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.usuarioTableAdapter2 = new Compucentro4.usuarioModificadoTableAdapters.UsuarioTableAdapter();
             this.txtSerie = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).BeginInit();
@@ -185,7 +186,7 @@
             // 
             // txtOrden
             // 
-            this.txtOrden.Location = new System.Drawing.Point(585, 90);
+            this.txtOrden.Location = new System.Drawing.Point(506, 98);
             this.txtOrden.Name = "txtOrden";
             this.txtOrden.Size = new System.Drawing.Size(83, 27);
             this.txtOrden.TabIndex = 1;
@@ -193,7 +194,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(490, 90);
+            this.label3.Location = new System.Drawing.Point(436, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 21);
@@ -271,7 +272,7 @@
             this.cmbCliente.DataSource = this.usuarioBindingSource3;
             this.cmbCliente.DisplayMember = "nombre";
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(121, 311);
+            this.cmbCliente.Location = new System.Drawing.Point(101, 311);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(258, 29);
             this.cmbCliente.TabIndex = 5;
@@ -544,11 +545,22 @@
             this.txtSerie.Size = new System.Drawing.Size(226, 29);
             this.txtSerie.TabIndex = 48;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(613, 91);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(78, 41);
+            this.btnBuscar.TabIndex = 49;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 749);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label14);
@@ -584,7 +596,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "Reportes";
-            this.Text = "Reportes";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.Reportes_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label4, 0);
@@ -622,6 +634,7 @@
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.txtFecha, 0);
             this.Controls.SetChildIndex(this.txtSerie, 0);
+            this.Controls.SetChildIndex(this.btnBuscar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).EndInit();
@@ -697,5 +710,6 @@
         private System.Windows.Forms.BindingSource usuarioBindingSource3;
         private usuarioModificadoTableAdapters.UsuarioTableAdapter usuarioTableAdapter2;
         private System.Windows.Forms.ComboBox txtSerie;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

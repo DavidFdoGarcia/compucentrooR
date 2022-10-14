@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtEquipo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,14 +47,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtFalla = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.txtClienteID = new System.Windows.Forms.TextBox();
-            this.txtSerieID = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.empleadoTableAdapter = new Compucentro4.empleadoTableAdapters.EmpleadoTableAdapter();
@@ -65,8 +62,19 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEquipo = new System.Windows.Forms.ComboBox();
+            this.txtSerieID = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtLimpiar = new System.Windows.Forms.Button();
+            this.txtReimprimir = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtObs = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtxSe = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtAccesorio = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).BeginInit();
@@ -75,15 +83,18 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(848, 523);
+            this.btnSalir.Location = new System.Drawing.Point(901, 401);
+            this.btnSalir.Size = new System.Drawing.Size(93, 41);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(848, 131);
+            this.btnGuardar.Location = new System.Drawing.Point(901, 125);
+            this.btnGuardar.Size = new System.Drawing.Size(101, 42);
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pictureCabecera
@@ -178,14 +189,6 @@
             this.label7.TabIndex = 49;
             this.label7.Text = "No.Orden";
             // 
-            // txtEquipo
-            // 
-            this.txtEquipo.Location = new System.Drawing.Point(109, 37);
-            this.txtEquipo.Margin = new System.Windows.Forms.Padding(5);
-            this.txtEquipo.Name = "txtEquipo";
-            this.txtEquipo.Size = new System.Drawing.Size(225, 27);
-            this.txtEquipo.TabIndex = 7;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -218,7 +221,7 @@
             // 
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
-            "Acttivo",
+            "Activo",
             "Inactivo"});
             this.cmbStatus.Location = new System.Drawing.Point(122, 47);
             this.cmbStatus.Name = "cmbStatus";
@@ -237,7 +240,7 @@
             // 
             // txtFalla
             // 
-            this.txtFalla.Location = new System.Drawing.Point(447, 475);
+            this.txtFalla.Location = new System.Drawing.Point(767, 483);
             this.txtFalla.Margin = new System.Windows.Forms.Padding(5);
             this.txtFalla.Name = "txtFalla";
             this.txtFalla.Size = new System.Drawing.Size(155, 27);
@@ -246,20 +249,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(471, 440);
+            this.label6.Location = new System.Drawing.Point(791, 448);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 21);
             this.label6.TabIndex = 61;
             this.label6.Text = "Falla";
-            // 
-            // txtComplemento
-            // 
-            this.txtComplemento.Location = new System.Drawing.Point(189, 523);
-            this.txtComplemento.Margin = new System.Windows.Forms.Padding(5);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(138, 27);
-            this.txtComplemento.TabIndex = 8;
             // 
             // label5
             // 
@@ -311,15 +306,6 @@
             this.txtClienteID.Name = "txtClienteID";
             this.txtClienteID.Size = new System.Drawing.Size(35, 27);
             this.txtClienteID.TabIndex = 67;
-            this.txtClienteID.Visible = false;
-            // 
-            // txtSerieID
-            // 
-            this.txtSerieID.Location = new System.Drawing.Point(330, 141);
-            this.txtSerieID.Name = "txtSerieID";
-            this.txtSerieID.Size = new System.Drawing.Size(37, 27);
-            this.txtSerieID.TabIndex = 68;
-            this.txtSerieID.Visible = false;
             // 
             // txtCelular
             // 
@@ -353,9 +339,9 @@
             // 
             // btnimprimir2
             // 
-            this.btnimprimir2.Location = new System.Drawing.Point(848, 325);
+            this.btnimprimir2.Location = new System.Drawing.Point(901, 264);
             this.btnimprimir2.Name = "btnimprimir2";
-            this.btnimprimir2.Size = new System.Drawing.Size(111, 61);
+            this.btnimprimir2.Size = new System.Drawing.Size(101, 40);
             this.btnimprimir2.TabIndex = 77;
             this.btnimprimir2.Text = "Imprimir2";
             this.btnimprimir2.UseVisualStyleBackColor = true;
@@ -363,9 +349,9 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(848, 230);
+            this.btnImprimir.Location = new System.Drawing.Point(901, 195);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(111, 61);
+            this.btnImprimir.Size = new System.Drawing.Size(101, 43);
             this.btnImprimir.TabIndex = 76;
             this.btnImprimir.Text = "Imprimir1";
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -387,9 +373,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtEquipo);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtEquipo);
             this.groupBox2.Controls.Add(this.txtModelo);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtSerieID);
@@ -400,6 +386,31 @@
             this.groupBox2.TabIndex = 79;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Equipo";
+            // 
+            // txtEquipo
+            // 
+            this.txtEquipo.FormattingEnabled = true;
+            this.txtEquipo.Items.AddRange(new object[] {
+            "Laptop",
+            "Imresora",
+            "PC",
+            "Monitor",
+            "Celular",
+            "Tablet",
+            "Scanner",
+            "Copiadora"});
+            this.txtEquipo.Location = new System.Drawing.Point(109, 37);
+            this.txtEquipo.Name = "txtEquipo";
+            this.txtEquipo.Size = new System.Drawing.Size(232, 29);
+            this.txtEquipo.TabIndex = 69;
+            this.txtEquipo.Text = "---------------Elija una---------------";
+            // 
+            // txtSerieID
+            // 
+            this.txtSerieID.Location = new System.Drawing.Point(330, 141);
+            this.txtSerieID.Name = "txtSerieID";
+            this.txtSerieID.Size = new System.Drawing.Size(37, 27);
+            this.txtSerieID.TabIndex = 68;
             // 
             // groupBox3
             // 
@@ -417,19 +428,111 @@
             // 
             // txtLimpiar
             // 
-            this.txtLimpiar.Location = new System.Drawing.Point(854, 423);
+            this.txtLimpiar.Location = new System.Drawing.Point(901, 328);
             this.txtLimpiar.Name = "txtLimpiar";
-            this.txtLimpiar.Size = new System.Drawing.Size(111, 61);
+            this.txtLimpiar.Size = new System.Drawing.Size(101, 44);
             this.txtLimpiar.TabIndex = 81;
             this.txtLimpiar.Text = "Limpiar";
             this.txtLimpiar.UseVisualStyleBackColor = true;
             this.txtLimpiar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtReimprimir
+            // 
+            this.txtReimprimir.Location = new System.Drawing.Point(701, 131);
+            this.txtReimprimir.Name = "txtReimprimir";
+            this.txtReimprimir.Size = new System.Drawing.Size(100, 49);
+            this.txtReimprimir.TabIndex = 82;
+            this.txtReimprimir.Text = "Reimprimir";
+            this.txtReimprimir.UseVisualStyleBackColor = true;
+            this.txtReimprimir.Click += new System.EventHandler(this.txtReimprimir_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 567);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(410, 110);
+            this.dataGridView1.TabIndex = 83;
+            // 
+            // txtObs
+            // 
+            this.txtObs.Location = new System.Drawing.Point(564, 600);
+            this.txtObs.Margin = new System.Windows.Forms.Padding(5);
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(182, 27);
+            this.txtObs.TabIndex = 84;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(508, 600);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 21);
+            this.label12.TabIndex = 85;
+            this.label12.Text = "Obs.";
+            // 
+            // txtxSe
+            // 
+            this.txtxSe.Location = new System.Drawing.Point(564, 557);
+            this.txtxSe.Margin = new System.Windows.Forms.Padding(5);
+            this.txtxSe.Name = "txtxSe";
+            this.txtxSe.Size = new System.Drawing.Size(155, 27);
+            this.txtxSe.TabIndex = 86;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(508, 557);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 21);
+            this.label13.TabIndex = 87;
+            this.label13.Text = "Serie";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(621, 454);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 44);
+            this.button1.TabIndex = 88;
+            this.button1.Text = "AgregaObs";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txtAccesorio
+            // 
+            this.txtAccesorio.Location = new System.Drawing.Point(563, 520);
+            this.txtAccesorio.Margin = new System.Windows.Forms.Padding(5);
+            this.txtAccesorio.Name = "txtAccesorio";
+            this.txtAccesorio.Size = new System.Drawing.Size(155, 27);
+            this.txtAccesorio.TabIndex = 89;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(467, 523);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 21);
+            this.label14.TabIndex = 90;
+            this.label14.Text = "Accesorio";
             // 
             // ordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 749);
+            this.Controls.Add(this.txtAccesorio);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtxSe);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtObs);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtReimprimir);
             this.Controls.Add(this.txtLimpiar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -438,7 +541,6 @@
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtFalla);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.datei);
             this.Controls.Add(this.label2);
@@ -457,17 +559,25 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.datei, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.txtComplemento, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.txtFalla, 0);
             this.Controls.SetChildIndex(this.btnImprimir, 0);
             this.Controls.SetChildIndex(this.btnimprimir2, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
-            this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.groupBox3, 0);
             this.Controls.SetChildIndex(this.txtLimpiar, 0);
+            this.Controls.SetChildIndex(this.txtReimprimir, 0);
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.txtObs, 0);
+            this.Controls.SetChildIndex(this.label13, 0);
+            this.Controls.SetChildIndex(this.txtxSe, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.txtAccesorio, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).EndInit();
@@ -479,6 +589,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,7 +605,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtEquipo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label1;
@@ -502,14 +612,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtFalla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.TextBox txtClienteID;
-        private System.Windows.Forms.TextBox txtSerieID;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.BindingSource empleadoBindingSource;
@@ -524,5 +632,16 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button txtLimpiar;
+        private System.Windows.Forms.TextBox txtSerieID;
+        private System.Windows.Forms.Button txtReimprimir;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtObs;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtxSe;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtAccesorio;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox txtEquipo;
     }
 }

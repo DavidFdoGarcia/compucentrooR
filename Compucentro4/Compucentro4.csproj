@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -118,6 +118,12 @@
     <Compile Include="ConsultaOrden.Designer.cs">
       <DependentUpon>ConsultaOrden.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarOrden.Designer.cs">
+      <DependentUpon>ConsultarOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataTecnico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaOrden.resx">
       <DependentUpon>ConsultaOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarOrden.resx">
+      <DependentUpon>ConsultarOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>

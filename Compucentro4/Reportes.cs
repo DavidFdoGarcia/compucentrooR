@@ -139,11 +139,7 @@ namespace Compucentro4
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            InsertaRefaccion();
-            InsertaRefaccion();
-            InsertaRefaccion();
-            InsertaRefaccion();
-            InsertaRefaccion();
+            
             InsertaRefaccion();
             /*int indice_fila = dgvver.Rows.Add();
             DataGridViewRow row = dgvver.Rows[indice_fila];
@@ -378,11 +374,52 @@ namespace Compucentro4
         {
             txtFecha.Text = ConsultaFecha();
             InsertaReporte();
+
+
         }
 
         private void pictureCabecera_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cmbCliente.Text = NombreCliente();
+            cmbEquipo.Text = NombreEquipo();
+         }
+
+        public string NombreCliente()
+        {
+            Conexion.Conectar();
+            string query = "select Usuario.Nombre as Cliente from Orden inner join Usuario on Usuario.idUsuario = Orden.idUsuario where idOrden = '"+txtOrden.Text+"'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["Cliente"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+
+        public string NombreEquipo()
+        {
+            Conexion.Conectar();
+            string query = "select Equipo.Tipo as Equipo from Orden inner join Equipo on Equipo.idEquipo = Orden.idEquipo where idOrden = '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["Equipo"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
         }
     }
     }

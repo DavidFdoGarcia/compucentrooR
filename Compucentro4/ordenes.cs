@@ -14,9 +14,17 @@ namespace Compucentro4
 {
     public partial class ordenes : Base
     {
+        private DataTable dt;
         public ordenes()
         {
             InitializeComponent();
+
+            dt = new DataTable();
+            dt.Columns.Add("Accesorio");
+            dt.Columns.Add("Serie");
+            dt.Columns.Add("Observacion");
+
+            dataGridView1.DataSource = dt;
         }
 
         private void ordenes_Load(object sender, EventArgs e)
@@ -25,13 +33,17 @@ namespace Compucentro4
             this.empleadoTableAdapter.Fill(this.empleado.Empleado);
             txtOrden.Text = ConsultaOrdenId();
 
-            txtComplemento.AutoSize = false;
-            txtComplemento.Size = new Size(200, 150);
-            txtComplemento.Multiline = true;
+           // txtComplemento.AutoSize = false;
+           // txtComplemento.Size = new Size(200, 150);
+           // txtComplemento.Multiline = true;
 
             txtFalla.AutoSize = false;
             txtFalla.Size = new Size(200, 150);
             txtFalla.Multiline = true;
+
+            txtObs.AutoSize = false;
+            txtObs.Size = new Size(200, 80);
+            txtObs.Multiline = true;
 
             cmbStatus.SelectedIndex = 0;
         }
@@ -110,12 +122,12 @@ namespace Compucentro4
         public void InsertaOrden()
         {
             Conexion.Conectar();
-            string insertar = "insert into Orden(idEquipo,idUsuario,Complemento,FallaC,Status,idEmpleado) values(@equipo,@usuario,@complemento,@fallaC,@status,@empleado)";
+            string insertar = "insert into Orden(idEquipo,idUsuario,FallaC,Status,idEmpleado) values(@equipo,@usuario,@fallaC,@status,@empleado)";
             SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
             cmd1.Parameters.AddWithValue("@equipo", txtSerieID.Text);
             cmd1.Parameters.AddWithValue("@usuario", txtClienteID.Text);
 
-            cmd1.Parameters.AddWithValue("@complemento", txtComplemento.Text);
+           // cmd1.Parameters.AddWithValue("@complemento", txtComplemento.Text);
             cmd1.Parameters.AddWithValue("@fallaC", txtFalla.Text);
             cmd1.Parameters.AddWithValue("@status", cmbStatus.Text);
             cmd1.Parameters.AddWithValue("@empleado", cmbAtendioID.Text);
@@ -126,14 +138,16 @@ namespace Compucentro4
         {
             if (MessageBox.Show("Desea dar de alta la orden? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
-                InsertaUsuario();
-                txtClienteID.Text = ConsultaUsuarioId();
+                //InsertaUsuario();
+                //txtClienteID.Text = ConsultaUsuarioId();
                 InsertaEquipo();
-                txtSerieID.Text = ConsultaEquipoId();
+                txtSerieID.Text = ConsultaEquipoID();
                 InsertaOrden();
             }
             
         }
+
+       
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
@@ -168,7 +182,7 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
 
-            e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+          //  e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
@@ -233,7 +247,7 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
 
-            e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+          //  e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
@@ -275,10 +289,271 @@ namespace Compucentro4
                 txtModelo.Text = "";
                 txtSerie.Text = "";
                 txtFalla.Text = "";
-                txtComplemento.Text = "";
+              //  txtComplemento.Text = "";
                 txtOrden.Text = ConsultaOrdenId();
             }
 
+        }
+
+        private void txtReimprimir_Click(object sender, EventArgs e)
+        {
+            txtEquipo.Text = ConsultaEquipoTipoR();
+            txtModelo.Text = ConsultaEquipoModeloR();
+            txtSerie.Text = ConsultaEquipoSerieR();
+            txtCliente.Text = ConsultaUsuarioNombreR();
+            txtCelular.Text = ConsultaUsuarioCelularR();
+            datei.Text = ConsultaOrdenFechaR();
+            cmbAtendio.Text = ConsultaEmpleadoNombreR();
+            cmbAtendio.Text = ConsultaOrdenStatusR();
+            txtFalla.Text = ConsultaOrdenFallaR();
+           // txtComplemento.Text = ConsultaOrdenComplementoR();
+        }
+
+        //Mmétodos para la reimpresion
+
+
+
+        public string ConsultaEquipoTipoR()
+        {
+            Conexion.Conectar();
+            string query = "select Equipo.Tipo as tipo from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["tipo"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaEquipoModeloR()
+        {
+            Conexion.Conectar();
+            string query = "select Equipo.Modelo as modelo from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["modelo"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaEquipoSerieR()
+        {
+            Conexion.Conectar();
+            string query = "select Equipo.Serie as Serie from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["Serie"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaUsuarioNombreR()
+        {
+            Conexion.Conectar();
+            string query = "select Usuario.Nombre as Cliente from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["Cliente"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaUsuarioCelularR()
+        {
+            Conexion.Conectar();
+            string query = "select Usuario.Celular as celular from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["celular"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaOrdenFechaR()
+        {
+            Conexion.Conectar();
+            string query = "select Orden.FechaI as fecha from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["fecha"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaEmpleadoNombreR()
+        {
+            Conexion.Conectar();
+            string query = "select Empleado.nombre as empleado from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["empleado"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaOrdenStatusR()
+        {
+            Conexion.Conectar();
+            string query = "select Orden.Status as status from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["status"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaOrdenFallaR()
+        {
+            Conexion.Conectar();
+            string query = "select Orden.FallaC as falla from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["falla"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaOrdenComplementoR()
+        {
+            Conexion.Conectar();
+            string query = "select Orden.Complemento as complemento from Orden INNER JOIN Usuario on Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo on Orden.idEquipo = Equipo.idEquipo INNER JOIN Empleado on Orden.idEmpleado = Empleado.idEmpleado where Orden.idOrden= '" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["complemento"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DataRow row = dt.NewRow();
+
+            row["Accesorio"] = txtAccesorio.Text;
+            row["Serie"] = txtxSe.Text;
+            row["Observacion"] = txtObs.Text;
+
+            dt.Rows.Add(row);
+
+            InsertaSoloUsuario();
+            txtClienteID.Text = ConsultaUsuId();
+            InsertaAccesorio();
+            ModificarUsuario();
+        }
+
+
+        public void InsertaAccesorio()
+        {
+            Conexion.Conectar();
+            string insertar = "insert into Accesorio(idUsuario,Accesorio,Serie,Observacion) values(@usuario,@Accesorio,@Serie,@Observacion)";
+            SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@usuario", txtClienteID.Text);
+            cmd1.Parameters.AddWithValue("@Accesorio", txtAccesorio.Text);
+            cmd1.Parameters.AddWithValue("@Serie", txtxSe.Text);
+            cmd1.Parameters.AddWithValue("@Observacion", txtObs.Text);
+            cmd1.ExecuteNonQuery();
+            MessageBox.Show("El Accesorio fue agregado con exito");
+        }
+
+        public void ModificarUsuario()
+        {
+            Conexion.Conectar();
+            string insertar = "UPDATE Usuario SET Celular=@Celular WHERE idUsuario=@id";
+            SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@Celular", txtCelular.Text);;
+            cmd1.Parameters.AddWithValue("@id", txtClienteID.Text);
+            cmd1.ExecuteNonQuery();
+            MessageBox.Show("El usuario fue modificado con exito");
+        }
+
+        public void InsertaSoloUsuario()
+        {
+            Conexion.Conectar();
+            string insertar = "insert into Usuario(Nombre) values(@Nombre)";
+            SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@Nombre", txtCliente.Text);
+            cmd1.ExecuteNonQuery();
+            MessageBox.Show("El Usuario fue agregado con exito");
+        }
+
+        public string ConsultaUsuId()
+        {
+            Conexion.Conectar();
+            string query = "select max (idUsuario) as ID from Usuario";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["ID"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public string ConsultaEquipoID()
+        {
+            Conexion.Conectar();
+            string query = "select max (idEquipo) as ID from Equipo";
+            SqlCommand cmd = new SqlCommand(query, Conexion.Conectar());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["ID"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
         }
     }
 }
