@@ -112,6 +112,12 @@
       <DependentUpon>clienteee.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="ConsultaDetallesOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaDetallesOrden.Designer.cs">
+      <DependentUpon>ConsultaDetallesOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     <Compile Include="ordenes.Designer.cs">
       <DependentUpon>ordenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdenFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenFiltros.Designer.cs">
+      <DependentUpon>OrdenFiltros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rango.Designer.cs">
@@ -212,6 +224,9 @@
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaDetallesOrden.resx">
+      <DependentUpon>ConsultaDetallesOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaOrden.resx">
       <DependentUpon>ConsultaOrden.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ordenes.resx">
       <DependentUpon>ordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenFiltros.resx">
+      <DependentUpon>OrdenFiltros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

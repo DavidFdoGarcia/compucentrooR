@@ -98,6 +98,17 @@ namespace Compucentro4
             MessageBox.Show("El reporte fue agregado con exito");
         }
 
+        public void ModificarOrden()
+        {
+            Conexion.Conectar();
+            string insertar = "UPDATE Orden SET ImporteTotal=@Importe WHERE idOrden=@id";
+            SqlCommand cmd1 = new SqlCommand(insertar, Conexion.Conectar());
+            cmd1.Parameters.AddWithValue("@Importe", txtMonto.Text); ;
+            cmd1.Parameters.AddWithValue("@id", txtOrden .Text);
+            cmd1.ExecuteNonQuery();
+            MessageBox.Show("El usuario fue modificado con exito");
+        }
+
         public void cargardatagridEditar() //todas las facturas
         {
 
@@ -374,7 +385,7 @@ namespace Compucentro4
         {
             txtFecha.Text = ConsultaFecha();
             InsertaReporte();
-
+            ModificarOrden();
 
         }
 

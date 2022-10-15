@@ -67,5 +67,17 @@ namespace Compucentro4
             ordenes or = new ordenes();
             or.Show();
         }
+
+        private void consulaDetallesOrdenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaDetallesOrden CDO = new ConsultaDetallesOrden();
+            CDO.Show();
+        }
+
+        private void consultaOrdenPorFiltrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenFiltros OF = new OrdenFiltros();
+            OF.Show();
+        }
     }
 }
