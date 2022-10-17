@@ -26,7 +26,7 @@ namespace Compucentro4
         public void cargardatagrid()
         {
             Conexion.Conectar();
-            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Orden.idOrden as Orden, Equipo.Tipo as Equio,Usuario.Nombre as Cliente, Orden.FechaI, Orden.FechaS, Orden.Complemento, Orden.FallaC, Orden.Status, Empleado.Nombre as Empleado FROM Orden INNER JOIN Usuario on Usuario.idUsuario = Orden.idUsuario INNER JOIN Equipo on Equipo.idEquipo = Orden.idEquipo INNER JOIN Empleado on Empleado.idEmpleado = Orden.idEmpleado WHERE Orden.idOrden =  '" + txtOrden.Text + "'", Conexion.Conectar());
+            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Orden.idOrden as Orden, Equipo.Tipo as Equio,Usuario.Nombre as Cliente, Orden.FechaI, Orden.FechaS, Orden.Complemento, Orden.FallaC, Orden.Status, Orden.Garantia, Empleado.Nombre as Empleado FROM Orden INNER JOIN Usuario on Usuario.idUsuario = Orden.idUsuario INNER JOIN Equipo on Equipo.idEquipo = Orden.idEquipo INNER JOIN Empleado on Empleado.idEmpleado = Orden.idEmpleado WHERE Orden.idOrden =  '" + txtOrden.Text + "'", Conexion.Conectar());
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
@@ -47,6 +47,20 @@ namespace Compucentro4
             MessageBox.Show("Los datos fueron actualizados con exito");
         }
 
+        public void Garantia()
+        {
+            Conexion.Conectar();
+            String FechaS = dateTimePicker1.Value.Date.Year.ToString() + "/" + dateTimePicker1.Value.Date.Month.ToString() + "/" + dateTimePicker1.Value.Date.Day.ToString();
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.CommandText = "Garantia";
+            cmd2.Connection = Conexion.Conectar();
+            cmd2.CommandType = CommandType.StoredProcedure;
+            cmd2.Parameters.AddWithValue("@fecha1", FechaS);
+            cmd2.Parameters.AddWithValue("@idOrden", txtOrden.Text);
+            cmd2.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron actualizados con exito");
+        }
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
              cargardatagrid();
@@ -55,6 +69,7 @@ namespace Compucentro4
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             MorificarOrden();
+            Garantia();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
