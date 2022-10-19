@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Falla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
@@ -50,6 +43,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Falla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,51 +73,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(894, 150);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Orden
-            // 
-            this.Orden.DataPropertyName = "Orden";
-            this.Orden.HeaderText = "Orden";
-            this.Orden.Name = "Orden";
-            this.Orden.Width = 50;
-            // 
-            // Equipo
-            // 
-            this.Equipo.DataPropertyName = "Equipo";
-            this.Equipo.HeaderText = "Equipo";
-            this.Equipo.Name = "Equipo";
-            // 
-            // Falla
-            // 
-            this.Falla.DataPropertyName = "Falla";
-            this.Falla.HeaderText = "Falla";
-            this.Falla.Name = "Falla";
-            this.Falla.Width = 200;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Width = 200;
-            // 
-            // Ingreso
-            // 
-            this.Ingreso.DataPropertyName = "Ingreso";
-            this.Ingreso.HeaderText = "Ingreso";
-            this.Ingreso.Name = "Ingreso";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            // 
-            // Importe
-            // 
-            this.Importe.DataPropertyName = "Importe";
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
             // 
             // label2
             // 
@@ -250,6 +205,53 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "días restantes de garantia.";
             // 
+            // Orden
+            // 
+            this.Orden.DataPropertyName = "Orden";
+            this.Orden.HeaderText = "Orden";
+            this.Orden.Name = "Orden";
+            this.Orden.Width = 50;
+            // 
+            // Equipo
+            // 
+            this.Equipo.DataPropertyName = "Equipo";
+            this.Equipo.HeaderText = "Equipo";
+            this.Equipo.Name = "Equipo";
+            // 
+            // Falla
+            // 
+            this.Falla.DataPropertyName = "Falla";
+            this.Falla.HeaderText = "Falla";
+            this.Falla.Name = "Falla";
+            this.Falla.Width = 200;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Width = 200;
+            // 
+            // Ingreso
+            // 
+            this.Ingreso.DataPropertyName = "Ingreso";
+            this.Ingreso.HeaderText = "Ingreso";
+            this.Ingreso.Name = "Ingreso";
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.Width = 84;
+            // 
+            // Importe
+            // 
+            this.Importe.DataPropertyName = "Importe";
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            // 
             // OrdenFiltros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -300,13 +302,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Falla;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ingreso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConsulta;
@@ -321,5 +316,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Falla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ingreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
     }
 }

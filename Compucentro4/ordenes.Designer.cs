@@ -68,12 +68,15 @@
             this.txtLimpiar = new System.Windows.Forms.Button();
             this.txtReimprimir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idAccesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtxSe = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtAccesorio = new System.Windows.Forms.TextBox();
+            this.cmbAccesorio = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).BeginInit();
@@ -123,7 +126,7 @@
             this.cmbAtendio.DataSource = this.empleadoBindingSource1;
             this.cmbAtendio.DisplayMember = "nombre";
             this.cmbAtendio.FormattingEnabled = true;
-            this.cmbAtendio.Location = new System.Drawing.Point(6, 176);
+            this.cmbAtendio.Location = new System.Drawing.Point(0, 149);
             this.cmbAtendio.Name = "cmbAtendio";
             this.cmbAtendio.Size = new System.Drawing.Size(277, 29);
             this.cmbAtendio.TabIndex = 10;
@@ -146,7 +149,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 120);
+            this.label9.Location = new System.Drawing.Point(14, 101);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 21);
@@ -240,7 +243,7 @@
             // 
             // txtFalla
             // 
-            this.txtFalla.Location = new System.Drawing.Point(767, 483);
+            this.txtFalla.Location = new System.Drawing.Point(751, 538);
             this.txtFalla.Margin = new System.Windows.Forms.Padding(5);
             this.txtFalla.Name = "txtFalla";
             this.txtFalla.Size = new System.Drawing.Size(155, 27);
@@ -249,7 +252,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(791, 448);
+            this.label6.Location = new System.Drawing.Point(799, 501);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 21);
@@ -306,6 +309,7 @@
             this.txtClienteID.Name = "txtClienteID";
             this.txtClienteID.Size = new System.Drawing.Size(35, 27);
             this.txtClienteID.TabIndex = 67;
+            this.txtClienteID.Visible = false;
             // 
             // txtCelular
             // 
@@ -332,7 +336,7 @@
             this.cmbAtendioID.DataSource = this.empleadoBindingSource1;
             this.cmbAtendioID.DisplayMember = "idEmpleado";
             this.cmbAtendioID.FormattingEnabled = true;
-            this.cmbAtendioID.Location = new System.Drawing.Point(299, 176);
+            this.cmbAtendioID.Location = new System.Drawing.Point(293, 149);
             this.cmbAtendioID.Name = "cmbAtendioID";
             this.cmbAtendioID.Size = new System.Drawing.Size(40, 29);
             this.cmbAtendioID.TabIndex = 75;
@@ -411,6 +415,7 @@
             this.txtSerieID.Name = "txtSerieID";
             this.txtSerieID.Size = new System.Drawing.Size(37, 27);
             this.txtSerieID.TabIndex = 68;
+            this.txtSerieID.Visible = false;
             // 
             // groupBox3
             // 
@@ -450,14 +455,57 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 567);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAccesorio,
+            this.Accesorio,
+            this.Serie,
+            this.Observacion,
+            this.Orden});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 567);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(410, 110);
+            this.dataGridView1.Size = new System.Drawing.Size(594, 119);
             this.dataGridView1.TabIndex = 83;
+            // 
+            // idAccesorio
+            // 
+            this.idAccesorio.DataPropertyName = "idAccesorio";
+            this.idAccesorio.HeaderText = "idAccesorio";
+            this.idAccesorio.Name = "idAccesorio";
+            this.idAccesorio.Visible = false;
+            // 
+            // Accesorio
+            // 
+            this.Accesorio.DataPropertyName = "Accesorio";
+            this.Accesorio.HeaderText = "Accesorio";
+            this.Accesorio.Name = "Accesorio";
+            this.Accesorio.Width = 150;
+            // 
+            // Serie
+            // 
+            this.Serie.DataPropertyName = "Serie";
+            this.Serie.HeaderText = "Serie";
+            this.Serie.Name = "Serie";
+            // 
+            // Observacion
+            // 
+            this.Observacion.DataPropertyName = "Observacion";
+            this.Observacion.FillWeight = 300F;
+            this.Observacion.HeaderText = "Observacion";
+            this.Observacion.Name = "Observacion";
+            this.Observacion.Width = 300;
+            // 
+            // Orden
+            // 
+            this.Orden.DataPropertyName = "Orden";
+            this.Orden.HeaderText = "Orden";
+            this.Orden.Name = "Orden";
+            this.Orden.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Orden.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Orden.Visible = false;
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(564, 600);
+            this.txtObs.Location = new System.Drawing.Point(472, 770);
             this.txtObs.Margin = new System.Windows.Forms.Padding(5);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(182, 27);
@@ -466,34 +514,16 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(508, 600);
+            this.label12.Location = new System.Drawing.Point(416, 770);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 21);
             this.label12.TabIndex = 85;
             this.label12.Text = "Obs.";
             // 
-            // txtxSe
-            // 
-            this.txtxSe.Location = new System.Drawing.Point(564, 557);
-            this.txtxSe.Margin = new System.Windows.Forms.Padding(5);
-            this.txtxSe.Name = "txtxSe";
-            this.txtxSe.Size = new System.Drawing.Size(155, 27);
-            this.txtxSe.TabIndex = 86;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(508, 557);
-            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 21);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "Serie";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(621, 454);
+            this.button1.Location = new System.Drawing.Point(538, 489);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 44);
             this.button1.TabIndex = 88;
@@ -501,18 +531,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // txtAccesorio
+            // cmbAccesorio
             // 
-            this.txtAccesorio.Location = new System.Drawing.Point(563, 520);
-            this.txtAccesorio.Margin = new System.Windows.Forms.Padding(5);
-            this.txtAccesorio.Name = "txtAccesorio";
-            this.txtAccesorio.Size = new System.Drawing.Size(155, 27);
-            this.txtAccesorio.TabIndex = 89;
+            this.cmbAccesorio.FormattingEnabled = true;
+            this.cmbAccesorio.Location = new System.Drawing.Point(528, 432);
+            this.cmbAccesorio.Name = "cmbAccesorio";
+            this.cmbAccesorio.Size = new System.Drawing.Size(187, 29);
+            this.cmbAccesorio.TabIndex = 91;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(467, 523);
+            this.label14.Location = new System.Drawing.Point(430, 440);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 21);
@@ -524,11 +554,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 749);
-            this.Controls.Add(this.txtAccesorio);
+            this.Controls.Add(this.cmbAccesorio);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtxSe);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridView1);
@@ -571,11 +599,9 @@
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.txtObs, 0);
-            this.Controls.SetChildIndex(this.label13, 0);
-            this.Controls.SetChildIndex(this.txtxSe, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label14, 0);
-            this.Controls.SetChildIndex(this.txtAccesorio, 0);
+            this.Controls.SetChildIndex(this.cmbAccesorio, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).EndInit();
@@ -637,11 +663,14 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtxSe;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtAccesorio;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox txtEquipo;
+        private System.Windows.Forms.ComboBox cmbAccesorio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAccesorio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Accesorio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
+        private System.Windows.Forms.Label label14;
     }
 }

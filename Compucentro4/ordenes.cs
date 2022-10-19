@@ -14,15 +14,20 @@ namespace Compucentro4
 {
     public partial class ordenes : Base
     {
-        private DataTable dt;
+        private DataTable dt; //DatasTable para el Grid
         public ordenes()
         {
             InitializeComponent();
 
+            clsOrden ObjOrden = new clsOrden(); //Objeto a la clase orden
+
+            //DataTable para llenar el Grid
             dt = new DataTable();
+            dt.Columns.Add("idAccesorio");
             dt.Columns.Add("Accesorio");
             dt.Columns.Add("Serie");
             dt.Columns.Add("Observacion");
+            dt.Columns.Add("Orden");
 
             dataGridView1.DataSource = dt;
         }
@@ -46,6 +51,16 @@ namespace Compucentro4
             txtObs.Multiline = true;
 
             cmbStatus.SelectedIndex = 0;
+
+            ListarAccesorios(); //Método que llena el combo de accesorios
+        }
+
+        private void ListarAccesorios() //Llena combo de accesorios
+        {
+            clsOrden ObjOrden = new clsOrden();
+            cmbAccesorio.DataSource = ObjOrden.ListarAccesorios();
+            cmbAccesorio.DisplayMember = "TipoAccesorio";
+            cmbAccesorio.ValueMember = "idAccesorio";
         }
 
         public string ConsultaOrdenId()
@@ -138,12 +153,15 @@ namespace Compucentro4
         {
             if (MessageBox.Show("Desea dar de alta la orden? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
-                //InsertaUsuario();
-                //txtClienteID.Text = ConsultaUsuarioId();
+                InsertaUsuario();
+                txtClienteID.Text = ConsultaUsuarioId();
                 InsertaEquipo();
                 txtSerieID.Text = ConsultaEquipoID();
                 InsertaOrden();
+                InsertaAccesorio();
             }
+
+            
             
         }
 
@@ -182,11 +200,26 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
 
-          //  e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
-
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
-            e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 420, 850, 50));
+            e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(35, y + 60, 1000, 60));
+            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 60, 1000, 60));
+            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 60, 1000, 60));
+
+            foreach (DataRow row in dt.Rows)
+            {
+                e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+
+
+
+               row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+
+                row["Observacion"].ToString() + " " + " " + " " + " " + " " 
+
+
+                   , font2, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
+            }
+                e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 420, 850, 50));
 
             e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 600, 1000, 60));
             e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 620, 900, 60));
@@ -250,6 +283,24 @@ namespace Compucentro4
           //  e.Graphics.DrawString("Accesorios: " + txtComplemento.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+
+            e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(35, y + 60, 1000, 60));
+            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 60, 1000, 60));
+            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 60, 1000, 60));
+
+            foreach (DataRow row in dt.Rows)
+            {
+                e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+
+
+
+               row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+
+                row["Observacion"].ToString() + " " + " " + " " + " " + " "
+
+
+                   , font2, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
+            }
 
             e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 980, 850, 50));
 
@@ -477,20 +528,21 @@ namespace Compucentro4
         {
             DataRow row = dt.NewRow();
 
-            row["Accesorio"] = txtAccesorio.Text;
-            row["Serie"] = txtxSe.Text;
-            row["Observacion"] = txtObs.Text;
-
+            row["idAccesorio"] = Convert.ToInt32(cmbAccesorio.SelectedValue);
+            row["Accesorio"] = cmbAccesorio.Text;
+            row["Serie"] = 1;
+            row["Observacion"] = 1;
+            row["Orden"] = txtOrden.Text;
             dt.Rows.Add(row);
 
-            InsertaSoloUsuario();
+           /* InsertaSoloUsuario();
             txtClienteID.Text = ConsultaUsuId();
             InsertaAccesorio();
-            ModificarUsuario();
+            ModificarUsuario();*/
         }
 
 
-        public void InsertaAccesorio()
+      /*  public void InsertaAccesorio()
         {
             Conexion.Conectar();
             string insertar = "insert into Accesorio(idUsuario,Accesorio,Serie,Observacion) values(@usuario,@Accesorio,@Serie,@Observacion)";
@@ -501,7 +553,7 @@ namespace Compucentro4
             cmd1.Parameters.AddWithValue("@Observacion", txtObs.Text);
             cmd1.ExecuteNonQuery();
             MessageBox.Show("El Accesorio fue agregado con exito");
-        }
+        }*/
 
         public void ModificarUsuario()
         {
@@ -555,5 +607,34 @@ namespace Compucentro4
                 return "NULL";
             }
         }
+        
+        public void InsertaAccesorio()
+        {
+
+            try
+            {
+                Conexion.Conectar();
+                SqlCommand cmd2 = new SqlCommand();
+                cmd2.CommandText = "INSERT INTO AccesorioOrden(idAccesorio,idOrden,Serie,Observacion) Values (@Accesorio,@Orden,@Serie,@Observacion)";
+                cmd2.Connection = Conexion.Conectar();
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    cmd2.Parameters.Clear();
+                    cmd2.Parameters.AddWithValue("@Accesorio", Convert.ToString(row.Cells["idAccesorio"].Value));
+                    cmd2.Parameters.AddWithValue("@Orden", Convert.ToString(row.Cells["Orden"].Value));
+                    cmd2.Parameters.AddWithValue("@Serie", Convert.ToString(row.Cells["Serie"].Value));
+                    cmd2.Parameters.AddWithValue("@Observacion", Convert.ToString(row.Cells["Observacion"].Value));
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron actualizados con exito");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error al agregar" + ex);
+            }
+           
+           
+        }
+
     }
 }
