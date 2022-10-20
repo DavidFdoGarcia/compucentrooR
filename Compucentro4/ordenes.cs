@@ -61,6 +61,12 @@ namespace Compucentro4
             cmbAccesorio.DataSource = ObjOrden.ListarAccesorios();
             cmbAccesorio.DisplayMember = "TipoAccesorio";
             cmbAccesorio.ValueMember = "idAccesorio";
+
+            // cargo la lista de items para el autocomplete dle combobox
+            cmbAccesorio.AutoCompleteCustomSource = ObjOrden.Autocomplete();
+            cmbAccesorio.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmbAccesorio.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
         }
 
         public string ConsultaOrdenId()

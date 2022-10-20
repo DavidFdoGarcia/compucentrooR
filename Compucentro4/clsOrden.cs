@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Compucentro4
 {
@@ -24,6 +25,45 @@ namespace Compucentro4
             Tabla.Load(LeerFilas);
             LeerFilas.Close();
             return Tabla;
+        }
+        //metodo para cargar la coleccion de datos para el autocomplete (combo Accesorios)
+        public AutoCompleteStringCollection Autocomplete()
+        {
+            DataTable dt = ListarAccesorios();
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            //recorrer y cargar los items para el autocompletado
+            foreach (DataRow row in dt.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["TipoAccesorio"]));
+            }
+
+            return coleccion;
+        }
+
+
+        public DataTable ListarClientes()
+        {
+            DataTable Tabla = new DataTable();
+            Comando.Connection = Conexion.Conectar();
+            Comando.CommandText = "ListarClientes";
+            Comando.CommandType = CommandType.StoredProcedure;
+            LeerFilas = Comando.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            return Tabla;
+        }
+
+        public AutoCompleteStringCollection AutocompleteClientes()
+        {
+            DataTable dt = ListarClientes();
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            //recorrer y cargar los items para el autocompletado
+            foreach (DataRow row in dt.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre"]));
+            }
+
+            return coleccion;
         }
     }
 }

@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Compucentro4.exe" size="1970672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Compucentro4.exe" size="1975280">
       <assemblyIdentity name="Compucentro4" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mwDpGGt6Vn5Vanw3pKLHLStljt3uxW6/OhMjk5oGbNA=</dsig:DigestValue>
+        <dsig:DigestValue>SfL3QrMTvSo1KGV4ztL1SRiJsGeNyPBCU/YajVG75HY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
