@@ -29,7 +29,6 @@ C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\stdol
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\bin\Debug\itextsharp.xml
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.csprojAssemblyReference.cache
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Base.resources
-C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ConsultaOrden.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Empleado.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.Menu.resources
 C:\Users\Gerardo\Desktop\RepositoriosC\Compucentro4\Compucentro4\obj\Debug\Compucentro4.ModificarOrden.resources

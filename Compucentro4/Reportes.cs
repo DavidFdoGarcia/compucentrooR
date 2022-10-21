@@ -45,6 +45,8 @@ namespace Compucentro4
 
         }
 
+     
+
         public void cargardatagrid()
         {
             Conexion.Conectar();
@@ -69,6 +71,11 @@ namespace Compucentro4
             {
                 return "NULL";
             }
+        }
+
+        public void sumar()
+        {
+
         }
 
         public void InsertaRefaccion()
@@ -168,7 +175,11 @@ namespace Compucentro4
             row["Importe"] = decimal.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text);
 
             dt.Rows.Add(row);
+
+           
         }
+
+
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
@@ -431,6 +442,17 @@ namespace Compucentro4
             {
                 return "NULL";
             }
+        }
+
+        private void txtCalcular_Click(object sender, EventArgs e)
+        {
+            double total = 0;
+
+            foreach (DataGridViewRow row in dgvver.Rows)
+            {
+                total += Convert.ToDouble(row.Cells[3].Value);
+            }
+            txtMonto.Text = Convert.ToString(total);
         }
     }
     }

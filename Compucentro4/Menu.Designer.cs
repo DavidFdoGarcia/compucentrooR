@@ -36,15 +36,14 @@
             this.altaDeTécnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaOrdenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulaDetallesOrdenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaOrdenPorFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.consultaOrdenPorFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -105,26 +104,25 @@
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultaOrdenesToolStripMenuItem,
             this.consulaDetallesOrdenesToolStripMenuItem,
             this.consultaOrdenPorFiltrosToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
-            // consultaOrdenesToolStripMenuItem
-            // 
-            this.consultaOrdenesToolStripMenuItem.Name = "consultaOrdenesToolStripMenuItem";
-            this.consultaOrdenesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.consultaOrdenesToolStripMenuItem.Text = "Consulta Ordenes y Refacciones";
-            this.consultaOrdenesToolStripMenuItem.Click += new System.EventHandler(this.consultaOrdenesToolStripMenuItem_Click);
-            // 
             // consulaDetallesOrdenesToolStripMenuItem
             // 
             this.consulaDetallesOrdenesToolStripMenuItem.Name = "consulaDetallesOrdenesToolStripMenuItem";
-            this.consulaDetallesOrdenesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.consulaDetallesOrdenesToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.consulaDetallesOrdenesToolStripMenuItem.Text = "Consula Detalles Ordenes";
             this.consulaDetallesOrdenesToolStripMenuItem.Click += new System.EventHandler(this.consulaDetallesOrdenesToolStripMenuItem_Click);
+            // 
+            // consultaOrdenPorFiltrosToolStripMenuItem
+            // 
+            this.consultaOrdenPorFiltrosToolStripMenuItem.Name = "consultaOrdenPorFiltrosToolStripMenuItem";
+            this.consultaOrdenPorFiltrosToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.consultaOrdenPorFiltrosToolStripMenuItem.Text = "Consulta Orden por Filtros";
+            this.consultaOrdenPorFiltrosToolStripMenuItem.Click += new System.EventHandler(this.consultaOrdenPorFiltrosToolStripMenuItem_Click);
             // 
             // modificacionesToolStripMenuItem
             // 
@@ -172,13 +170,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // consultaOrdenPorFiltrosToolStripMenuItem
-            // 
-            this.consultaOrdenPorFiltrosToolStripMenuItem.Name = "consultaOrdenPorFiltrosToolStripMenuItem";
-            this.consultaOrdenPorFiltrosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.consultaOrdenPorFiltrosToolStripMenuItem.Text = "Consulta Orden por Filtros";
-            this.consultaOrdenPorFiltrosToolStripMenuItem.Click += new System.EventHandler(this.consultaOrdenPorFiltrosToolStripMenuItem_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -212,7 +203,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaDeReportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaOrdenesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ordenToolStripMenuItem;

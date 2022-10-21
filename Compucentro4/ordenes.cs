@@ -54,6 +54,20 @@ namespace Compucentro4
 
             ListarAccesorios(); //Método que llena el combo de accesorios
         }
+        public DataTable llenar_gridConsulta()
+        {
+            Conexion.Conectar();
+            DataTable dt = new DataTable();
+            string consulta = "select Accesorio.TipoAccesorio as Accesorio, AccesorioOrden.Serie, AccesorioOrden.Observacion from Accesorio inner join AccesorioOrden on Accesorio.idAccesorio = AccesorioOrden.idAccesorio where idOrden ='" + txtOrden.Text + "'";
+            SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            return (dt);
+
+
+        }
 
         private void ListarAccesorios() //Llena combo de accesorios
         {
@@ -354,6 +368,7 @@ namespace Compucentro4
 
         private void txtReimprimir_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = llenar_gridConsulta();
             txtEquipo.Text = ConsultaEquipoTipoR();
             txtModelo.Text = ConsultaEquipoModeloR();
             txtSerie.Text = ConsultaEquipoSerieR();
@@ -361,7 +376,7 @@ namespace Compucentro4
             txtCelular.Text = ConsultaUsuarioCelularR();
             datei.Text = ConsultaOrdenFechaR();
             cmbAtendio.Text = ConsultaEmpleadoNombreR();
-            cmbAtendio.Text = ConsultaOrdenStatusR();
+            cmbStatus.Text = ConsultaOrdenStatusR();
             txtFalla.Text = ConsultaOrdenFallaR();
            // txtComplemento.Text = ConsultaOrdenComplementoR();
         }

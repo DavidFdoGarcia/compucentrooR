@@ -159,6 +159,7 @@ namespace Compucentro4
         {
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
+            cmbNombre.Enabled = true;
         }
 
         private void rdbTodos_CheckedChanged(object sender, EventArgs e)

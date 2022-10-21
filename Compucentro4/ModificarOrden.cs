@@ -26,7 +26,7 @@ namespace Compucentro4
         public void cargardatagrid()
         {
             Conexion.Conectar();
-            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Orden.idOrden as Orden, Equipo.Tipo as Equio,Usuario.Nombre as Cliente, Orden.FechaI, Orden.FechaS, Orden.Complemento, Orden.FallaC, Orden.Status, Orden.Garantia, Empleado.Nombre as Empleado FROM Orden INNER JOIN Usuario on Usuario.idUsuario = Orden.idUsuario INNER JOIN Equipo on Equipo.idEquipo = Orden.idEquipo INNER JOIN Empleado on Empleado.idEmpleado = Orden.idEmpleado WHERE Orden.idOrden =  '" + txtOrden.Text + "'", Conexion.Conectar());
+            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Orden.idOrden as Orden, Equipo.Tipo as Equio,Usuario.Nombre as Cliente, Orden.FechaI, Orden.FechaS, Orden.FallaC, Orden.Status, Orden.Garantia, Empleado.Nombre as Empleado FROM Orden INNER JOIN Usuario on Usuario.idUsuario = Orden.idUsuario INNER JOIN Equipo on Equipo.idEquipo = Orden.idEquipo INNER JOIN Empleado on Empleado.idEmpleado = Orden.idEmpleado WHERE Orden.idOrden =  '" + txtOrden.Text + "'", Conexion.Conectar());
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
             dataGridView1.DataSource = dtbl;

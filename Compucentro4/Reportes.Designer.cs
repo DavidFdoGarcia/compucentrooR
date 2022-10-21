@@ -86,6 +86,11 @@
             this.usuarioTableAdapter2 = new Compucentro4.usuarioModificadoTableAdapters.UsuarioTableAdapter();
             this.txtSerie = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtCalcular = new System.Windows.Forms.Button();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).BeginInit();
@@ -214,6 +219,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvver.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cantidad,
+            this.Descripcion,
+            this.Precio,
+            this.Importe});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -555,11 +565,54 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // txtCalcular
+            // 
+            this.txtCalcular.Location = new System.Drawing.Point(640, 444);
+            this.txtCalcular.Name = "txtCalcular";
+            this.txtCalcular.Size = new System.Drawing.Size(78, 39);
+            this.txtCalcular.TabIndex = 50;
+            this.txtCalcular.Text = "Calcular";
+            this.txtCalcular.UseVisualStyleBackColor = true;
+            this.txtCalcular.Click += new System.EventHandler(this.txtCalcular_Click);
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.Frozen = true;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 112;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.Frozen = true;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 125;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.Frozen = true;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 82;
+            // 
+            // Importe
+            // 
+            this.Importe.DataPropertyName = "Importe";
+            this.Importe.Frozen = true;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.Width = 98;
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 749);
+            this.Controls.Add(this.txtCalcular);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.txtFecha);
@@ -635,6 +688,7 @@
             this.Controls.SetChildIndex(this.txtFecha, 0);
             this.Controls.SetChildIndex(this.txtSerie, 0);
             this.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.Controls.SetChildIndex(this.txtCalcular, 0);
             ((System.ComponentModel.ISupportInitialize)(this.operadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTecnico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvver)).EndInit();
@@ -711,5 +765,10 @@
         private usuarioModificadoTableAdapters.UsuarioTableAdapter usuarioTableAdapter2;
         private System.Windows.Forms.ComboBox txtSerie;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button txtCalcular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
     }
 }
