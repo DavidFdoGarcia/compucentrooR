@@ -222,24 +222,24 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
-            e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(35, y + 60, 1000, 60));
-            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 60, 1000, 60));
-            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 60, 1000, 60));
+            e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(20 , y += 60, 1000, 60));
+            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 0, 1000, 60));
+            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 0, 1000, 60));
 
             foreach (DataRow row in dt.Rows)
             {
-                e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+                e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
 
 
-               row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+               row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
                 row["Observacion"].ToString() + " " + " " + " " + " " + " " 
 
 
-                   , font2, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
+                   , font2, Brushes.Black, new Rectangle(20, y += 25, 1000, 60));
             }
-                e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 420, 850, 50));
+                e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, y += 25, 850, 50));
 
             e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 600, 1000, 60));
             e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 620, 900, 60));
@@ -304,25 +304,25 @@ namespace Compucentro4
 
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
-            e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(35, y + 60, 1000, 60));
-            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 60, 1000, 60));
-            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 60, 1000, 60));
+            e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 0, 1000, 60));
+            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 0, 1000, 60));
 
             foreach (DataRow row in dt.Rows)
             {
-                e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+                e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
 
 
-               row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+               row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
                 row["Observacion"].ToString() + " " + " " + " " + " " + " "
 
 
-                   , font2, Brushes.Black, new Rectangle(50, y += 40, 1000, 60));
+                   , font2, Brushes.Black, new Rectangle(20, y += 25, 1000, 60));
             }
 
-            e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, 980, 850, 50));
+            e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, y += 25, 850, 50));
 
             e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 120, 1000, 60));
             e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 140, 900, 60));

@@ -26,6 +26,7 @@ namespace Compucentro4
             LeerFilas.Close();
             return Tabla;
         }
+
         //metodo para cargar la coleccion de datos para el autocomplete (combo Accesorios)
         public AutoCompleteStringCollection Autocomplete()
         {

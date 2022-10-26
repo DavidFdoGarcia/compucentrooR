@@ -36,6 +36,8 @@
             this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.garantia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
@@ -45,14 +47,15 @@
             this.rdbPendiente = new System.Windows.Forms.RadioButton();
             this.rdbEntregado = new System.Windows.Forms.RadioButton();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbNombre = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.rdbOrden = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +66,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(683, 639);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dataGridView1
             // 
@@ -78,12 +82,14 @@
             this.Cliente,
             this.Ingreso,
             this.Status,
-            this.Importe});
+            this.Importe,
+            this.garantia,
+            this.dias});
             this.dataGridView1.Location = new System.Drawing.Point(12, 363);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(894, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1013, 150);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // Orden
             // 
@@ -132,6 +138,18 @@
             this.Importe.HeaderText = "Importe";
             this.Importe.Name = "Importe";
             // 
+            // garantia
+            // 
+            this.garantia.DataPropertyName = "garantia";
+            this.garantia.HeaderText = "garantia";
+            this.garantia.Name = "garantia";
+            // 
+            // dias
+            // 
+            this.dias.DataPropertyName = "dias";
+            this.dias.HeaderText = "días";
+            this.dias.Name = "dias";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -153,7 +171,7 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(551, 264);
+            this.btnConsulta.Location = new System.Drawing.Point(618, 275);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(100, 50);
             this.btnConsulta.TabIndex = 7;
@@ -225,16 +243,6 @@
             this.rdbNombre.UseVisualStyleBackColor = true;
             this.rdbNombre.CheckedChanged += new System.EventHandler(this.rdbNombre_CheckedChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(806, 550);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Garantia";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -243,31 +251,6 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(127, 27);
             this.dateTimePicker3.TabIndex = 20;
             this.dateTimePicker3.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(468, 559);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 27);
-            this.textBox1.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(397, 565);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 21);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Tiene";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(557, 565);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(219, 21);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "días restantes de garantia.";
             // 
             // rdbTodos
             // 
@@ -300,19 +283,80 @@
             this.cmbNombre.Size = new System.Drawing.Size(338, 29);
             this.cmbNombre.TabIndex = 26;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(659, 545);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 21);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Status";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.AutoCompleteCustomSource.AddRange(new string[] {
+            "Recibido",
+            "Revisión",
+            "Autorización",
+            "Reparación",
+            "Lista para Entregar",
+            "Entregado",
+            "Garantia"});
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Recibido",
+            "Revisión",
+            "Autorización",
+            "Reparación",
+            "Lista para Entregar",
+            "Entregado",
+            "Garantia"});
+            this.cmbStatus.Location = new System.Drawing.Point(725, 545);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(191, 29);
+            this.cmbStatus.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(638, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 21);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "orden";
+            // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(713, 46);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(61, 27);
+            this.txtOrden.TabIndex = 31;
+            // 
+            // rdbOrden
+            // 
+            this.rdbOrden.AutoSize = true;
+            this.rdbOrden.Location = new System.Drawing.Point(486, 275);
+            this.rdbOrden.Name = "rdbOrden";
+            this.rdbOrden.Size = new System.Drawing.Size(78, 25);
+            this.rdbOrden.TabIndex = 32;
+            this.rdbOrden.TabStop = true;
+            this.rdbOrden.Text = "Orden";
+            this.rdbOrden.UseVisualStyleBackColor = true;
+            // 
             // OrdenFiltros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 727);
+            this.Controls.Add(this.rdbOrden);
+            this.Controls.Add(this.txtOrden);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbNombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rdbTodos);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.rdbNombre);
             this.Controls.Add(this.rdbEntregado);
             this.Controls.Add(this.rdbPendiente);
@@ -339,14 +383,15 @@
             this.Controls.SetChildIndex(this.rdbPendiente, 0);
             this.Controls.SetChildIndex(this.rdbEntregado, 0);
             this.Controls.SetChildIndex(this.rdbNombre, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.dateTimePicker3, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.rdbTodos, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.cmbNombre, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.cmbStatus, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtOrden, 0);
+            this.Controls.SetChildIndex(this.rdbOrden, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -365,11 +410,10 @@
         private System.Windows.Forms.RadioButton rdbPendiente;
         private System.Windows.Forms.RadioButton rdbEntregado;
         private System.Windows.Forms.RadioButton rdbNombre;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton rdbTodos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Falla;
@@ -377,8 +421,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ingreso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
-        private System.Windows.Forms.RadioButton rdbTodos;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn garantia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dias;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtOrden;
+        private System.Windows.Forms.RadioButton rdbOrden;
     }
 }
