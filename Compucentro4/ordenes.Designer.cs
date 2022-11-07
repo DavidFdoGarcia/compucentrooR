@@ -78,6 +78,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cmbAccesorio = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.txtNuevo = new System.Windows.Forms.Button();
+            this.txtRefrescar = new System.Windows.Forms.Button();
+            this.btnReimprimi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).BeginInit();
@@ -430,6 +433,7 @@
             this.groupBox3.TabIndex = 80;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la Orden";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // txtLimpiar
             // 
@@ -471,7 +475,6 @@
             this.idAccesorio.DataPropertyName = "idAccesorio";
             this.idAccesorio.HeaderText = "idAccesorio";
             this.idAccesorio.Name = "idAccesorio";
-            this.idAccesorio.Visible = false;
             // 
             // Accesorio
             // 
@@ -501,7 +504,6 @@
             this.Orden.Name = "Orden";
             this.Orden.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Orden.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Orden.Visible = false;
             // 
             // txtObs
             // 
@@ -549,11 +551,44 @@
             this.label14.TabIndex = 90;
             this.label14.Text = "Accesorio";
             // 
+            // txtNuevo
+            // 
+            this.txtNuevo.Location = new System.Drawing.Point(654, 654);
+            this.txtNuevo.Name = "txtNuevo";
+            this.txtNuevo.Size = new System.Drawing.Size(95, 32);
+            this.txtNuevo.TabIndex = 83;
+            this.txtNuevo.Text = "Nuevo";
+            this.txtNuevo.UseVisualStyleBackColor = true;
+            this.txtNuevo.Click += new System.EventHandler(this.txtNuevo_Click);
+            // 
+            // txtRefrescar
+            // 
+            this.txtRefrescar.Location = new System.Drawing.Point(649, 590);
+            this.txtRefrescar.Name = "txtRefrescar";
+            this.txtRefrescar.Size = new System.Drawing.Size(83, 26);
+            this.txtRefrescar.TabIndex = 92;
+            this.txtRefrescar.Text = "Refrescar";
+            this.txtRefrescar.UseVisualStyleBackColor = true;
+            this.txtRefrescar.Click += new System.EventHandler(this.txtRefrescar_Click);
+            // 
+            // btnReimprimi
+            // 
+            this.btnReimprimi.Location = new System.Drawing.Point(631, 539);
+            this.btnReimprimi.Name = "btnReimprimi";
+            this.btnReimprimi.Size = new System.Drawing.Size(101, 40);
+            this.btnReimprimi.TabIndex = 93;
+            this.btnReimprimi.Text = "ImprimirR";
+            this.btnReimprimi.UseVisualStyleBackColor = true;
+            this.btnReimprimi.Click += new System.EventHandler(this.btnReimprimi_Click);
+            // 
             // ordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 749);
+            this.Controls.Add(this.btnReimprimi);
+            this.Controls.Add(this.txtRefrescar);
+            this.Controls.Add(this.txtNuevo);
             this.Controls.Add(this.cmbAccesorio);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button1);
@@ -604,6 +639,9 @@
             this.Controls.SetChildIndex(this.cmbAccesorio, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
+            this.Controls.SetChildIndex(this.txtNuevo, 0);
+            this.Controls.SetChildIndex(this.txtRefrescar, 0);
+            this.Controls.SetChildIndex(this.btnReimprimi, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).EndInit();
@@ -666,11 +704,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox txtEquipo;
         private System.Windows.Forms.ComboBox cmbAccesorio;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAccesorio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accesorio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button txtNuevo;
+        private System.Windows.Forms.Button txtRefrescar;
+        private System.Windows.Forms.Button btnReimprimi;
     }
 }

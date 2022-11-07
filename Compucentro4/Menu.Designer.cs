@@ -44,6 +44,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.altaDeDiagnosticoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,8 @@
             this.ordenToolStripMenuItem,
             this.altaDeEmpleadosToolStripMenuItem,
             this.altaDeTécnicosToolStripMenuItem,
-            this.altaDeReportesToolStripMenuItem});
+            this.altaDeReportesToolStripMenuItem,
+            this.altaDeDiagnosticoToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.menuToolStripMenuItem.Text = "Altas";
@@ -76,28 +78,28 @@
             // ordenToolStripMenuItem
             // 
             this.ordenToolStripMenuItem.Name = "ordenToolStripMenuItem";
-            this.ordenToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.ordenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ordenToolStripMenuItem.Text = "orden";
             this.ordenToolStripMenuItem.Click += new System.EventHandler(this.ordenToolStripMenuItem_Click);
             // 
             // altaDeEmpleadosToolStripMenuItem
             // 
             this.altaDeEmpleadosToolStripMenuItem.Name = "altaDeEmpleadosToolStripMenuItem";
-            this.altaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.altaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaDeEmpleadosToolStripMenuItem.Text = "Alta de Empleados";
             this.altaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.altaDeEmpleadosToolStripMenuItem_Click);
             // 
             // altaDeTécnicosToolStripMenuItem
             // 
             this.altaDeTécnicosToolStripMenuItem.Name = "altaDeTécnicosToolStripMenuItem";
-            this.altaDeTécnicosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.altaDeTécnicosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaDeTécnicosToolStripMenuItem.Text = "Alta de Técnicos";
             this.altaDeTécnicosToolStripMenuItem.Click += new System.EventHandler(this.altaDeTécnicosToolStripMenuItem_Click);
             // 
             // altaDeReportesToolStripMenuItem
             // 
             this.altaDeReportesToolStripMenuItem.Name = "altaDeReportesToolStripMenuItem";
-            this.altaDeReportesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.altaDeReportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaDeReportesToolStripMenuItem.Text = "Alta de Reportes";
             this.altaDeReportesToolStripMenuItem.Click += new System.EventHandler(this.altaDeReportesToolStripMenuItem_Click);
             // 
@@ -170,6 +172,13 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // altaDeDiagnosticoToolStripMenuItem
+            // 
+            this.altaDeDiagnosticoToolStripMenuItem.Name = "altaDeDiagnosticoToolStripMenuItem";
+            this.altaDeDiagnosticoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaDeDiagnosticoToolStripMenuItem.Text = "Alta de Diagnostico";
+            this.altaDeDiagnosticoToolStripMenuItem.Click += new System.EventHandler(this.altaDeDiagnosticoToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -208,6 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem ordenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consulaDetallesOrdenesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaOrdenPorFiltrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem altaDeDiagnosticoToolStripMenuItem;
     }
 }
 

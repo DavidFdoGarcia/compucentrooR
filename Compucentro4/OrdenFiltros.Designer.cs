@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Falla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.garantia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
@@ -56,6 +47,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.rdbOrden = new System.Windows.Forms.RadioButton();
+            this.txtDiagnostico = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Falla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.garantia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,71 +87,14 @@
             this.Status,
             this.Importe,
             this.garantia,
-            this.dias});
+            this.dias,
+            this.diagnostico});
             this.dataGridView1.Location = new System.Drawing.Point(12, 363);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1013, 150);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // Orden
-            // 
-            this.Orden.DataPropertyName = "Orden";
-            this.Orden.HeaderText = "Orden";
-            this.Orden.Name = "Orden";
-            this.Orden.Width = 50;
-            // 
-            // Equipo
-            // 
-            this.Equipo.DataPropertyName = "Equipo";
-            this.Equipo.HeaderText = "Equipo";
-            this.Equipo.Name = "Equipo";
-            // 
-            // Falla
-            // 
-            this.Falla.DataPropertyName = "Falla";
-            this.Falla.HeaderText = "Falla";
-            this.Falla.Name = "Falla";
-            this.Falla.Width = 200;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Width = 200;
-            // 
-            // Ingreso
-            // 
-            this.Ingreso.DataPropertyName = "Ingreso";
-            this.Ingreso.HeaderText = "Ingreso";
-            this.Ingreso.Name = "Ingreso";
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Width = 84;
-            // 
-            // Importe
-            // 
-            this.Importe.DataPropertyName = "Importe";
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
-            // 
-            // garantia
-            // 
-            this.garantia.DataPropertyName = "garantia";
-            this.garantia.HeaderText = "garantia";
-            this.garantia.Name = "garantia";
-            // 
-            // dias
-            // 
-            this.dias.DataPropertyName = "dias";
-            this.dias.HeaderText = "días";
-            this.dias.Name = "dias";
             // 
             // label2
             // 
@@ -343,11 +289,96 @@
             this.rdbOrden.Text = "Orden";
             this.rdbOrden.UseVisualStyleBackColor = true;
             // 
+            // txtDiagnostico
+            // 
+            this.txtDiagnostico.Location = new System.Drawing.Point(78, 562);
+            this.txtDiagnostico.Name = "txtDiagnostico";
+            this.txtDiagnostico.Size = new System.Drawing.Size(61, 27);
+            this.txtDiagnostico.TabIndex = 33;
+            this.txtDiagnostico.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(112, 525);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 21);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Diagnostico:";
+            // 
+            // Orden
+            // 
+            this.Orden.DataPropertyName = "Orden";
+            this.Orden.HeaderText = "Orden";
+            this.Orden.Name = "Orden";
+            this.Orden.Width = 50;
+            // 
+            // Equipo
+            // 
+            this.Equipo.DataPropertyName = "Equipo";
+            this.Equipo.HeaderText = "Equipo";
+            this.Equipo.Name = "Equipo";
+            // 
+            // Falla
+            // 
+            this.Falla.DataPropertyName = "Falla";
+            this.Falla.HeaderText = "Falla";
+            this.Falla.Name = "Falla";
+            this.Falla.Width = 200;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Width = 200;
+            // 
+            // Ingreso
+            // 
+            this.Ingreso.DataPropertyName = "Ingreso";
+            this.Ingreso.HeaderText = "Ingreso";
+            this.Ingreso.Name = "Ingreso";
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.Width = 84;
+            // 
+            // Importe
+            // 
+            this.Importe.DataPropertyName = "Importe";
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            // 
+            // garantia
+            // 
+            this.garantia.DataPropertyName = "garantia";
+            this.garantia.HeaderText = "garantia";
+            this.garantia.Name = "garantia";
+            // 
+            // dias
+            // 
+            this.dias.DataPropertyName = "dias";
+            this.dias.HeaderText = "días";
+            this.dias.Name = "dias";
+            // 
+            // diagnostico
+            // 
+            this.diagnostico.DataPropertyName = "Diagnostico";
+            this.diagnostico.HeaderText = "Dignostico";
+            this.diagnostico.Name = "diagnostico";
+            this.diagnostico.Visible = false;
+            // 
             // OrdenFiltros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 727);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtDiagnostico);
             this.Controls.Add(this.rdbOrden);
             this.Controls.Add(this.txtOrden);
             this.Controls.Add(this.label5);
@@ -392,6 +423,8 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtOrden, 0);
             this.Controls.SetChildIndex(this.rdbOrden, 0);
+            this.Controls.SetChildIndex(this.txtDiagnostico, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -414,6 +447,13 @@
         private System.Windows.Forms.RadioButton rdbTodos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbNombre;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtOrden;
+        private System.Windows.Forms.RadioButton rdbOrden;
+        private System.Windows.Forms.TextBox txtDiagnostico;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Falla;
@@ -423,10 +463,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.DataGridViewTextBoxColumn garantia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dias;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtOrden;
-        private System.Windows.Forms.RadioButton rdbOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diagnostico;
     }
 }

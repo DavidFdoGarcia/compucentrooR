@@ -78,5 +78,11 @@ namespace Compucentro4
             OrdenFiltros OF = new OrdenFiltros();
             OF.Show();
         }
+
+        private void altaDeDiagnosticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Diagnostico d = new Diagnostico();
+            d.Show();
+        }
     }
 }

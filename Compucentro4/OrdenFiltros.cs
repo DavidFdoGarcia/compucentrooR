@@ -27,6 +27,10 @@ namespace Compucentro4
             dgv.Formato(dataGridView1, 1);
 
             cmbStatus.SelectedIndex = 0;
+
+            txtDiagnostico.AutoSize = false;
+            txtDiagnostico.Size = new Size(500, 150);
+            txtDiagnostico.Multiline = true;
         }
 
         public void ModificarOrdenStatus()
@@ -60,7 +64,7 @@ namespace Compucentro4
             String Fecha1 = dateTimePicker1.Value.Date.Year.ToString() + "/" + dateTimePicker1.Value.Date.Month.ToString() + "/" + dateTimePicker1.Value.Date.Day.ToString();
             String Fecha2 = dateTimePicker2.Value.Date.Year.ToString() + "/" + dateTimePicker2.Value.Date.Month.ToString() + "/" + dateTimePicker2.Value.Date.Day.ToString();
             DataTable dt = new DataTable();
-            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Usuario.Nombre='" + cmbNombre.Text+"'";
+            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias, Orden.Diagnostico from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Usuario.Nombre='" + cmbNombre.Text+"'";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -77,7 +81,7 @@ namespace Compucentro4
             String Fecha1 = dateTimePicker1.Value.Date.Year.ToString() + "/" + dateTimePicker1.Value.Date.Month.ToString() + "/" + dateTimePicker1.Value.Date.Day.ToString();
             String Fecha2 = dateTimePicker2.Value.Date.Year.ToString() + "/" + dateTimePicker2.Value.Date.Month.ToString() + "/" + dateTimePicker2.Value.Date.Day.ToString();
             DataTable dt = new DataTable();
-            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.FechaI BETWEEN '" + Fecha1 + "' AND '" + Fecha2 + "'";
+            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias,Orden.Diagnostico from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.FechaI BETWEEN '" + Fecha1 + "' AND '" + Fecha2 + "'";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -94,7 +98,7 @@ namespace Compucentro4
             String Fecha1 = dateTimePicker1.Value.Date.Year.ToString() + "/" + dateTimePicker1.Value.Date.Month.ToString() + "/" + dateTimePicker1.Value.Date.Day.ToString();
             String Fecha2 = dateTimePicker2.Value.Date.Year.ToString() + "/" + dateTimePicker2.Value.Date.Month.ToString() + "/" + dateTimePicker2.Value.Date.Day.ToString();
             DataTable dt = new DataTable();
-            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.FechaI BETWEEN '" + Fecha1 + "' AND '" + Fecha2 + "' and Status ='Entregado'";
+            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias,Orden.Diagnostico from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.FechaI BETWEEN '" + Fecha1 + "' AND '" + Fecha2 + "' and Status ='Entregado'";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -107,7 +111,7 @@ namespace Compucentro4
         {
             Conexion.Conectar();
             DataTable dt = new DataTable();
-            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.IdOrden =  '" + txtOrden.Text + "'";
+            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias,Orden.Diagnostico from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.IdOrden =  '" + txtOrden.Text + "'";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -122,7 +126,7 @@ namespace Compucentro4
             String Fecha1 = dateTimePicker1.Value.Date.Year.ToString() + "/" + dateTimePicker1.Value.Date.Month.ToString() + "/" + dateTimePicker1.Value.Date.Day.ToString();
             String Fecha2 = dateTimePicker2.Value.Date.Year.ToString() + "/" + dateTimePicker2.Value.Date.Month.ToString() + "/" + dateTimePicker2.Value.Date.Day.ToString();
             DataTable dt = new DataTable();
-            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.FechaI BETWEEN '" + Fecha1 + "' AND '" + Fecha2 + "' and Status ='Activo'";
+            string consulta = "select Orden.idOrden as Orden, Equipo.Tipo as Equipo, Orden.FallaC as Falla,Usuario.Nombre as Cliente,Orden.FechaI as Ingreso,Orden.Status,Orden.ImporteTotal as Importe, Orden.garantia,DATEDIFF( dd , GETDATE() , Garantia) as dias,Orden.Diagnostico from Orden INNER JOIN Usuario ON Orden.idUsuario = Usuario.idUsuario INNER JOIN Equipo ON Equipo.idEquipo = Orden.idEquipo where Orden.FechaI BETWEEN '" + Fecha1 + "' AND '" + Fecha2 + "' and Status ='Activo'";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -237,6 +241,16 @@ namespace Compucentro4
         {
             ModificarOrdenStatus();
             dataGridView1.DataSource = llenar_gridOrden();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDiagnostico.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
     }
 }

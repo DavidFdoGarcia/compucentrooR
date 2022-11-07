@@ -14,7 +14,7 @@ namespace Compucentro4
 {
     public partial class ordenes : Base
     {
-        private DataTable dt; //DatasTable para el Grid
+        DataTable dt = new DataTable();
         public ordenes()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Compucentro4
             clsOrden ObjOrden = new clsOrden(); //Objeto a la clase orden
 
             //DataTable para llenar el Grid
-            dt = new DataTable();
+            
             dt.Columns.Add("idAccesorio");
             dt.Columns.Add("Accesorio");
             dt.Columns.Add("Serie");
@@ -30,6 +30,8 @@ namespace Compucentro4
             dt.Columns.Add("Orden");
 
             dataGridView1.DataSource = dt;
+
+            ListarAccesorios();
         }
 
         private void ordenes_Load(object sender, EventArgs e)
@@ -57,8 +59,8 @@ namespace Compucentro4
         public DataTable llenar_gridConsulta()
         {
             Conexion.Conectar();
-            DataTable dt = new DataTable();
-            string consulta = "select Accesorio.TipoAccesorio as Accesorio, AccesorioOrden.Serie, AccesorioOrden.Observacion from Accesorio inner join AccesorioOrden on Accesorio.idAccesorio = AccesorioOrden.idAccesorio where idOrden ='" + txtOrden.Text + "'";
+            
+            string consulta = "select Accesorio.idAccesorio, Accesorio.TipoAccesorio as Accesorio, AccesorioOrden.Serie, AccesorioOrden.Observacion, AccesorioOrden.idOrden from Accesorio inner join AccesorioOrden on Accesorio.idAccesorio = AccesorioOrden.idAccesorio where idOrden ='" + txtOrden.Text + "'";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -223,8 +225,8 @@ namespace Compucentro4
             e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
 
             e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(20 , y += 60, 1000, 60));
-            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 0, 1000, 60));
-            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 0, 1000, 60));
+            e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(230, y + 0, 1000, 60));
+            e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(300, y + 0, 1000, 60));
 
             foreach (DataRow row in dt.Rows)
             {
@@ -234,7 +236,7 @@ namespace Compucentro4
 
                row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
 
-                row["Observacion"].ToString() + " " + " " + " " + " " + " " 
+                row["Observacion"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " "
 
 
                    , font2, Brushes.Black, new Rectangle(20, y += 25, 1000, 60));
@@ -547,19 +549,24 @@ namespace Compucentro4
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            DataRow row = dt.NewRow();
+            dt = dataGridView1.DataSource as DataTable;
+            DataRow datarow;
+            datarow = dt.NewRow();
 
-            row["idAccesorio"] = Convert.ToInt32(cmbAccesorio.SelectedValue);
-            row["Accesorio"] = cmbAccesorio.Text;
-            row["Serie"] = 1;
-            row["Observacion"] = 1;
-            row["Orden"] = txtOrden.Text;
-            dt.Rows.Add(row);
 
-           /* InsertaSoloUsuario();
-            txtClienteID.Text = ConsultaUsuId();
-            InsertaAccesorio();
-            ModificarUsuario();*/
+
+            datarow["idAccesorio"] = Convert.ToInt32(cmbAccesorio.SelectedValue);
+            datarow["Accesorio"] = cmbAccesorio.Text;
+            datarow["Serie"] = 1;
+            datarow["Observacion"] = 1;
+            datarow["Orden"] = txtOrden.Text;
+            dt.Rows.Add(datarow);
+
+            /* InsertaSoloUsuario();
+             txtClienteID.Text = ConsultaUsuId();
+             InsertaAccesorio();
+             ModificarUsuario();*/
+            //dataGridView1.Rows.Add(Convert.ToInt32(cmbAccesorio.SelectedValue), cmbAccesorio.Text, "1", "1", txtOrden.Text);
         }
 
 
@@ -657,5 +664,119 @@ namespace Compucentro4
            
         }
 
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNuevo_Click(object sender, EventArgs e)
+        {
+            //AgregarDataArticulo an = new AgregarDataArticulo();
+            //an.txtOrden.Text = txtOrden.Text;
+            //an.Show();
+            InsertaAccesorio();
+        }
+
+        private void txtRefrescar_Click(object sender, EventArgs e)
+        {
+            //dataGridView1.DataSource = llenar_grid();
+            dt.Clear();
+        }
+
+        public DataTable llenar_grid()
+        {
+            Conexion.Conectar();
+            DataTable dt = new DataTable();
+            string consulta = "select idAccesorio,idOrden,Observacion,Serie from AccesorioOrden where idOrden = '"+txtOrden.Text+"'";
+            SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            return (dt);
+
+        }
+
+        private void btnReimprimi_Click(object sender, EventArgs e)
+        {
+            
+                PrintDialog pd = new PrintDialog();
+                PrintDocument doc = new PrintDocument();
+                doc.PrintPage += reImprimir;
+                pd.Document = doc;
+                if (pd.ShowDialog() == DialogResult.OK)
+                {
+                    doc.Print();
+                }
+            }
+
+            private void reImprimir(object sender, PrintPageEventArgs e)
+            {
+                //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
+                Font font = new Font("Arial", 12, FontStyle.Bold);
+                Font font2 = new Font("Arial", 8, FontStyle.Bold);
+                // 
+                int y = 20;
+                e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, 5, 850, 80));
+                e.Graphics.DrawString("Orden de Servicio", font, Brushes.Black, new Rectangle(360, y += 60, 1000, 60));
+
+                e.Graphics.DrawString("No.Orden: " + txtOrden.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+                e.Graphics.DrawString("Fecha de Ingreso: " + datei.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
+
+                e.Graphics.DrawString("Equipo: " + txtEquipo.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+                e.Graphics.DrawString("Cliente: " + txtCliente.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
+
+                e.Graphics.DrawString("Modelo: " + txtModelo.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+                e.Graphics.DrawString("Celular: " + txtCelular.Text, font, Brushes.Black, new Rectangle(20, y += 30, 1000, 60));
+
+                e.Graphics.DrawString("Serie: " + txtSerie.Text, font, Brushes.Black, new Rectangle(500, y + 30, 1000, 60));
+
+                e.Graphics.DrawString("Falla: " + txtFalla.Text, font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+
+                e.Graphics.DrawString("Accesorio", font, Brushes.Black, new Rectangle(20, y += 60, 1000, 60));
+                e.Graphics.DrawString("Serie", font, Brushes.Black, new Rectangle(150, y + 0, 1000, 60));
+                e.Graphics.DrawString("Observacion", font, Brushes.Black, new Rectangle(230, y + 0, 1000, 60));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    e.Graphics.DrawString(row["Accesorio"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+
+
+
+                   row["Serie"].ToString() + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+
+                    row["Observacion"].ToString() + " " + " " + " " + " " + " "
+
+
+                       , font2, Brushes.Black, new Rectangle(20, y += 25, 1000, 60));
+                }
+                e.Graphics.DrawImage(picturePie.Image, new Rectangle(5, y += 25, 850, 50));
+
+                e.Graphics.DrawString("Condiciones generales", font2, Brushes.Black, new Rectangle(360, 600, 1000, 60));
+                e.Graphics.DrawString("I. Todo equipo nuevo viene con su póliza de garantía en la cual se especifican los términos de la misma.", font2, Brushes.Black, new Rectangle(20, 620, 900, 60));
+                e.Graphics.DrawString("II. Toda revisión de equipos fuera de su garantía genera un cargo, siendo el monto minimo de $100.00 + IVA \n el cual cambiará de acuerdo al modelo del equipo.", font2, Brushes.Black, new Rectangle(20, 650, 900, 60));
+                e.Graphics.DrawString("III. Toda reparación que requiera cambio de parte, se solicitara el 50% de anticipo.", font2, Brushes.Black, new Rectangle(20, 680, 900, 60));
+                e.Graphics.DrawString("IV. Toda revisión o reparación en la que no proceda la garantía tendra un costo.", font2, Brushes.Black, new Rectangle(20, 700, 900, 60));
+                e.Graphics.DrawString("V. La garantía del equipo no cubre problemas de software(programas y aplicaciones) únicamente problemas de hardware (daños fisicos).", font2, Brushes.Black, new Rectangle(20, 720, 900, 60));
+                e.Graphics.DrawString("VI. La garantía del equipo tampoco cubre el servicio de mantenimiento preventivo.", font2, Brushes.Black, new Rectangle(20, 740, 900, 60));
+                e.Graphics.DrawString("VII. La garantía del servicio es de 30 días naturales.", font2, Brushes.Black, new Rectangle(20, 760, 900, 60));
+                e.Graphics.DrawString("VIII. En el caso de la información contenida en el disco duro es RESPONSABILIDAD ABSOLUTA DEL CLIENTE.", font2, Brushes.Black, new Rectangle(20, 780, 900, 60));
+                e.Graphics.DrawString("IX. Todo equipo que no se haya recogido después de 8 días de habérse notiicado al cliente, tendrá un cargo de almacenamiento de $15.00 por día", font2, Brushes.Black, new Rectangle(20, 800, 900, 60));
+                e.Graphics.DrawString("X. Transcurridos 30 días naturales después de la notificación, el equipo se pasará al almacén de destrucción sin ninguna  responsabilidad para \n Computadoras Centro de Servicio.", font2, Brushes.Black, new Rectangle(20, 820, 900, 60));
+                e.Graphics.DrawString("XI. El horario para seguimiento de reportes es de 10:00 a 19:00 hrs. de lunes a viernes, sábados de 10:00 a 14:00 hrs. \n a los teléfonos 444-817-5710, 444-128-6760, WhatsApp 444-427-3576.", font2, Brushes.Black, new Rectangle(20, 850, 900, 60));
+
+                e.Graphics.DrawString("ACEPTO", font2, Brushes.Black, new Rectangle(80, 880, 800, 60));
+                e.Graphics.DrawString("NOMBRE Y FIRMA", font2, Brushes.Black, new Rectangle(50, 980, 900, 60));
+
+                e.Graphics.DrawString("RECIBE", font2, Brushes.Black, new Rectangle(630, 880, 880, 60));
+                e.Graphics.DrawString(cmbAtendio.Text, font2, Brushes.Black, new Rectangle(600, 980, 900, 60));
+                /*//e.Graphics.DrawString(txtTitulo.Text, font, Brushes.Black, 50, 130);
+                Bitmap varbmp = new Bitmap(este.Image);
+                Image img = este.Image;
+                e.Graphics.DrawImage(img, new Rectangle(20, 30, 185, 50));
+                e.Graphics.DrawString("*" + txtCodigo.Text + "*", font, Brushes.Black, new Rectangle(75, 85, 150, 20)); */
+
+            }
+        
     }
 }

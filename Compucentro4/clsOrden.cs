@@ -41,6 +41,20 @@ namespace Compucentro4
             return coleccion;
         }
 
+        public DataTable InsertaDiagnostico(int idOrden,string Diagnostico)
+        {
+            DataTable Tabla = new DataTable();
+            Comando.Connection = Conexion.Conectar();
+            Comando.CommandText = "InsertaDiagnostico";
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.AddWithValue("@idOrden", idOrden);
+            Comando.Parameters.AddWithValue("@diagnostico", Diagnostico);
+            MessageBox.Show("Se agrego el diagnostico");
+            LeerFilas = Comando.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            return Tabla;
+        }
 
         public DataTable ListarClientes()
         {
